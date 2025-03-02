@@ -1,0 +1,122 @@
+{
+    "data": {
+        "resumeNameTitle": "Karthikeyan R V",
+        "resumeTagLine": "Software engineer II at Oracle",
+        "skills": {
+            "languages": "Typescript, JavaScript, C++, C, JAVA, Python, Solidity, HTML, CSS, SCSS",
+            "frameworkAndTools": "ReactJS, React Native, PreactJS, Oracle ADF, OracleJet, CI/CD pipeline automation & development, Jekyll, NodeJS, Firebase, MongoDB, Flask, Cypress Automation, Selenium Java Automation, Git, JIRA, Jenkins, Adobe XD, Adobe Illustrator, Figma, Blender"
+        },
+        "experience": [
+            {
+                "organization": "ORACLE",
+                "positions": [
+                    {
+                        "position": "Software Engineer II (IC2)",
+                        "location": "Hyderabad, India",
+                        "start": "09/2024",
+                        "end": "present",
+                        "projects": [
+                            "Cloud PMS - OPERA Cloud",
+                            "Hotels Distribution Software"
+                        ],
+                        "responsibilities": [
+                            {
+                                "subtitle": "Leadership & Mentorship",
+                                "items": [
+                                    "Led a team of 2 interns, providing technical guidance, onboarding support, and project workflow training.",
+                                    "Mentored interns in full-stack development, debugging, and best practices, improving team efficiency by 30%."
+                                ]
+                            },
+                            {
+                                "subtitle": "Full-Stack Development & Framework Modernization",
+                                "items": [
+                                    "Developed and maintained enterprise-grade applications using Oracle ADF, Oracle Jet, RAPID (React-based framework), PreactJS, TypeScript, JavaScript, Java, HTML, CSS, SCSS, and Figma.",
+                                    "Migrated 100+ Oracle JET components to React-based architecture, ensuring 100% feature parity and improved performance.",
+                                    "Optimized and automated CI/CD pipelines, reducing deployment time by 40%.",
+                                    "Automated crucial yet robust work flows with javascript such that it saved almost 90% of the manual work time involved."
+                                ]
+                            },
+                            {
+                                "subtitle": "High-Impact Features Development & Error handling",
+                                "items": [
+                                    "Implemented multilingual translation functionality across 8 modules, modifying 3,000+ files, ensuring seamless global usability. Completed translation implementation in 1 month, surpassing efficiency benchmarks.",
+                                    "Conducted extensive regression and unit testing for a large-scale system change, identifying and resolving 95% of critical issues before deployment. Implemented robust error-handling mechanisms to ensure zero downstream impact, maintaining system stability for future updates. ",
+                                    "Delivered 5+ mission-critical features with 100% UI/UX design accuracy and zero post-release defects."
+                                ]
+                            },
+                            {
+                                "subtitle": "Performance Optimization & Testing",
+                                "items": [
+                                    "Enhanced UI rendering performance by 50%, reducing load times and improving responsiveness. ",
+                                    "Developed comprehensive test automation suites using Cypress, Selenium, and Postman, leading to a 40% decrease in regression issues. Cross-Functional Collaboration & Agile Development",
+                                    "Worked closely with Product Owners, UX/UI designers, developers, and QA engineers to align on feature requirements, user stories, and project deliverables.",
+                                    "Led sprint demos and stakeholder presentations, ensuring smooth feature acceptance and on-time delivery.",
+                                    "Followed Agile (Scrum) methodology, actively participating in daily stand-ups, sprint planning, and retrospectives."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "position": "Software Engineer I (IC1)",
+                        "location": "Hyderabad, India",
+                        "start": "09/2022",
+                        "end": "08/2024"
+                    },
+                    {
+                        "position": "Project Intern",
+                        "location": "Hyderabad, India",
+                        "start": "02/2022",
+                        "end": "08/2022"
+                    }
+                ]
+            },
+            {
+                "organization": "APPSCMS TECHNOLOGIES",
+                "positions": [
+                    {
+                        "position": "Web Developer Intern",
+                        "location": "Noida, India (Remote)",
+                        "start": "02/2021",
+                        "end": "07/2021",
+                        "projects": [
+                            "Safe Pdf Kit",
+                            "Safe Video Kit",
+                            "Safe Audio Kit"
+                        ],
+                        "responsibilities": [
+                            {
+                                "subtitle": "Robust quantity of applications",
+                                "items": [
+                                    "Built and deployed 3 secured client-focused web applications, each consisting of over 10 core functionalities to edit andorganize videos, audios, and PDFs without involving the server, ensuring the security of user data. Video Editor Link, PDF Editor Link."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "education": [
+            {
+                "university": "AMRITA VISHWA VIDYAPEETHAM",
+                "course": "B-tech Engineering in Computer Science",
+                "start": "04/2018",
+                "end": "06/2022",
+                "score": "CGPA: 8.43/10.00",
+                "achievements": [
+                    "All India finalist in the Atlassian app development hackathon by IIT Madras Shaastra, ranking in the top 10 out of 2000+ teams.",
+                    "Secured AIR 819 in AEEE, awarded a 90% scholarship, and maintained a GPA above 8 throughout all 8 semesters."
+                ]
+            }
+        ],
+        "projects": [
+            {
+                "projectTitle": "Cloud PMS - OPERA Cloud ",
+                "description": "Contributing to the world's number 1 hospitality software, OPERA Cloud, designed specifically for hotel operations. Actively involved in building a cloud-based solution for hotel management that caters to 40,000 properties globally using OPERA PMS; achieved an impressive annual customer growth rate of 100% since the platform's launch. Click here for the project website."
+            },
+            {
+                "projectTitle": "Order Management System",
+                "description": "Created an order and stock management web application for a construction company, featuring four distinct user roles with tailored pages to support their specific functionalities. Delivered a high-performance, full-stack website using the PERN stack (PostgreSQL, ExpressJS, React, NodeJS). Find more about the project here."
+            }
+        ]
+    }
+}

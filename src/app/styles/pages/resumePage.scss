@@ -1,0 +1,26 @@
+$pw: '.pw-resume-page';
+
+
+#{$pw} {
+    display: flex;
+    flex-direction: column;
+    &-title-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-download-button{
+            background: white;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            &:hover {
+                opacity: 0.8;
+                transition: all 0.3s ease;
+            }
+        }
+
+    }
+}

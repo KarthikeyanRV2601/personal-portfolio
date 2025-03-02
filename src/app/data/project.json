@@ -1,0 +1,93 @@
+{
+    "data": [
+        {
+            "title": "Oracle's Opera Cloud",
+            "role": "Framework developer, Full stack application engineer, Intern team lead.",
+            "start": "September 2023",
+            "end": "Present",
+            "description": "A comprehensive cloud-based property management system (PMS) designed specifically for the hospitality industry, allowing them to manage reservations, guest profiles, room inventory, sales, and other operations centrally within a single platform; some notable clients include Hyatt, Crown Resorts, Minor Hotel Group, Premier Inn Hotels Limited, and various other large hotel chains across the globe. ",
+            "technologies": [
+                "react",
+                "typescript",
+                "node",
+                "cypress",
+                "git",
+                "java",
+                "html"
+            ],
+            "projectImages": [
+                "project11.png",
+                "project12.png"
+            ],
+            "url": "https://www.oracle.com/in/hospitality/hotel-property-management/hotel-pms-software/tour/"
+        },
+
+        {
+            "title": "Order Management System",
+            "role": "Full stack developer, UI/UX Designer",
+            "start": "February 2019",
+            "end": "June 2019",
+            "description": "Created an order and stock management web application for a construction company, featuring four distinct user roles with tailored pages to support their specific functionalities. The system provides a comprehensive set of features for efficient order tracking, inventory management, and reporting. Delivered a high-performance, full-stack website.",
+            "technologies": [
+                "react",
+                "typescript",
+                "node",
+                "git",
+                "postgresql",
+                "expressjs"
+            ],
+            "projectImages": [
+                "project21.png",
+                "project22.png",
+                "project23.png",
+                "project24.png",
+                "project25.png"
+            ],
+            "url": "https://contra.com/p/7g2mWsbR-order-management-system"
+        },
+
+        {
+            "title": "Safe Video Kit - Secure and Seamless Video Editing and Sharing",
+            "role": "Full stack developer, UI/UX Designer",
+            "start": "March 2021",
+            "end": "April 2021",
+            "description": "Safe Video Kit is a cutting-edge web application designed to provide secure and seamless video editing and sharing capabilities. With a strong focus on data security, Safe Video Kit ensures that your videos are protected while offering a seamless editing experience. Unlock new possibilities and unleash your creativity without compromising on the privacy of your valuable video content.",
+            "technologies": [
+                "html",
+                "css",
+                "javascript",
+                "jekyll"
+            ],
+            "projectImages": [
+                "project31.png",
+                "project32.png",
+                "project33.png"
+            ],
+            "url": "https://contra.com/p/AEMYlRUU-safe-video-kit-secure-and-seamless-video-editing-and-sharing"
+        },
+
+        {
+            "title": "Student Profile Management System",
+            "role": "Full stack developer, UI/UX Designer",
+            "start": "July 2020",
+            "end": "December 2020",
+            "description": "The Student Profile Management System is a web application that simplifies student information management for educational institutions. It provides secure login, student registration, course management, attendance tracking, grade management, communication, and data export/import features.",
+            "technologies": [
+                "react",
+                "javascript",
+                "springboot",
+                "java",
+                "firebase"
+            ],
+            "projectImages": [
+                "project41.png",
+                "project42.png",
+                "project43.png",
+                "project44.png",
+                "project45.png"
+            ],
+            "url": "https://contra.com/p/kFPAbeZN-student-profile-management-system"
+        }
+        
+    ]
+}

@@ -1,0 +1,28 @@
+.pw-typo-mainheader {
+  font-size: 64px;
+  font-weight: 600;
+}
+.pw-typo-paragraph {
+  font-size: 16px;
+}
+.pw-typo-bold {
+  font-weight: bold;
+}
+.pw-typo-secondary-text {
+  font-size: 16px;
+  color: #686868;
+}
+.pw-typo-subheader {
+  font-size: 40px;
+}
+.pw-typo-subheader-small {
+  font-size: 32px;
+}
+.pw-typo-resume-name-title {
+  font-weight: 100;
+}
+.pw-typo-resume-tagline {
+  font-size: 32px;
+  font-style: italic;
+  color: #686868;
+}/*# sourceMappingURL=textWrapper.css.map */

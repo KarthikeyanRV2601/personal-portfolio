@@ -1,0 +1,21 @@
+.pw-resume-page {
+  display: flex;
+  flex-direction: column;
+}
+.pw-resume-page-title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pw-resume-page-title-section-download-button {
+  background: white;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pw-resume-page-title-section-download-button:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}/*# sourceMappingURL=resumePage.css.map */

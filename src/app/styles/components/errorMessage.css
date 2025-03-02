@@ -1,0 +1,10 @@
+.pw-error-message-text {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: red;
+}
+
+.pw-error-applied {
+  border: 1px red solid;
+}/*# sourceMappingURL=errorMessage.css.map */

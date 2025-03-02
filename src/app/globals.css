@@ -1,0 +1,87 @@
+:root {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  --background-color: white;
+  --text-color: black;
+  cursor: none;
+}
+
+.pw-dark-mode {
+  --background-color: black;
+  --text-color: white;
+}
+
+body {
+  font-family: "Geist Sans", sans-serif;
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 
+* {
+  transition: all 0.3s ease-in-out;
+} */
+
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.hover-title {
+  font-size: 1.25rem;
+  /* Adjust size */
+  font-weight: 600;
+  /* Semi-bold */
+  color: #ffffff;
+  /* White or any color */
+  background: rgba(0, 0, 0, 0.7);
+  /* Dark semi-transparent background */
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+::selection {
+  background-color: #ff5733;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #ff5733;
+  color: #ffffff;
+}
+
+.pw-theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--text-color);
+  color: var(--background-color);
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.pw-interactible {
+  transition: all 0.3s ease;
+  &:hover{
+    opacity: 0.8;
+  }
+}

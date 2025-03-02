@@ -1,0 +1,26 @@
+$pw: '.pw-project-page';
+
+
+#{$pw} {
+    &-tech-stack {
+        background: white;
+        display: flex;
+        gap: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+        width: fit-content;
+        &-image{
+            cursor: pointer;
+        }
+    }
+    &-project-block {
+        &-a {
+            color: black;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+    }
+}

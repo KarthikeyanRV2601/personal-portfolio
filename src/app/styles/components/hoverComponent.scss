@@ -1,0 +1,8 @@
+$pw: '.pw-hover-component';
+
+
+#{$pw} {
+    &-hover-image {
+        object-fit: contain;
+    }
+}

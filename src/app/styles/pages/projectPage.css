@@ -1,0 +1,20 @@
+.pw-project-page-tech-stack {
+  background: white;
+  display: flex;
+  gap: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.pw-project-page-tech-stack-image {
+  cursor: pointer;
+}
+.pw-project-page-project-block-a {
+  color: black;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}/*# sourceMappingURL=projectPage.css.map */

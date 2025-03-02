@@ -1,0 +1,39 @@
+$pw: '.pw-loading-screen';
+
+#{$pw} {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    z-index: 9999;
+    transition: opacity 0.5s ease-in-out;
+
+    &.pw-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.pw-loading-text {
+    font-family: "Geist", sans-serif;
+    letter-spacing: 2px;
+    animation: pw-fadeIn 1.5s ease-in-out;
+}
+
+
+
+@keyframes pw-fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

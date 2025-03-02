@@ -1,0 +1,13 @@
+@import url("./components/textWrapper.css");
+@import url("./components/menu.css");
+@import url("./components/hoverComponent.css");
+@import url("./components/errorMessage.css");
+@import url("./components/pw-button.css");
+@import url("./pages/mainPage.css");
+@import url("./pages/projectPage.css");
+@import url("./pages/blogsPage.css");
+@import url("./pages/resumePage.css");
+@import url("./pages/contactPage.css");
+@import url("./pages/aboutMePage.css");
+@import url("./pages/loadingScreen.css");
+@import url("./positioning.css");/*# sourceMappingURL=main.css.map */

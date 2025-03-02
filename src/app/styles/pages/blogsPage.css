@@ -1,0 +1,51 @@
+.pw-blogs-page-blog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.pw-blogs-page-blog-content-blog-image {
+  width: 450px;
+  height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.pw-blogs-page-blog-content-paragraph-image-wrap {
+  display: flex;
+}
+.pw-blogs-page-blog-content-paragraph-image-wrap-paragraph-wrap {
+  width: 70%;
+}
+.pw-blogs-page-blog-navigation {
+  display: flex;
+  flex-direction: column;
+}
+.pw-blogs-page-blog-navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: center;
+}
+.pw-blogs-page-blog-navigation-buttons-left-button {
+  cursor: pointer;
+}
+.pw-blogs-page-blog-navigation-buttons-right-button {
+  cursor: pointer;
+}
+.pw-blogs-page-blog-navigation-buttons-button-disabled {
+  opacity: 0.5;
+}
+.pw-blogs-page-blog-index-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.pw-blogs-page-blog-index-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.pw-blogs-page-blog-index-list-item-title {
+  cursor: pointer;
+}/*# sourceMappingURL=blogsPage.css.map */

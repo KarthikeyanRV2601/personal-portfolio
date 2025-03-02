@@ -1,0 +1,32 @@
+$pw: '.pw-typo';
+
+#{$pw} {
+    &-mainheader {
+        font-size: 64px;
+        font-weight: 600;
+    }
+    &-paragraph {
+        font-size: 16px;
+    }
+    &-bold {
+        font-weight: bold;
+    }
+    &-secondary-text {
+        font-size: 16px;
+        color: #686868;
+    }
+    &-subheader {
+        font-size: 40px;
+    }
+    &-subheader-small {
+        font-size: 32px;
+    }
+    &-resume-name-title {
+        font-weight: 100;
+    }
+    &-resume-tagline {
+        font-size: 32px;
+        font-style: italic;
+        color: #686868;
+    }
+}

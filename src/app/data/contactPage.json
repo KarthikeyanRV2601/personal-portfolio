@@ -1,0 +1,50 @@
+{
+    "interestsDropDownData": {
+        "data": [
+            {
+                "id": "WEB_DEVELOPMENT",
+                "value": "Web development"
+            },
+            {
+                "id": "WEB_DESIGN",
+                "value": "Web design"
+            },
+            {
+                "id": "WEBSITE_FUNCTION_DEVELOPMENT",
+                "value": "Website function(s) development"
+            },
+            {
+                "id": "WEBSITE_RENNOVATION",
+                "value": "Website renovation"
+            },
+            {
+                "id": "WEBSITE_MAINTENANCE",
+                "value": "Existing website maintenance"
+            },
+            {
+                "id": "OTHER",
+                "value": "Other (Please specify in detail in message box)"
+            }
+        ]
+    },
+    "projectTimeData": {
+        "data": [
+            {
+                "id": "SHORT",
+                "value": "Short project ( less than 1 week )"
+            },
+            {
+                "id": "MID",
+                "value": "Medium project ( less than 1 month )"
+            },
+            {
+                "id": "LARGE",
+                "value": "Large project ( 4~6 months )"
+            },
+            {
+                "id": "OTHER",
+                "value": "Other (Please specify in detail in message box)"
+            }
+        ]
+    }
+}

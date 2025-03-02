@@ -1,0 +1,10 @@
+$pw: '.pw-main-page';
+
+#{$pw} {
+    padding: 65px 130px 65px 65px ;
+    position: relative;
+    .pw-main-content-renderer {
+        font-size: 64px;
+        margin-left: 640px;
+    }
+}
