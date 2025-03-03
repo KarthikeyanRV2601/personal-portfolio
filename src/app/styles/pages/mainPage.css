@@ -1,6 +1,7 @@
 .pw-main-page {
   padding: 65px 130px 65px 65px;
   position: relative;
+  transition: background-color 0.5s ease-in-out;
 }
 .pw-main-page .pw-main-content-renderer {
   font-size: 64px;

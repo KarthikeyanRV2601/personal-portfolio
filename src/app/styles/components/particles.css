@@ -1,0 +1,41 @@
+.pw-particles-container.dark {
+  background-color: black;
+  color: white;
+}
+.pw-particles-container.light {
+  background-color: white;
+  color: black;
+}
+.pw-particles-container .particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+}
+.pw-particles-container .particle {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: moveParticles linear infinite;
+}
+@keyframes moveParticles {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(13.2382411291px, -24.1402120976px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.4;
+  }
+}
+.pw-particles-container.light .particle {
+  background-color: black;
+}/*# sourceMappingURL=particles.css.map */

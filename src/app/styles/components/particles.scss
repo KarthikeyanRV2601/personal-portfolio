@@ -1,0 +1,58 @@
+$pw: '.pw-particles-container';
+
+#{$pw} {
+
+    // Theme-based styles
+    &.dark {
+        background-color: black;
+        color: white;
+    }
+
+    &.light {
+        background-color: white;
+        color: black;
+    }
+
+    // Full-Screen Particles Container (Fix Scroll Issue)
+    .particles-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        overflow: hidden; // Prevents particles from getting cut
+    }
+
+    // Individual Particle Styling
+    .particle {
+        position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        opacity: 0.8;
+        animation: moveParticles linear infinite;
+    }
+
+    // Particle Animation: Moves in Random Directions
+    @keyframes moveParticles {
+        0% {
+            transform: translate(0, 0);
+            opacity: 0.4;
+        }
+
+        50% {
+            transform: translate(calc(30px - 60px * random()), calc(30px - 60px * random()));
+            opacity: 1;
+        }
+
+        100% {
+            transform: translate(0, 0);
+            opacity: 0.4;
+        }
+    }
+
+    // Apply Theme to Particles
+    &.light .particle {
+        background-color: black;
+    }
+}

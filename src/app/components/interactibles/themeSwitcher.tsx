@@ -1,9 +1,8 @@
 "use client"
 import { useEffect, useState } from "react";
 
-export default function ThemeSwitcher() {
-    const [darkMode, setDarkMode] = useState(false);
-
+export default function ThemeSwitcher(props: { darkMode: boolean, setDarkMode: (a: boolean) => void }) {
+    const { darkMode, setDarkMode } = props;
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme");
         if (savedTheme === "dark") {
