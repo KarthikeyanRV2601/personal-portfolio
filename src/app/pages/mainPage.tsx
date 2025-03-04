@@ -1,5 +1,5 @@
 "use client"
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useCallback, useState } from "react"
 import { MainPageTabs } from "../types";
 import { AboutMePage } from "./aboutMePage";
 import '../styles/main.css'

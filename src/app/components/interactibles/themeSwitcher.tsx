@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function ThemeSwitcher(props: { darkMode: boolean, setDarkMode: (a: boolean) => void }) {
     const { darkMode, setDarkMode } = props;
@@ -9,7 +9,7 @@ export default function ThemeSwitcher(props: { darkMode: boolean, setDarkMode: (
             document.body.classList.add("pw-dark-mode");
             setDarkMode(true);
         }
-    }, []);
+    }, [setDarkMode]);
 
     const toggleTheme = () => {
         if (darkMode) {

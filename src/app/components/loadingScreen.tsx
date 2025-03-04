@@ -24,7 +24,7 @@ export default function LoadingScreen() {
     return () => {
       document.removeEventListener("click", playScreen);
     };
-  }, []);
+  }, [playScreen]);
 
   return (
     <div className={`pw-loading-screen ${!isVisible ? "pw-hidden" : ""}`}>
