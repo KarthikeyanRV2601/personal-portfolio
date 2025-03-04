@@ -21,7 +21,10 @@ $pw: '.pw-about-me-page';
             justify-content: end;
             align-items: flex-end;
             .pw-typo-mainheader{
-                font-size: 32px;
+                font-size: 24px;
+            }
+            .pw-typo-paragraph {
+                font-size: 16px;
             }
         }
     }

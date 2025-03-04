@@ -15,3 +15,4 @@ export * from './hoverImage';
 export * from './hoverProvider';
 export * from './hoverTrigger';
 export * from './loadingScreen';
+export * from './floatingCode';

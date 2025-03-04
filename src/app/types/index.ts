@@ -10,3 +10,4 @@ export * from './resumePage';
 export * from './contactPage';
 export * from './hoverImageComponent';
 export * from './errorMessage';
+export * from './dynamicBackground';

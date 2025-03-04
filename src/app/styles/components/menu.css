@@ -17,4 +17,7 @@
 .pw-menu-li-active {
   font-size: 24px;
   font-weight: bold;
+  position: relative;
+  display: inline-block;
+  animation: glitch 10s steps(1, start) infinite;
 }/*# sourceMappingURL=menu.css.map */

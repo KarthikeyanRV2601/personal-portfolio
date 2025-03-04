@@ -20,5 +20,8 @@
   align-items: flex-end;
 }
 .pw-about-me-page-landing-wrap-right-section .pw-typo-mainheader {
-  font-size: 32px;
+  font-size: 24px;
+}
+.pw-about-me-page-landing-wrap-right-section .pw-typo-paragraph {
+  font-size: 16px;
 }/*# sourceMappingURL=aboutMePage.css.map */

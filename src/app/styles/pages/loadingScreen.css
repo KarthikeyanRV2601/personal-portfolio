@@ -14,6 +14,15 @@
   opacity: 0;
   pointer-events: none;
 }
+.pw-loading-screen .pw-typo-paragraph {
+  font-size: 12px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: none;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+}
 
 .pw-loading-text {
   font-family: "Geist", sans-serif;

@@ -17,7 +17,7 @@ export default function RootLayout({
       <head>
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Work+Sans:wght@400;700&display=swap"
         />
         <link rel="stylesheet" href="https://geists-fonts.vercel.app/stylesheet.css" />
       </head>

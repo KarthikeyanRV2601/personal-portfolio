@@ -16,6 +16,15 @@ $pw: '.pw-loading-screen';
         opacity: 0;
         pointer-events: none;
     }
+
+    .pw-typo-paragraph {
+        font-size: 12px;
+        width: fit-content;
+        background: none;
+        color: white;
+        position: absolute;
+        bottom: 10px;
+    }
 }
 
 .pw-loading-text {

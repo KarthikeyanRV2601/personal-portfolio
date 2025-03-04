@@ -7,6 +7,7 @@ $pw-error-applied: '.pw-error-applied';
         padding: 0;
         font-size: 14px;
         color: red;
+        animation: glitch 2s steps(1, start) infinite;
     }
 }
 

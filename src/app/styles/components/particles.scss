@@ -1,58 +1,78 @@
-$pw: '.pw-particles-container';
+$pw: '.pw-dynamic-background';
 
 #{$pw} {
 
-    // Theme-based styles
-    &.dark {
-        background-color: black;
-        color: white;
-    }
-
-    &.light {
-        background-color: white;
-        color: black;
-    }
-
-    // Full-Screen Particles Container (Fix Scroll Issue)
-    .particles-container {
+    .floating-code-container {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 30vw;
+        height: 70vh;
         pointer-events: none;
-        overflow: hidden; // Prevents particles from getting cut
+        overflow: hidden;
     }
-
-    // Individual Particle Styling
-    .particle {
+    
+    .code-line {
         position: absolute;
-        background-color: white;
-        border-radius: 50%;
-        opacity: 0.8;
-        animation: moveParticles linear infinite;
+        font-family: "Courier New", monospace;
+        font-size: 12px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        white-space: nowrap;
+        opacity: 0.85;
+        animation: floatUp 6s linear infinite, glitchParticles 0.3s infinite alternate;
     }
-
-    // Particle Animation: Moves in Random Directions
-    @keyframes moveParticles {
-        0% {
-            transform: translate(0, 0);
-            opacity: 0.4;
-        }
-
-        50% {
-            transform: translate(calc(30px - 60px * random()), calc(30px - 60px * random()));
+    
+    /* Light Mode */
+    .code-line.light {
+        color: #000;
+    }
+    
+    /* Dark Mode */
+    .code-line.dark {
+        color: #0ff;
+        text-shadow: 2px 2px rgba(0, 255, 255, 0.3);
+    }
+    
+    /* Floating Up */
+    @keyframes floatUp {
+        from {
+            transform: translateY(10vh);
             opacity: 1;
         }
-
-        100% {
-            transform: translate(0, 0);
-            opacity: 0.4;
+        to {
+            transform: translateY(-100vh);
+            opacity: 0;
         }
     }
-
-    // Apply Theme to Particles
-    &.light .particle {
-        background-color: black;
+    
+    /* Glitch Effect */
+    @keyframes glitchParticles {
+        0% {
+            text-shadow: 2px 2px rgba(255, 0, 0, 0.3), -2px -2px rgba(0, 255, 0, 0.3);
+            font-style: normal;
+        }
+        20% {
+            text-shadow: -2px -2px rgba(0, 255, 0, 0.3), 2px 2px rgba(255, 0, 0, 0.3);
+            font-style: italic;
+        }
+        40% {
+            text-shadow: 2px -2px rgba(0, 255, 255, 0.3), -2px 2px rgba(255, 0, 255, 0.3);
+            font-style: italic;
+        }
+        60% {
+            text-shadow: -2px 2px rgba(255, 255, 0, 0.3), 2px -2px rgba(0, 255, 255, 0.3);
+            font-style: normal;
+        }
+        80% {
+            text-shadow: 2px 2px rgba(255, 0, 255, 0.3), -2px -2px rgba(255, 255, 0, 0.3);
+            font-style: italic;
+        }
+        100% {
+            text-shadow: -2px -2px rgba(0, 255, 255, 0.3), 2px 2px rgba(255, 0, 0, 0.3);
+            font-style: normal;
+        }
     }
+    
+      
 }

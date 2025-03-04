@@ -4,29 +4,85 @@ $pw: '.pw-typo';
     &-mainheader {
         font-size: 64px;
         font-weight: 600;
+        text-shadow: none;
+        position: relative;
+        display: inline-block;
+        animation: glitch 10s steps(1, start) infinite;
     }
+
     &-paragraph {
-        font-size: 16px;
+        font-size: 24px;
     }
+
     &-bold {
         font-weight: bold;
     }
+
     &-secondary-text {
         font-size: 16px;
         color: #686868;
     }
+
     &-subheader {
         font-size: 40px;
     }
+
     &-subheader-small {
         font-size: 32px;
     }
+
     &-resume-name-title {
         font-weight: 100;
     }
+
     &-resume-tagline {
         font-size: 32px;
         font-style: italic;
         color: #686868;
+    }
+}
+
+@keyframes glitch {
+    
+    0%,
+    5% {
+        text-shadow: none;
+        transform: translate(0, 0);
+    }
+
+    5% {
+        text-shadow: 2px 2px rgba(255, 0, 0, 0.3), -2px -2px rgba(0, 255, 0, 0.3);
+        transform: translate(-1px, 0);
+    }
+
+    5.5% {
+        text-shadow: -2px -2px rgba(0, 255, 0, 0.3), 2px 2px rgba(255, 0, 0, 0.3);
+        transform: translate(2px, 0);
+    }
+
+    6% {
+        text-shadow: 2px -2px rgba(0, 255, 255, 0.3), -2px 2px rgba(255, 0, 255, 0.3);
+        transform: translate(-1px, 0);
+    }
+
+    6.5% {
+        text-shadow: -2px 2px rgba(255, 255, 0, 0.3), 2px -2px rgba(0, 255, 255, 0.3);
+        transform: translate(2px, 0);
+    }
+
+    7% {
+        text-shadow: 2px 2px rgba(255, 0, 255, 0.3), -2px -2px rgba(255, 255, 0.3);
+        transform: translate(-2px, 0);
+    }
+
+    7.5% {
+        text-shadow: -2px -2px rgba(0, 255, 255, 0.3), 2px 2px rgba(255, 0, 0, 0.3);
+        transform: translate(1px, 0);
+    }
+    
+    8%,
+    100% {
+        text-shadow: none;
+        transform: translate(0, 0);
     }
 }

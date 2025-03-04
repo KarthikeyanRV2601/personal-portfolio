@@ -1,0 +1,33 @@
+{
+    "codeSnippets": [
+        "// TODO: Fix this bug... or just blame the intern.",
+        "const life = () => { return '42'; }; // Deep thoughts by JS",
+        "function sleep(ms) { return new Promise(res => setTimeout(res, ms)); } // Me waiting for motivation",
+        "let coffee = { size: 'large', shots: 3 }; // Fuel for debugging",
+        "if (codeQuality < 5) { console.log('It works on my machine!'); }",
+        "try { throw new Error('Not my problem!'); } catch (boss) { fixBug(); }",
+        "<marquee>Old devs will remember this...</marquee>",
+        "const debug = () => console.log('Why are you not working?!');",
+        "while(alive) { code(); sleep(6); repeat(); } // The dev loop",
+        "fetch('motivation.com').then(res => res.json()).catch(err => nap());",
+        "function fixBug() { return 'commit and push to production'; }",
+        "let deadline = new Date('tomorrow'); deadline.extend(); // Hopeful dev",
+        "if (job === 'done') { celebrate(); } else { panic(); }",
+        "let bugCount = Infinity; // Accurate",
+        "git commit -m 'fixed the fix that broke the last fix'",
+        "function procrastinate() { setTimeout(procrastinate, 3600000); }",
+        "const deploy = () => { console.log('It's fine. Just ship it.'); };",
+        "while(true) { console.log('Why is it not working?'); }",
+        "debugging: Finding where you forgot the semicolon.",
+        "function generateIdeas() { return ['work harder', 'drink coffee', 'debug forever']; }",
+        "if (itWorks) { don'tTouch(); } else { blameTheFramework(); }",
+        "console.warn('Low coffee levels detected!');",
+        "git push --force // Nothing to see here...",
+        "while (!success) { keepTrying(); } // Never-ending loop",
+        "let happiness = (salary) => salary > 100000 ? true : false;",
+        "document.querySelector('motivation').style.display = 'none';",
+        "new Feature().release(); // Immediate regret",
+        "npm install --hope // Waiting...",
+        "const weekendMode = () => { work = false; fun = true; };"
+    ]
+}
