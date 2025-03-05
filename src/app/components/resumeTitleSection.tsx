@@ -10,7 +10,7 @@ export const ResumeTitleSection = (props: ResumeSectionProps) => {
                 <ResumeTagLine textContent={props.resumeData.resumeTagLine} />
             </div>
             <a href={'/KarthikeyanRV_Resume.pdf'} download="Karthikeyan_RV_Resume.pdf" className="pw-resume-page-title-section-download-button pw-interactible">
-                <Image src={'/resources/images/download.png'} width={20} height={20} alt="download" />
+                <Image src={'/resources/images/icons/download.webp'} width={20} height={20} alt="download" />
             </a>
         </div>
     </>);

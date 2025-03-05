@@ -22,7 +22,7 @@ export const ProjectBlock = (props: ProjectBlockProps) => {
                         
                         <a href={projectData.url} className="pw-project-page-project-block-a" target="_blank">
                             Project link 
-                            <Image src={'/resources/images/redirect.png'} width={24} height={24} objectFit="contain" alt="redirect"/>
+                            <Image src={'/resources/images/icons/redirect.webp'} width={24} height={24} objectFit="contain" alt="redirect"/>
                         </a>
                         <div className="pw-pos-margin-top-large" />
                         <Paragraph textContent={'Languages, Frameworks & Tools'} bold />
