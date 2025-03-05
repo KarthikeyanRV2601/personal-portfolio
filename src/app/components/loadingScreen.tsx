@@ -13,7 +13,7 @@ export default function LoadingScreen() {
       audioRef.current.play().catch((err) => console.error("Audio play error:", err));
       setTimeout(() => {
         setIsVisible(false);
-      }, 2500);
+      }, 4000);
       setDisplayButton(false);
       document.removeEventListener("click", playScreen);
     }

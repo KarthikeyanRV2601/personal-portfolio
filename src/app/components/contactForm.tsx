@@ -115,7 +115,7 @@ export const ContactForm = () => {
                 setStatus("Email sent successfully!");
                 setContactData({ ...initialData });
             } else {
-                setStatus("Failed to send email. Try again later.");
+                setStatus("Failed to send email. Try again later. Meanwhile, please mail to karthikeyan.rv.portfolio@gmail.com");
             }
         }
     }, [contactData, validForm, initialData]);

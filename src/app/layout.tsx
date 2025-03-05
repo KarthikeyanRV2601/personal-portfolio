@@ -20,6 +20,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Work+Sans:wght@400;700&display=swap"
         />
         <link rel="stylesheet" href="https://geists-fonts.vercel.app/stylesheet.css" />
+        <link rel="icon" type="image/svg+xml" href="/resources/logoblack.svg" />
       </head>
       <body>
         {children}
