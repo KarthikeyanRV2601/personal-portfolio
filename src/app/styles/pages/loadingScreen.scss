@@ -11,6 +11,7 @@ $pw: '.pw-loading-screen';
     font-size: 16px;
     z-index: 9999;
     transition: opacity 0.5s ease-in-out;
+    flex-direction: column; // Ensures proper stacking on small screens
 
     &.pw-hidden {
         opacity: 0;
@@ -24,6 +25,8 @@ $pw: '.pw-loading-screen';
         color: white;
         position: absolute;
         bottom: 10px;
+        text-align: center; // Centers text on small screens
+        padding: 0 10px; // Adds padding for better spacing
     }
 }
 
@@ -31,18 +34,46 @@ $pw: '.pw-loading-screen';
     font-family: "Geist", sans-serif;
     letter-spacing: 2px;
     animation: pw-fadeIn 1.5s ease-in-out;
+    text-align: center; // Ensures text is always centered
 }
 
-
-
+// Fade-in animation
 @keyframes pw-fadeIn {
     0% {
         opacity: 0;
         transform: scale(0.9);
     }
-
     100% {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #{$pw} {
+        font-size: 14px; // Reduce font size for tablets
+    }
+
+    .pw-typo-paragraph {
+        font-size: 10px; // Smaller text on smaller screens
+        bottom: 5px; // Adjust positioning
+    }
+}
+
+@media (max-width: 480px) {
+    #{$pw} {
+        font-size: 12px; // Even smaller font size for mobile
+        padding: 20px; // Adds padding to prevent text from touching edges
+    }
+
+    .pw-loading-text {
+        font-size: 14px; // Adjusts size to fit smaller screens
+    }
+
+    .pw-typo-paragraph {
+        font-size: 9px;
+        bottom: 5px;
+        padding: 0 5px;
     }
 }

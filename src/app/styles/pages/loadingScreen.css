@@ -9,6 +9,7 @@
   font-size: 16px;
   z-index: 9999;
   transition: opacity 0.5s ease-in-out;
+  flex-direction: column;
 }
 .pw-loading-screen.pw-hidden {
   opacity: 0;
@@ -22,12 +23,15 @@
   color: white;
   position: absolute;
   bottom: 10px;
+  text-align: center;
+  padding: 0 10px;
 }
 
 .pw-loading-text {
   font-family: "Geist", sans-serif;
   letter-spacing: 2px;
   animation: pw-fadeIn 1.5s ease-in-out;
+  text-align: center;
 }
 
 @keyframes pw-fadeIn {
@@ -38,5 +42,29 @@
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .pw-loading-screen {
+    font-size: 14px;
+  }
+  .pw-typo-paragraph {
+    font-size: 10px;
+    bottom: 5px;
+  }
+}
+@media (max-width: 480px) {
+  .pw-loading-screen {
+    font-size: 12px;
+    padding: 20px;
+  }
+  .pw-loading-text {
+    font-size: 14px;
+  }
+  .pw-typo-paragraph {
+    font-size: 9px;
+    bottom: 5px;
+    padding: 0 5px;
   }
 }/*# sourceMappingURL=loadingScreen.css.map */

@@ -17,15 +17,19 @@ $pw-menu: '.pw-menu';
         bottom: 20px; // Slightly more space
         left: 20px; // Added space from left to prevent overflow
         z-index: 10;
+
         @media (max-width: 768px) {
             width: 200px; // Smaller width for tablets
             bottom: 15px;
             bottom: 0;
             left: 0;
             flex-direction: row;
-            justify-content: space-around; // Horizontal menu for mobile
+            justify-content: center; // Horizontal menu for mobile
             background: white;
             padding: 10px;
+            margin: 0;
+            margin: 0;
+            gap: 16px;
         }
 
         @media (max-width: 480px) {
@@ -34,9 +38,12 @@ $pw-menu: '.pw-menu';
             bottom: 0;
             left: 0;
             flex-direction: row;
-            justify-content: space-around; // Horizontal menu for mobile
+            justify-content: center; // Horizontal menu for mobile
             background: white;
             padding: 10px;
+            margin: 0;
+            margin: 0;
+            gap: 16px;
         }
     }
 
