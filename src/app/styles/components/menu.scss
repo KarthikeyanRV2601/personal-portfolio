@@ -20,6 +20,12 @@ $pw-menu: '.pw-menu';
         @media (max-width: 768px) {
             width: 200px; // Smaller width for tablets
             bottom: 15px;
+            bottom: 0;
+            left: 0;
+            flex-direction: row;
+            justify-content: space-around; // Horizontal menu for mobile
+            background: white;
+            padding: 10px;
         }
 
         @media (max-width: 480px) {
