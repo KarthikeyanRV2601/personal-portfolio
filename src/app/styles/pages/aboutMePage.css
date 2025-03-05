@@ -1,7 +1,16 @@
 @charset "UTF-8";
 .pw-about-me-page {
+  /* Mobile Screens (≤ 768px) */
   /* Tablet Screens (≤ 1024px) */
   /* Mobile Screens (≤ 768px) */
+}
+@media (max-width: 768px) {
+  .pw-about-me-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .pw-about-me-page-landing-wrap {
   width: 100%;

@@ -39,6 +39,8 @@
     width: 100%;
     padding: 20px;
     margin-bottom: 100px;
+    max-width: 80%;
+    margin-left: 5%;
   }
   .pw-main-page .pw-main-content-renderer {
     font-size: 24px;

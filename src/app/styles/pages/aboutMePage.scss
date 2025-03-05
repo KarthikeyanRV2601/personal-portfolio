@@ -1,4 +1,12 @@
 .pw-about-me-page {
+    
+    /* Mobile Screens (≤ 768px) */
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     &-landing-wrap {
         width: 100%;
         display: flex;
