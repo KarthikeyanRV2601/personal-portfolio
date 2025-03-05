@@ -6,4 +6,9 @@
 }
 .pw-pos-margin-left-large {
   margin-left: 60px;
+}
+@media (max-width: 768px) {
+  .pw-pos-margin-left-large {
+    margin-left: 0px;
+  }
 }/*# sourceMappingURL=positioning.css.map */

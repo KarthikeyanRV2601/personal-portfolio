@@ -1,12 +1,49 @@
 $pw: '.pw-main-page';
 
 #{$pw} {
-    padding: 65px 130px 65px 65px ;
+    padding: 65px 130px 65px 65px;
     position: relative;
     transition: background-color 0.5s ease-in-out;
+
     .pw-main-content-renderer {
         font-size: 64px;
         margin-left: 640px;
     }
-}
 
+    /* Tablet (≤1024px) */
+    @media (max-width: 1024px) {
+        width: 100%;
+        padding: 50px;
+        margin-bottom: 100px;
+        
+        .pw-main-content-renderer {
+            font-size: 48px;
+            margin-left: 0; // No forced left margin on smaller screens
+            text-align: center;
+        }
+    }
+
+    /* Mobile (≤768px) */
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 30px;
+        margin-bottom: 100px;
+
+        .pw-main-content-renderer {
+            font-size: 32px;
+            text-align: center;
+        }
+    }
+
+    /* Small Mobile (≤480px) */
+    @media (max-width: 480px) {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 100px;
+
+        .pw-main-content-renderer {
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+}

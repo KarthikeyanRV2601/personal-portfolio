@@ -1,9 +1,47 @@
+@charset "UTF-8";
 .pw-main-page {
   padding: 65px 130px 65px 65px;
   position: relative;
   transition: background-color 0.5s ease-in-out;
+  /* Tablet (≤1024px) */
+  /* Mobile (≤768px) */
+  /* Small Mobile (≤480px) */
 }
 .pw-main-page .pw-main-content-renderer {
   font-size: 64px;
   margin-left: 640px;
+}
+@media (max-width: 1024px) {
+  .pw-main-page {
+    width: 100%;
+    padding: 50px;
+    margin-bottom: 100px;
+  }
+  .pw-main-page .pw-main-content-renderer {
+    font-size: 48px;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .pw-main-page {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 100px;
+  }
+  .pw-main-page .pw-main-content-renderer {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .pw-main-page {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 100px;
+  }
+  .pw-main-page .pw-main-content-renderer {
+    font-size: 24px;
+    text-align: center;
+  }
 }/*# sourceMappingURL=mainPage.css.map */

@@ -8,24 +8,64 @@ $pw-menu: '.pw-menu';
 }
 
 #{$pw-menu} {
-    &-ul{
+    &-ul {
         width: 250px;
-        height: 280px;
+        height: auto; // Allow flexible height
         @include flex-column();
         align-items: flex-start;
         position: fixed;
-        bottom: 10px;
+        bottom: 20px; // Slightly more space
+        left: 20px; // Added space from left to prevent overflow
+        z-index: 10;
+        @media (max-width: 768px) {
+            width: 200px; // Smaller width for tablets
+            bottom: 15px;
+        }
+
+        @media (max-width: 480px) {
+            width: 100%; // Full width on small screens
+            height: auto;
+            bottom: 0;
+            left: 0;
+            flex-direction: row;
+            justify-content: space-around; // Horizontal menu for mobile
+            background: white;
+            padding: 10px;
+        }
     }
-    &-li{
+
+    &-li {
         cursor: pointer;
         font-size: 16px;
         list-style: none;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            font-size: 10px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 10px;
+        }
     }
-    &-li-active{
+
+    &-li-active {
         font-size: 24px;
         font-weight: bold;
         position: relative;
         display: inline-block;
-        animation: glitch 10s steps(1, start) infinite;
+        animation: glitch 2s steps(1, start) infinite; // Faster glitch effect
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 16px;
+        }
     }
 }

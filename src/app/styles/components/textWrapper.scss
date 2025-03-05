@@ -8,6 +8,15 @@ $pw: '.pw-typo';
         position: relative;
         display: inline-block;
         animation: glitch 10s steps(1, start) infinite;
+
+        
+        @media (max-width: 768px) {
+            font-size: 48px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 48px;
+        }
     }
 
     &-paragraph {
@@ -33,6 +42,13 @@ $pw: '.pw-typo';
 
     &-resume-name-title {
         font-weight: 100;
+        @media (max-width: 768px) {
+            font-size: 48px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 48px;
+        }
     }
 
     &-resume-tagline {

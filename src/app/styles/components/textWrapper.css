@@ -6,6 +6,16 @@
   display: inline-block;
   animation: glitch 10s steps(1, start) infinite;
 }
+@media (max-width: 768px) {
+  .pw-typo-mainheader {
+    font-size: 48px;
+  }
+}
+@media (max-width: 480px) {
+  .pw-typo-mainheader {
+    font-size: 48px;
+  }
+}
 .pw-typo-paragraph {
   font-size: 24px;
 }
@@ -24,6 +34,16 @@
 }
 .pw-typo-resume-name-title {
   font-weight: 100;
+}
+@media (max-width: 768px) {
+  .pw-typo-resume-name-title {
+    font-size: 48px;
+  }
+}
+@media (max-width: 480px) {
+  .pw-typo-resume-name-title {
+    font-size: 48px;
+  }
 }
 .pw-typo-resume-tagline {
   font-size: 32px;

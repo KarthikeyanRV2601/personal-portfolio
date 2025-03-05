@@ -1,19 +1,30 @@
 $pw: '.pw-project-page';
 
-
 #{$pw} {
-    &-tech-stack {
-        background: white;
-        display: flex;
-        gap: 24px;
-        // padding-left: 24px;
-        padding-right: 24px;
-        width: fit-content;
-        &-image{
-            cursor: pointer;
-        }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    @media (max-width: 768px) {
+        padding: 20px;
     }
+
     &-project-block {
+        padding: 24px;
+        margin-bottom: 40px;
+        width: 100%;
+        transition: transform 0.2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 768px) {
+            padding: 16px;
+        }
+
         &-a {
             color: black;
             font-size: 16px;
@@ -21,6 +32,53 @@ $pw: '.pw-project-page';
             align-items: center;
             justify-content: flex-start;
             gap: 10px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+            width: fit-content;
+            background: white;
+            padding: 2px;
+            
+            @media (max-width: 768px) {
+                gap: 12px;
+                align-self: center;
+            }
+
+            img {
+                width: 24px;
+                height: 24px;
+                transition: transform 0.2s ease-in-out;
+                background: white;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    &-tech-stack {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        width: fit-content;
+        &-image {
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+            
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            background: white;
+            padding: 2px;
+        }
+
+        @media (max-width: 768px) {
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
         }
     }
 }

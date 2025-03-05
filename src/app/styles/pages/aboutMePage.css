@@ -1,27 +1,81 @@
+@charset "UTF-8";
+.pw-about-me-page {
+  /* Tablet Screens (≤ 1024px) */
+  /* Mobile Screens (≤ 768px) */
+}
 .pw-about-me-page-landing-wrap {
   width: 100%;
   display: flex;
-  height: 100%;
+  height: auto;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .pw-about-me-page-landing-wrap-left-section {
   width: 60%;
-  height: 100%;
 }
 .pw-about-me-page-landing-wrap-left-section .pw-typo-mainheader {
   font-size: 96px;
+  line-height: 1.1;
 }
 .pw-about-me-page-landing-wrap-right-section {
   width: 30%;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
   align-items: flex-end;
+  text-align: right;
 }
 .pw-about-me-page-landing-wrap-right-section .pw-typo-mainheader {
   font-size: 24px;
 }
 .pw-about-me-page-landing-wrap-right-section .pw-typo-paragraph {
   font-size: 16px;
+}
+@media (max-width: 1024px) {
+  .pw-about-me-page-landing-wrap {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .pw-about-me-page-landing-wrap-left-section {
+    width: 100%;
+  }
+  .pw-about-me-page-landing-wrap-left-section .pw-typo-mainheader {
+    font-size: 72px;
+  }
+  .pw-about-me-page-landing-wrap-right-section {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .pw-about-me-page-landing-wrap-right-section .pw-typo-mainheader {
+    font-size: 20px;
+  }
+  .pw-about-me-page-landing-wrap-right-section .pw-typo-paragraph {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .pw-about-me-page-landing-wrap {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .pw-about-me-page-landing-wrap-left-section {
+    width: 100%;
+  }
+  .pw-about-me-page-landing-wrap-left-section .pw-typo-mainheader {
+    font-size: 48px;
+  }
+  .pw-about-me-page-landing-wrap-right-section {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .pw-about-me-page-landing-wrap-right-section .pw-typo-mainheader {
+    font-size: 18px;
+  }
+  .pw-about-me-page-landing-wrap-right-section .pw-typo-paragraph {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=aboutMePage.css.map */

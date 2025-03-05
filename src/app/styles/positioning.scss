@@ -12,5 +12,8 @@ $pw: '.pw-pos';
 
     &-margin-left-large{
         margin-left: 60px;
+        @media (max-width: 768px) {
+            margin-left: 0px;
+        }
     }
 }

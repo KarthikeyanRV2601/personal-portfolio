@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+  .pw-experience-page {
+    padding: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .pw-experience-page-experience-block {
+    padding: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .pw-experience-page .pw-typo-mainheader {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .pw-experience-page .pw-typo-secondary-text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .pw-experience-page .pw-typo-paragraph {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=experiencePage.css.map */

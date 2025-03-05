@@ -1,0 +1,36 @@
+$pw-experience: '.pw-experience-page';
+
+#{$pw-experience} {
+    
+    @media (max-width: 768px) {
+        padding: 20px;
+    }
+
+    &-experience-block {
+
+        @media (max-width: 768px) {
+            padding: 16px;
+        }
+    }
+
+    .pw-typo-mainheader {
+        
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
+    }
+
+    .pw-typo-secondary-text {
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }
+
+    .pw-typo-paragraph {
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+}

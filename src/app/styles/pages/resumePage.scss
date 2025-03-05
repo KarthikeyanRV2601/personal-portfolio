@@ -1,26 +1,110 @@
 $pw: '.pw-resume-page';
 
-
 #{$pw} {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+
+    @media (max-width: 768px) {
+        padding: 0;
+    }
+
+    /* Title Section */
     &-title-section {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        &-download-button{
+        flex-wrap: wrap;
+        gap: 20px;
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        &-download-button {
             background: white;
             width: 30px;
             height: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
-            
+            border-radius: 5px;
+            transition: all 0.3s ease;
+
             &:hover {
                 opacity: 0.8;
-                transition: all 0.3s ease;
             }
         }
+    }
 
+    /* Skills Section */
+    &-skills-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &-skill {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+    }
+
+    /* Experience Section */
+    &-experience-section {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        &-experience {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            &-position {
+                margin-top: 16px;
+
+                &-information {
+                    padding-left: 20px;
+                    
+                    @media (max-width: 768px) {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Education Section */
+    &-education-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    /* Projects Section */
+    &-projects-section {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        &-project {
+            &-title {
+                font-weight: bold;
+            }
+
+            &-description {
+                padding-left: 20px;
+
+                @media (max-width: 768px) {
+                    padding-left: 10px;
+                }
+            }
+        }
     }
 }

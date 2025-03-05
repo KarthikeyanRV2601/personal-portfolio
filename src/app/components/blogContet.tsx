@@ -22,11 +22,11 @@ export const BlogContent = (props: BlogContentProps) => {
         <MainHeader textContent={blogData.title} />
         <SecondaryText textContent={blogData.date} />
         <div className="pw-blogs-page-blog-content-paragraph-image-wrap pw-pos-margin-top-large">
+            <Image className="pw-blogs-page-blog-content-blog-image" src={`/resources/images/blogs/${blogData.image}`} alt={blogData.image} height={315} width={450} objectFit="contain" />
             <div className="pw-blogs-page-blog-content-paragraph-image-wrap-paragraph-wrap">
                 <Paragraph textContent={blogData.description} />
             </div>
 
-            <Image className="pw-blogs-page-blog-content-blog-image" src={`/resources/images/blogs/${blogData.image}`} alt={blogData.image} height={315} width={450} objectFit="contain" />
         </div>
         <Button buttonLabel="Return to index" buttonCallBack={returnToIndex} className={'pw-blogs-page-blog-navigation-return-button pw-pos-margin-top-large'}/>
     </div>)
