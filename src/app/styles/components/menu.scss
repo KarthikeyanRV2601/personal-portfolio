@@ -66,6 +66,12 @@ $pw-menu: '.pw-menu';
         @media (max-width: 480px) {
             font-size: 10px;
         }
+
+        
+        @media (max-width: 1400px) {
+            background: var(--background-color);
+            color: var(--text-color);
+        }
     }
 
     &-li-active {

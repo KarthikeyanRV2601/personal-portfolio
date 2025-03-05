@@ -3,7 +3,6 @@
   padding: 65px 130px 65px 65px;
   position: relative;
   transition: background-color 0.5s ease-in-out;
-  /* Tablet (≤1024px) */
   /* Mobile (≤768px) */
   /* Small Mobile (≤480px) */
 }
@@ -11,16 +10,18 @@
   font-size: 64px;
   margin-left: 640px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
   .pw-main-page {
     width: 100%;
-    padding: 50px;
+    padding: 0;
+    padding-top: 50px;
     margin-bottom: 100px;
   }
   .pw-main-page .pw-main-content-renderer {
     font-size: 48px;
     margin-left: 0;
     text-align: center;
+    padding: 50px;
   }
 }
 @media (max-width: 768px) {

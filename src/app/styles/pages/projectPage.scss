@@ -38,6 +38,12 @@ $pw: '.pw-project-page';
             width: fit-content;
             background: white;
             padding: 2px;
+
+                        
+            @media (max-width: 1400px) {
+                align-self: center;
+            }
+
             
             @media (max-width: 768px) {
                 gap: 12px;
@@ -76,6 +82,13 @@ $pw: '.pw-project-page';
 
         @media (max-width: 768px) {
             gap: 12px;
+            align-items: center;
+            justify-content: center;
+            align-self: center;
+        }
+
+                                
+        @media (max-width: 1400px) {
             align-items: center;
             justify-content: center;
             align-self: center;

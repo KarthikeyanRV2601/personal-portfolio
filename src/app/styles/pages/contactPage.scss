@@ -6,6 +6,10 @@ $pw: '.pw-contact-page';
         flex-direction: column;
         gap: 20px;
 
+        @media (max-width: 1400px) {
+            margin-top: 10%;
+        }
+
         &-row {
             display: flex;
             gap: 20px;

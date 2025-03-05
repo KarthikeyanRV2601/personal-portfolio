@@ -2,8 +2,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Paragraph } from "./typography";
 
-export default function LoadingScreen() {
-  const [isVisible, setIsVisible] = useState(true);
+export default function LoadingScreen(props: { isVisible: boolean, setIsVisible: (a: boolean) => void }) {
+  const { isVisible, setIsVisible } = props;
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [displayButton, setDisplayButton] = useState(true);
 
@@ -17,7 +17,7 @@ export default function LoadingScreen() {
       setDisplayButton(false);
       document.removeEventListener("click", playScreen);
     }
-  }, []);
+  }, [setIsVisible]);
 
   useEffect(() => {
     document.addEventListener("click", playScreen);

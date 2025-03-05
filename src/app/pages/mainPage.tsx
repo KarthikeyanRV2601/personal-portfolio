@@ -17,6 +17,7 @@ export const MainPage = () => {
 
     const [currentMainPageTab, setCurrentMainPageTab] = useState(MainPageTabs.ABOUT_ME);
     const [darkMode, setDarkMode] = useState(false);
+    const [isLoadingScreenVisible, setIsLoadingScreenVisible] = useState(true);
 
     const renderContent = useCallback(() => {
         switch (currentMainPageTab) {
@@ -31,19 +32,24 @@ export const MainPage = () => {
 
     return (
         <>
-            <LoadingScreen />
-            <div className={`pw-dynamic-background ${darkMode ? 'dark' : 'light'}`}>
-                {currentMainPageTab === MainPageTabs.PROJECTS && <FloatingCode theme={darkMode ? 'dark' : 'light'}/>}
-            </div>
-            <div className={'pw-main-page'}>
-                <ThemeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} />
-                <Menu currentMainPageTab={currentMainPageTab} setCurrentMainPageTab={setCurrentMainPageTab} />
-                <div className={'pw-main-content-renderer'}>
-                    {
-                        renderContent()
-                    }
-                </div>
-            </div>
+            {isLoadingScreenVisible && <LoadingScreen isVisible={isLoadingScreenVisible} setIsVisible={setIsLoadingScreenVisible} />}
+            {
+                !isLoadingScreenVisible &&
+                <>
+                    <div className={`pw-dynamic-background ${darkMode ? 'dark' : 'light'}`}>
+                        {currentMainPageTab === MainPageTabs.PROJECTS && <FloatingCode theme={darkMode ? 'dark' : 'light'} />}
+                    </div>
+                    <div className={'pw-main-page'}>
+                        <ThemeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} />
+                        <Menu currentMainPageTab={currentMainPageTab} setCurrentMainPageTab={setCurrentMainPageTab} />
+                        <div className={'pw-main-content-renderer'}>
+                            {
+                                renderContent()
+                            }
+                        </div>
+                    </div>
+                </>
+            }
         </>
     )
 }

@@ -4,15 +4,22 @@ $pw: '.pw-pos';
 #{$pw} {
     &-margin-top-regular{
         margin-top: 24px;
+        @media (max-width: 1400px) {
+            margin-top: 0px;
+        }
     }
 
     &-margin-top-large{
         margin-top: 60px;
+        @media (max-width: 1400px) {
+            margin-top: 0px;
+        }
     }
 
     &-margin-left-large{
         margin-left: 60px;
-        @media (max-width: 768px) {
+
+        @media (max-width: 1400px) {
             margin-left: 0px;
         }
     }

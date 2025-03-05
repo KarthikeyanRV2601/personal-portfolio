@@ -1,13 +1,23 @@
 .pw-pos-margin-top-regular {
   margin-top: 24px;
 }
+@media (max-width: 1400px) {
+  .pw-pos-margin-top-regular {
+    margin-top: 0px;
+  }
+}
 .pw-pos-margin-top-large {
   margin-top: 60px;
+}
+@media (max-width: 1400px) {
+  .pw-pos-margin-top-large {
+    margin-top: 0px;
+  }
 }
 .pw-pos-margin-left-large {
   margin-left: 60px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
   .pw-pos-margin-left-large {
     margin-left: 0px;
   }

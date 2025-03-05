@@ -16,6 +16,11 @@ $pw: '.pw-blogs-page';
             align-items: center;
         }
 
+        
+        @media (max-width: 1400px) {
+            align-items: center;
+        }
+
         &-blog-image {
             width: 100%;
             max-width: 450px;
@@ -23,6 +28,10 @@ $pw: '.pw-blogs-page';
             object-fit: contain;
 
             @media (max-width: 500px) {
+                max-width: 100%;
+            }
+
+            @media (max-width: 1400px) {
                 max-width: 100%;
             }
         }

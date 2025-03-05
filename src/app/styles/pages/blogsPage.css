@@ -14,6 +14,11 @@
     align-items: center;
   }
 }
+@media (max-width: 1400px) {
+  .pw-blogs-page-blog-content {
+    align-items: center;
+  }
+}
 .pw-blogs-page-blog-content-blog-image {
   width: 100%;
   max-width: 450px;
@@ -22,6 +27,11 @@
      object-fit: contain;
 }
 @media (max-width: 500px) {
+  .pw-blogs-page-blog-content-blog-image {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1400px) {
   .pw-blogs-page-blog-content-blog-image {
     max-width: 100%;
   }

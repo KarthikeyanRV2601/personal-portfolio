@@ -2,6 +2,7 @@
 .pw-about-me-page {
   /* Mobile Screens (≤ 768px) */
   /* Tablet Screens (≤ 1024px) */
+  /* Tablet Screens (≤ 1024px) */
   /* Mobile Screens (≤ 768px) */
 }
 @media (max-width: 768px) {
@@ -39,6 +40,11 @@
 }
 .pw-about-me-page-landing-wrap-right-section .pw-typo-paragraph {
   font-size: 16px;
+}
+@media (max-width: 1400px) {
+  .pw-about-me-page-landing-wrap {
+    justify-content: center;
+  }
 }
 @media (max-width: 1024px) {
   .pw-about-me-page-landing-wrap {

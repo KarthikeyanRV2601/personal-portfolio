@@ -40,6 +40,11 @@
   background: white;
   padding: 2px;
 }
+@media (max-width: 1400px) {
+  .pw-project-page-project-block-a {
+    align-self: center;
+  }
+}
 @media (max-width: 768px) {
   .pw-project-page-project-block-a {
     gap: 12px;
@@ -74,6 +79,13 @@
 @media (max-width: 768px) {
   .pw-project-page-tech-stack {
     gap: 12px;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+  }
+}
+@media (max-width: 1400px) {
+  .pw-project-page-tech-stack {
     align-items: center;
     justify-content: center;
     align-self: center;

@@ -3,6 +3,11 @@
   flex-direction: column;
   gap: 20px;
 }
+@media (max-width: 1400px) {
+  .pw-contact-page-contact-form {
+    margin-top: 10%;
+  }
+}
 .pw-contact-page-contact-form-row {
   display: flex;
   gap: 20px;
