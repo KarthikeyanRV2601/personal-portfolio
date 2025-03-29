@@ -19,7 +19,7 @@ export const MainHeader = (props: TextWrapperProps) => {
     return (
         <div className="pw-typo-mainheader">
             {textContent}
-            <audio ref={audioRef} src="/glitch2.wav" preload="auto"/>
+            <audio ref={audioRef} src="/glitch2.mp3" preload="auto"/>
         </div>
     )
 }

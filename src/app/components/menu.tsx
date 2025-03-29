@@ -53,7 +53,7 @@ export const Menu = (props: MenuProps) => {
             <ul className="pw-menu-ul">
                 {menuTabs.map((tab, index) => <li key={index} className={`pw-menu-li ${currentMainPageTab === tab.id ? 'pw-menu-li-active' : ''}`} onClick={() => handleOnClick(tab)}>{tab.value}</li>)}
             </ul>
-            <audio ref={audioRef} src="/glitch2.wav" preload="auto" />
+            <audio ref={audioRef} src="/glitch2.mp3" preload="auto" />
         </>
 
     )
