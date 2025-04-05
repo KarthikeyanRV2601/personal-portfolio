@@ -1,10 +1,12 @@
 {
     "data": {
         "resumeNameTitle": "Karthikeyan R V",
-        "resumeTagLine": "Software engineer II at Oracle",
+        "resumeTagLine": "Software Engineer Level 2 (SDE2) at Oracle",
         "skills": {
-            "languages": "Typescript, JavaScript, C++, C, JAVA, Python, Solidity, HTML, CSS, SCSS",
-            "frameworkAndTools": "ReactJS, React Native, PreactJS, Oracle ADF, OracleJet, CI/CD pipeline automation & development, Jekyll, NodeJS, Firebase, MongoDB, Flask, Cypress Automation, Selenium Java Automation, Git, JIRA, Jenkins, Adobe XD, Adobe Illustrator, Figma, Blender"
+            "languages": "Typescript (10), JavaScript (10), JAVA (10), Python (10), SQL (10), HTML (10), CSS (10), SCSS (10), C++ (7), C (7), Solidity (7)",
+            "frameworkAndTools": "ReactJS (10), PreactJS (10), React Native (8), Oracle ADF (10), OracleJet (10), NodeJS (10), Firebase (10), PostgreSQL (10), MongoDB (8), Flask (8), Cypress Automation (10), Selenium Java Automation (10), CI/CD pipeline automation & development (8), Jekyll (8), Git (10), JIRA (10), Jenkins (8), Adobe XD (10), Figma (10), Adobe Illustrator (9), Blender (7)",
+            "aiMlAndDataScience": "LangChain (5), GPT-4 (5), OpenAI API (5), Semantic Search (5), Retrieval-Augmented Generation (5), Vector Databases (FAISS) (5), Chatbot Development (5), Prompt Engineering (5), Embedding Models (5), Numpy (5), Document Parsing (5), PDF Text Extraction (5), Data Preprocessing (5), Asynchronous Data Pipelines (5), Text Processing (5)",
+            "certifications": "Oracle Cloud Infrastructure 2025 AI Foundations Associate"
         },
         "experience": [
             {
@@ -110,12 +112,34 @@
         ],
         "projects": [
             {
-                "projectTitle": "Cloud PMS - OPERA Cloud ",
-                "description": "Contributing to the world's number 1 hospitality software, OPERA Cloud, designed specifically for hotel operations. Actively involved in building a cloud-based solution for hotel management that caters to 40,000 properties globally using OPERA PMS; achieved an impressive annual customer growth rate of 100% since the platform's launch. Click here for the project website."
+                "projectTitle": "Cloud PMS - OPERA Cloud",
+                "description": "Contributed to the world's #1 hotel management system used by ~40K properties, focusing on frontend framework modules.",
+                "link": "https://www.oracle.com/in/hospitality/hotel-property-management/hotel-pms-software/"
+            },
+            {
+                "projectTitle": "Policy Compliance System",
+                "description": "Developed a SOC 2-compliant app for managing employee policy acknowledgments with roles, versioning, and automated escalations.",
+                "link": "https://drive.google.com/file/d/1ZDbhMMZFMbD_-xAWQh4WGsU8pyyMmPiN/view?usp=sharing"
+            },
+            {
+                "projectTitle": "Aether",
+                "description": "Aether is a mindful visual productivity tool that helps you map your life, dream boldly, and flow with purpose.",
+                "link": "https://drive.google.com/file/d/1idMcLkzvYFX8bn6xfjOynsS7LrrjUgFe/view?usp=sharing"
+            },
+            {
+                "projectTitle": "Vortex AI",
+                "description": "A document-based chatbot app where admins upload PDFs to train the model, and users can interact with an AI via a smart, searchable chat interface.",
+                "link": "https://github.com/karthikeyan2601/Vortex-AI"
             },
             {
                 "projectTitle": "Order Management System",
-                "description": "Created an order and stock management web application for a construction company, featuring four distinct user roles with tailored pages to support their specific functionalities. Delivered a high-performance, full-stack website using the PERN stack (PostgreSQL, ExpressJS, React, NodeJS). Find more about the project here."
+                "description": "Built a full-stack PERN web app with 4 user roles for a construction company to manage orders and inventory.",
+                "link": "https://drive.google.com/file/d/1flZPPZYNk9X7WBCVhh5M9_wmv4Jdt0o8/view?usp=sharing"
+            },
+            {
+                "projectTitle": "Online Video, Audio & PDF Editor",
+                "description": "Developed secure, client-side web tools to edit media files with 20+ core features, ensuring data never leaves the browser.",
+                "link": "https://karthikeyan2601.github.io/Online-Video-Audio-PDF-Editor/"
             }
         ]
     }

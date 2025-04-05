@@ -9,6 +9,9 @@ export const ResumeProjectsSection = (props: ResumeSectionProps) => {
                 <Paragraph textContent={project.projectTitle} bold />
                 <div className="pw-pos-margin-left-large">
                     <Paragraph textContent={project.description} />
+                    <a href={project.link} className="pw-project-page-project-block-a" target="_blank">
+                        Click here to view project
+                    </a>
                 </div>
             </div>)
         }

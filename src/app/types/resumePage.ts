@@ -8,6 +8,8 @@ export type ResumeData = {
     skills: {
         languages: string;
         frameworkAndTools: string;
+        aiMlAndDataScience: string;
+        certifications: string;
     };
     experience: Experience[];
     education: Education[];
@@ -45,4 +47,5 @@ export type Education = {
 export type Project = {
     projectTitle: string;
     description: string;
+    link: string;
 };

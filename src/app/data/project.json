@@ -21,7 +21,72 @@
             ],
             "url": "https://www.oracle.com/in/hospitality/hotel-property-management/hotel-pms-software/tour/"
         },
-
+        {
+            "title": "Aether",
+            "role": "Frontend Engineer & Designer",
+            "start": "October 2022",
+            "end": "December 2022",
+            "description": "Aether is a modular, visually-driven self-exploration and productivity platform built with Next.js, React, and Firebase, featuring a highly interactive canvas using React Flow. It allows users to create, organize, and connect life elements like passions, goals, and dreams through nodes and timelines. It uses Supabase storage for decentralized image storage and offers seamless dark/light theming, SCSS-based responsive styling, and a scalable component architecture. Designed for extensibility and clean state management, Aether integrates journaling, goal tracking, and visualization into a unified, personalized experience.",
+            "technologies": [
+                "react",
+                "typescript",
+                "figma",
+                "firebase",
+                "supabase"
+            ],
+            "projectImages": [
+                "project61.webp",
+                "project62.webp",
+                "project63.webp"
+            ],
+            "url": "https://contra.com/p/NUoYZ2BM-aether"
+        },
+        {
+            "title": "Policy Compliance System",
+            "role": "Full Stack Developer",
+            "start": "January 2023",
+            "end": "March 2023",
+            "description": "Developed a secure, SOC 2-compliant web application to streamline how organizations manage and track employee policy acknowledgments. The system automates the entire workflow—from role-based policy assignment and version control to approval tracking and smart escalation handling—ensuring zero compliance gaps. Designed with enterprise scalability in mind, it empowers HR and legal teams to maintain audit readiness effortlessly while reducing manual overhead.",
+            "technologies": [
+                "react",
+                "typescript",
+                "node",
+                "postgresql",
+                "firebase"
+            ],
+            "projectImages": [
+                "project51.webp",
+                "project52.webp",
+                "project53.webp",
+                "project54.webp",
+                "project55.webp",
+                "project56.webp",
+                "project57.webp",
+                "project58.webp",
+                "project59.webp"
+            ],
+            "url": "https://docs.google.com/document/d/1UgFN7qpVdGrDzPuNyUg97LLtxXgkvLk8vITuKfN3IxM/edit?usp=sharing"
+        },
+        {
+            "title": "Vortex AI",
+            "role": "AI/ML Engineer, Full Stack Developer",
+            "start": "February 2024",
+            "end": "Present",
+            "description": "Engineered a cutting-edge document intelligence platform that converts PDFs into searchable, interactive knowledge bases using LangChain, OpenAI's GPT-4, and FAISS. Admins can upload internal documentation, which the system intelligently indexes and understands, enabling users to query the content through a conversational AI chatbot. It’s a next-gen solution for organizations to unlock insights from static files with real-time, contextual answers—redefining how teams access critical information.",
+            "technologies": [
+                "langchain",
+                "gpt4",
+                "fastapi",
+                "react",
+                "typescript",
+                "node",
+                "ai"
+            ],
+            "projectImages": [
+                "project71.webp"
+            ],
+            "url": "https://github.com/karthikeyan2601/Vortex-AI"
+        },
         {
             "title": "Order Management System",
             "role": "Full stack developer, UI/UX Designer",
@@ -45,7 +110,6 @@
             ],
             "url": "https://contra.com/p/7g2mWsbR-order-management-system"
         },
-
         {
             "title": "Safe Video Kit - Secure and Seamless Video Editing and Sharing",
             "role": "Full stack developer, UI/UX Designer",
@@ -65,7 +129,6 @@
             ],
             "url": "https://contra.com/p/AEMYlRUU-safe-video-kit-secure-and-seamless-video-editing-and-sharing"
         },
-
         {
             "title": "Student Profile Management System",
             "role": "Full stack developer, UI/UX Designer",
@@ -88,6 +151,5 @@
             ],
             "url": "https://contra.com/p/kFPAbeZN-student-profile-management-system"
         }
-        
     ]
 }
