@@ -77,10 +77,11 @@
     text-align: center;
   }
   .pw-about-me-page-landing-wrap-left-section {
-    width: 100%;
+    max-width: 100%;
   }
   .pw-about-me-page-landing-wrap-left-section .pw-typo-mainheader {
-    font-size: 48px;
+    max-width: 100%;
+    font-size: 24px;
   }
   .pw-about-me-page-landing-wrap-right-section {
     width: 100%;

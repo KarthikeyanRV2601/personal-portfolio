@@ -15,7 +15,7 @@ $pw: '.pw-typo';
         }
 
         @media (max-width: 480px) {
-            font-size: 48px;
+            font-size: 24px;
         }
     }
 
@@ -34,10 +34,26 @@ $pw: '.pw-typo';
 
     &-subheader {
         font-size: 40px;
+
+        @media (max-width: 768px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 24px;
+        }
     }
 
     &-subheader-small {
         font-size: 32px;
+
+        @media (max-width: 768px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 480px) {
+            font-size: 24px;
+        }
     }
 
     &-resume-name-title {
@@ -47,7 +63,7 @@ $pw: '.pw-typo';
         }
 
         @media (max-width: 480px) {
-            font-size: 48px;
+            font-size: 24px;
         }
     }
 
@@ -55,6 +71,10 @@ $pw: '.pw-typo';
         font-size: 32px;
         font-style: italic;
         color: #686868;
+
+        @media (max-width: 480px) {
+            font-size: 16px;
+        }
     }
 }
 

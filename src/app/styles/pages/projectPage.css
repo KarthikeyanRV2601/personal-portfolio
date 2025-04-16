@@ -25,6 +25,11 @@
     padding: 16px;
   }
 }
+@media (max-width: 480px) {
+  .pw-project-page-project-block {
+    padding: 0 !important;
+  }
+}
 .pw-project-page-project-block-a {
   color: black;
   font-size: 16px;

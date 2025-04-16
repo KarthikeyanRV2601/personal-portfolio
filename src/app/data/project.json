@@ -22,6 +22,31 @@
             "url": "https://www.oracle.com/in/hospitality/hotel-property-management/hotel-pms-software/tour/"
         },
         {
+            "title": "Vortex AI",
+            "role": "AI/ML Engineer, Full Stack Developer",
+            "start": "February 2024",
+            "end": "Present",
+            "description": "Engineered a cutting-edge document intelligence platform that converts PDFs into searchable, interactive knowledge bases using LangChain, OpenAI's GPT-4, and FAISS. Admins can upload internal documentation, which the system intelligently indexes and understands, enabling users to query the content through a conversational AI chatbot. It’s a next-gen solution for organizations to unlock insights from static files with real-time, contextual answers—redefining how teams access critical information.",
+            "technologies": [
+                "langchain",
+                "gpt4",
+                "fastapi",
+                "react",
+                "typescript",
+                "node",
+                "ai"
+            ],
+            "projectImages": [
+                "project71.webp",
+                "project72.webp",
+                "project73.webp",
+                "project74.webp",
+                "project75.webp",
+                "project76.webp"
+            ],
+            "url": "https://github.com/karthikeyan2601/Vortex-AI"
+        },
+        {
             "title": "Aether",
             "role": "Frontend Engineer & Designer",
             "start": "October 2022",
@@ -66,26 +91,6 @@
                 "project59.webp"
             ],
             "url": "https://docs.google.com/document/d/1UgFN7qpVdGrDzPuNyUg97LLtxXgkvLk8vITuKfN3IxM/edit?usp=sharing"
-        },
-        {
-            "title": "Vortex AI",
-            "role": "AI/ML Engineer, Full Stack Developer",
-            "start": "February 2024",
-            "end": "Present",
-            "description": "Engineered a cutting-edge document intelligence platform that converts PDFs into searchable, interactive knowledge bases using LangChain, OpenAI's GPT-4, and FAISS. Admins can upload internal documentation, which the system intelligently indexes and understands, enabling users to query the content through a conversational AI chatbot. It’s a next-gen solution for organizations to unlock insights from static files with real-time, contextual answers—redefining how teams access critical information.",
-            "technologies": [
-                "langchain",
-                "gpt4",
-                "fastapi",
-                "react",
-                "typescript",
-                "node",
-                "ai"
-            ],
-            "projectImages": [
-                "project71.webp"
-            ],
-            "url": "https://github.com/karthikeyan2601/Vortex-AI"
         },
         {
             "title": "Order Management System",
