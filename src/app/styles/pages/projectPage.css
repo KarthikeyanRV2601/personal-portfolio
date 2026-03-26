@@ -75,11 +75,13 @@
 .pw-project-page-tech-stack-image {
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
-  background: white;
-  padding: 2px;
 }
 .pw-project-page-tech-stack-image:hover {
   transform: scale(1.1);
+}
+.pw-project-page-tech-stack-image {
+  background: white;
+  padding: 2px;
 }
 @media (max-width: 768px) {
   .pw-project-page-tech-stack {

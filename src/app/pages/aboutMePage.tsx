@@ -4,7 +4,7 @@ import aboutMeData from '../data/aboutMe.json';
 import { motion } from "framer-motion";
 
 export const AboutMePage = () => {
-    const { name, title, tagline, description, mainLandingTitle } = aboutMeData.data
+    const { name, title, tagline, description, mainLandingTitle, linkedInLink } = aboutMeData.data
     return (
         <motion.div
             initial={{ opacity: 0, x: "2%" }} // Start off-screen (right side)
@@ -22,7 +22,8 @@ export const AboutMePage = () => {
                     </div>
                     <div className="pw-about-me-page-landing-wrap-right-section">
                         <div>
-                            <MainHeader textContent={name} />
+                            <MainHeader textContent={name} link={linkedInLink}/>
+                            <br/>
                             <MainHeader textContent={title} />
                             <Paragraph textContent={tagline} bold />
                         </div>

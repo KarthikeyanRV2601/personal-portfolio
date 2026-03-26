@@ -3,8 +3,6 @@
   padding: 65px 130px 65px 65px;
   position: relative;
   transition: background-color 0.5s ease-in-out;
-  /* Mobile (≤768px) */
-  /* Small Mobile (≤480px) */
 }
 .pw-main-page .pw-main-content-renderer {
   font-size: 64px;
@@ -24,6 +22,9 @@
     padding: 50px;
   }
 }
+.pw-main-page {
+  /* Mobile (≤768px) */
+}
 @media (max-width: 768px) {
   .pw-main-page {
     width: 100%;
@@ -34,6 +35,9 @@
     font-size: 32px;
     text-align: center;
   }
+}
+.pw-main-page {
+  /* Small Mobile (≤480px) */
 }
 @media (max-width: 480px) {
   .pw-main-page {

@@ -1,36 +1,36 @@
 {
     "data": [
         {
-            "position": "Software engineer IC2",
-            "organization": "Oracle",
+            "position": "Software Engineer II",
+            "organization": "Oracle | Hospitality Global Business Unit",
             "location": "Hyderabad, India (On-site)",
-            "start": "September 2023",
+            "start": "September 2024",
             "end": "Present",
-            "description": "At Oracle, I work as a Software Engineer II, where I drive innovation in enterprise applications, specializing in full-stack development and framework modernization. I have successfully led the migration of 100+ Oracle JET components to a React-based architecture, significantly enhancing performance and maintainability. My role involves mentoring interns, optimizing CI/CD pipelines, and implementing high-impact features that directly improve user experience and scalability. From developing multilingual translation functionality across 8 modules to automating workflows that reduced manual effort by 90%, my contributions have streamlined operations and boosted efficiency. Additionally, I ensure rigorous testing and performance optimization, cutting regression issues by 40% and enhancing UI rendering speeds by 50%. With a strong Agile mindset, I collaborate closely with product teams, designers, and QA engineers to deliver robust and scalable solutions."
+            "description": "Delivered 20+ production features for OPERA Cloud used by 40K+ hotels globally, including reusable UI components and page-template frameworks across 8+ modules. Built REST APIs in a microservices architecture, improved response times by ~15%, and contributed to cross-region localization. Applied SOLID design patterns, mentored interns, and built Python + LLM internal workflows that reduced manual effort by ~30%."
         },
         {
-            "position": "Software engineer IC1",
-            "organization": "Oracle",
+            "position": "Software Engineer I",
+            "organization": "Oracle | Hospitality Global Business Unit",
             "location": "Hyderabad, India (On-site)",
-            "start": "July 2022",
-            "end": "September 2023",
-            "description": "As a Software Engineer I at Oracle, I played a crucial role in building enterprise-grade solutions within the Cloud PMS - OPERA Cloud and Hotels Distribution Software. My focus was on enhancing system performance, debugging, and ensuring seamless UI/UX experiences. I contributed to feature development, system optimization, and large-scale framework migration while maintaining 100% feature parity with legacy implementations. During this phase, I deepened my expertise in front-end and back-end technologies, collaborated with cross-functional teams, and ensured error-free, scalable implementations that aligned with industry best practices."
+            "start": "September 2022",
+            "end": "August 2024",
+            "description": "Built full-stack features with React, TypeScript, Java, and REST APIs for Oracle Hospitality products. Improved UI latency by ~20%, developed Java/Spring microservices for high-concurrency scenarios, and optimized SQL queries and state management to improve data retrieval performance by ~25%. Contributed to CI/CD and code-review practices that reduced defects and improved deployment stability."
         },
         {
-            "position": "Product intern",
-            "organization": "Oracle",
+            "position": "Project Intern",
+            "organization": "Oracle | Hospitality Global Business Unit",
             "location": "Hyderabad, India (On-site)",
             "start": "February 2022",
-            "end": "July 2022",
-            "description": "During my internship at Oracle, I gained hands-on experience in full-stack development, working on high-traffic enterprise applications. My focus was on learning, optimizing workflows, and assisting in the development of scalable solutions for Oracle’s cloud-based hospitality software. This period strengthened my technical foundation, improved my problem-solving skills, and prepared me for a fast-paced, product-driven engineering role."
+            "end": "August 2022",
+            "description": "Audited 10+ microservices and supported bulk dependency/version upgrades for stable deployments. Assisted feature development, integration, and debugging in a distributed service ecosystem. Built Cypress and Jest test coverage and automated Jira workflows using Python to improve team efficiency."
         },
         {
-            "position": "Web developer intern",
-            "organization": "Appscms technologies",
-            "location": "Noida, India (Remote)",
-            "start": "January 2021",
-            "end": "June 2021",
-            "description": "At Appscms Technologies, I was responsible for developing three security-focused web applications, including Safe Pdf Kit, Safe Video Kit, and Safe Audio Kit. These tools provided server-less data processing, ensuring enhanced security and privacy for users. I designed and implemented over 10 core functionalities for editing, organizing, and managing PDFs, videos, and audio files, directly impacting end-user efficiency. This experience honed my ability to build lightweight, high-performance web applications while emphasizing data security and seamless user interactions."
+            "position": "Web Developer Intern",
+            "organization": "APPSCMS Technologies",
+            "location": "Remote",
+            "start": "February 2021",
+            "end": "July 2021",
+            "description": "Developed browser-based video, audio, and PDF editor tools with 20+ features using FFmpeg (WASM) and PDF libraries. Optimized client-side processing for large file operations, reducing processing time by ~30% while improving UI responsiveness and data privacy through local-first processing."
         }
     ]
 }

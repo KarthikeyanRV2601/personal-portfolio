@@ -1,9 +1,3 @@
-.pw-dynamic-background {
-  /* Light Mode */
-  /* Dark Mode */
-  /* Floating Up */
-  /* Glitch Effect */
-}
 .pw-dynamic-background .floating-code-container {
   position: fixed;
   top: 0;
@@ -23,12 +17,21 @@
   opacity: 0.85;
   animation: floatUp 6s linear infinite, glitchParticles 0.3s infinite alternate;
 }
+.pw-dynamic-background {
+  /* Light Mode */
+}
 .pw-dynamic-background .code-line.light {
   color: #000;
+}
+.pw-dynamic-background {
+  /* Dark Mode */
 }
 .pw-dynamic-background .code-line.dark {
   color: #0ff;
   text-shadow: 2px 2px rgba(0, 255, 255, 0.3);
+}
+.pw-dynamic-background {
+  /* Floating Up */
 }
 @keyframes floatUp {
   from {
@@ -39,6 +42,9 @@
     transform: translateY(-100vh);
     opacity: 0;
   }
+}
+.pw-dynamic-background {
+  /* Glitch Effect */
 }
 @keyframes glitchParticles {
   0% {

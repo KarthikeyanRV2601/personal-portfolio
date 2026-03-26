@@ -1,74 +1,85 @@
 {
     "data": {
         "resumeNameTitle": "Karthikeyan R V",
-        "resumeTagLine": "Software Engineer Level 2 (SDE2) at Oracle",
+        "resumeTagLine": "Software Engineer (SDE II) at Oracle Hospitality",
         "skills": {
-            "languages": "Typescript (10), JavaScript (10), JAVA (10), Python (10), SQL (10), HTML (10), CSS (10), SCSS (10), C++ (7), C (7), Solidity (7)",
-            "frameworkAndTools": "ReactJS (10), PreactJS (10), React Native (8), Oracle ADF (10), OracleJet (10), NodeJS (10), Firebase (10), PostgreSQL (10), MongoDB (8), Flask (8), Cypress Automation (10), Selenium Java Automation (10), CI/CD pipeline automation & development (8), Jekyll (8), Git (10), JIRA (10), Jenkins (8), Adobe XD (10), Figma (10), Adobe Illustrator (9), Blender (7)",
-            "aiMlAndDataScience": "LangChain (5), GPT-4 (5), OpenAI API (5), Semantic Search (5), Retrieval-Augmented Generation (5), Vector Databases (FAISS) (5), Chatbot Development (5), Prompt Engineering (5), Embedding Models (5), Numpy (5), Document Parsing (5), PDF Text Extraction (5), Data Preprocessing (5), Asynchronous Data Pipelines (5), Text Processing (5)",
-            "certifications": "Oracle Cloud Infrastructure 2025 AI Foundations Associate"
+            "languages": "Java, Python, TypeScript, JavaScript, SQL, C++, C, HTML5, CSS3",
+            "frameworkAndTools": "React.js, Next.js, Spring Boot, FastAPI, Node.js, Flask, REST APIs, Microservices Architecture, PostgreSQL, MongoDB, Firebase, Docker, Kubernetes, CI/CD, Jenkins, GitHub Actions, Git, Linux, Selenium, Cypress",
+            "aiMlAndDataScience": "LangChain, OpenAI API, Retrieval-Augmented Generation (RAG), FAISS, Embeddings, Semantic Search, Prompt Engineering, Agentic AI Systems, Data Processing",
+            "certifications": "OCI 2025 AI Foundations Associate, OCI 2025 Certified Generative AI Professional"
         },
         "experience": [
             {
-                "organization": "ORACLE",
+                "organization": "ORACLE | HOSPITALITY GLOBAL BUSINESS UNIT",
                 "positions": [
                     {
-                        "position": "Software Engineer II (IC2)",
+                        "position": "Software Engineer II",
                         "location": "Hyderabad, India",
                         "start": "09/2024",
-                        "end": "present",
+                        "end": "Present",
                         "projects": [
-                            "Cloud PMS - OPERA Cloud",
-                            "Hotels Distribution Software"
+                            "Cloud PMS - OPERA Cloud"
                         ],
                         "responsibilities": [
                             {
-                                "subtitle": "Leadership & Mentorship",
+                                "subtitle": "Production Feature Delivery",
                                 "items": [
-                                    "Led a team of 2 interns, providing technical guidance, onboarding support, and project workflow training.",
-                                    "Mentored interns in full-stack development, debugging, and best practices, improving team efficiency by 30%."
+                                    "Delivered 20+ production features for OPERA Cloud used by 40K+ hotels globally.",
+                                    "Built reusable UI components and page-template framework across 8+ modules, reducing development effort by ~25%."
                                 ]
                             },
                             {
-                                "subtitle": "Full-Stack Development & Framework Modernization",
+                                "subtitle": "Scalable Services and Reliability",
                                 "items": [
-                                    "Developed and maintained enterprise-grade applications using Oracle ADF, Oracle Jet, RAPID (React-based framework), PreactJS, TypeScript, JavaScript, Java, HTML, CSS, SCSS, and Figma.",
-                                    "Migrated 100+ Oracle JET components to React-based architecture, ensuring 100% feature parity and improved performance.",
-                                    "Optimized and automated CI/CD pipelines, reducing deployment time by 40%.",
-                                    "Automated crucial yet robust work flows with javascript such that it saved almost 90% of the manual work time involved."
+                                    "Developed REST APIs within a microservices architecture and improved response times by ~15%.",
+                                    "Implemented i18n localization and cross-browser compatibility, improving usability across 10+ regions."
                                 ]
                             },
                             {
-                                "subtitle": "High-Impact Features Development & Error handling",
+                                "subtitle": "Engineering Quality and Automation",
                                 "items": [
-                                    "Implemented multilingual translation functionality across 8 modules, modifying 3,000+ files, ensuring seamless global usability. Completed translation implementation in 1 month, surpassing efficiency benchmarks.",
-                                    "Conducted extensive regression and unit testing for a large-scale system change, identifying and resolving 95% of critical issues before deployment. Implemented robust error-handling mechanisms to ensure zero downstream impact, maintaining system stability for future updates. ",
-                                    "Delivered 5+ mission-critical features with 100% UI/UX design accuracy and zero post-release defects."
-                                ]
-                            },
-                            {
-                                "subtitle": "Performance Optimization & Testing",
-                                "items": [
-                                    "Enhanced UI rendering performance by 50%, reducing load times and improving responsiveness. ",
-                                    "Developed comprehensive test automation suites using Cypress, Selenium, and Postman, leading to a 40% decrease in regression issues. Cross-Functional Collaboration & Agile Development",
-                                    "Worked closely with Product Owners, UX/UI designers, developers, and QA engineers to align on feature requirements, user stories, and project deliverables.",
-                                    "Led sprint demos and stakeholder presentations, ensuring smooth feature acceptance and on-time delivery.",
-                                    "Followed Agile (Scrum) methodology, actively participating in daily stand-ups, sprint planning, and retrospectives."
+                                    "Applied SOLID principles and design patterns in scalable system modules and mentored interns for faster onboarding.",
+                                    "Built Python and LLM-based agent workflows that reduced manual effort in internal processes by ~30%."
                                 ]
                             }
                         ]
                     },
                     {
-                        "position": "Software Engineer I (IC1)",
+                        "position": "Software Engineer I",
                         "location": "Hyderabad, India",
                         "start": "09/2022",
-                        "end": "08/2024"
+                        "end": "08/2024",
+                        "responsibilities": [
+                            {
+                                "subtitle": "Full-stack Feature Development",
+                                "items": [
+                                    "Built full-stack features using React, TypeScript, Java, and REST APIs, improving UI responsiveness and reducing latency by ~20%.",
+                                    "Developed Java and Spring microservices to support high-concurrency enterprise usage."
+                                ]
+                            },
+                            {
+                                "subtitle": "Performance and Delivery",
+                                "items": [
+                                    "Optimized SQL queries, state management, and APIs to improve data retrieval performance by ~25%.",
+                                    "Contributed to code reviews, testing, and CI/CD workflows to reduce production defects and improve deployment stability."
+                                ]
+                            }
+                        ]
                     },
                     {
                         "position": "Project Intern",
                         "location": "Hyderabad, India",
                         "start": "02/2022",
-                        "end": "08/2022"
+                        "end": "08/2022",
+                        "responsibilities": [
+                            {
+                                "subtitle": "Platform and Test Support",
+                                "items": [
+                                    "Audited 10+ microservices and supported bulk version upgrades for stable deployments.",
+                                    "Built Cypress/Jest test suites and automated Jira workflows using Python to improve team efficiency."
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
@@ -77,19 +88,20 @@
                 "positions": [
                     {
                         "position": "Web Developer Intern",
-                        "location": "Noida, India (Remote)",
+                        "location": "Remote",
                         "start": "02/2021",
                         "end": "07/2021",
                         "projects": [
-                            "Safe Pdf Kit",
-                            "Safe Video Kit",
-                            "Safe Audio Kit"
+                            "Online Video Editor",
+                            "Online Audio Editor",
+                            "Online PDF Editor"
                         ],
                         "responsibilities": [
                             {
-                                "subtitle": "Robust quantity of applications",
+                                "subtitle": "Client-side Media Platform",
                                 "items": [
-                                    "Built and deployed 3 secured client-focused web applications, each consisting of over 10 core functionalities to edit andorganize videos, audios, and PDFs without involving the server, ensuring the security of user data. Video Editor Link, PDF Editor Link."
+                                    "Developed browser-based media tools with 20+ features using FFmpeg (WASM) and PDF libraries.",
+                                    "Optimized client-side processing for large files, reducing processing time by ~30% and improving UI responsiveness."
                                 ]
                             }
                         ]
@@ -100,46 +112,36 @@
         "education": [
             {
                 "university": "AMRITA VISHWA VIDYAPEETHAM",
-                "course": "B-tech Engineering in Computer Science",
-                "start": "04/2018",
+                "course": "B.Tech in Computer Science and Engineering",
+                "start": "06/2018",
                 "end": "06/2022",
-                "score": "CGPA: 8.43/10.00",
+                "score": "CGPA: 8.43/10",
                 "achievements": [
-                    "All India finalist in the Atlassian app development hackathon by IIT Madras Shaastra, ranking in the top 10 out of 2000+ teams.",
-                    "Secured AIR 819 in AEEE, awarded a 90% scholarship, and maintained a GPA above 8 throughout all 8 semesters."
+                    "Finalist in Atlassian App Dev Hackathon (Top 10 of 2000+ teams).",
+                    "AIR 819 in AEEE and awarded 90% scholarship."
                 ]
             }
         ],
         "projects": [
             {
-                "projectTitle": "Cloud PMS - OPERA Cloud",
-                "description": "Contributed to the world's #1 hotel management system used by ~40K properties, focusing on frontend framework modules.",
-                "link": "https://www.oracle.com/in/hospitality/hotel-property-management/hotel-pms-software/"
+                "projectTitle": "Vortex AI",
+                "description": "RAG chatbot for PDF querying with LangChain, OpenAI APIs, FAISS, and Python.",
+                "link": "https://github.com/KarthikeyanRV2601/Vortex-AI/tree/main"
             },
             {
                 "projectTitle": "Policy Compliance System",
-                "description": "Developed a SOC 2-compliant app for managing employee policy acknowledgments with roles, versioning, and automated escalations.",
-                "link": "https://drive.google.com/file/d/1ZDbhMMZFMbD_-xAWQh4WGsU8pyyMmPiN/view?usp=sharing"
-            },
-            {
-                "projectTitle": "Aether",
-                "description": "Aether is a mindful visual productivity tool that helps you map your life, dream boldly, and flow with purpose.",
-                "link": "https://drive.google.com/file/d/1idMcLkzvYFX8bn6xfjOynsS7LrrjUgFe/view?usp=sharing"
-            },
-            {
-                "projectTitle": "Vortex AI",
-                "description": "A document-based chatbot app where admins upload PDFs to train the model, and users can interact with an AI via a smart, searchable chat interface.",
-                "link": "https://github.com/karthikeyan2601/Vortex-AI"
+                "description": "RBAC platform with policy versioning, tracking workflows, notifications, and enterprise APIs.",
+                "link": "https://docs.google.com/document/d/1UgFN7qpVdGrDzPuNyUg97LLtxXgkvLk8vITuKfN3IxM/edit?usp=sharing"
             },
             {
                 "projectTitle": "Order Management System",
-                "description": "Built a full-stack PERN web app with 4 user roles for a construction company to manage orders and inventory.",
-                "link": "https://drive.google.com/file/d/1flZPPZYNk9X7WBCVhh5M9_wmv4Jdt0o8/view?usp=sharing"
+                "description": "Full-stack order and inventory application built with PostgreSQL, Express, React, and Node.js.",
+                "link": "https://contra.com/p/7g2mWsbR-order-management-system"
             },
             {
-                "projectTitle": "Online Video, Audio & PDF Editor",
-                "description": "Developed secure, client-side web tools to edit media files with 20+ core features, ensuring data never leaves the browser.",
-                "link": "https://karthikeyan2601.github.io/Online-Video-Audio-PDF-Editor/"
+                "projectTitle": "Cloud PMS - OPERA Cloud",
+                "description": "Contributed to Oracle Hospitality OPERA Cloud serving 40K+ hotels globally.",
+                "link": "https://www.oracle.com/in/hospitality/hotel-property-management/hotel-pms-software/"
             }
         ]
     }

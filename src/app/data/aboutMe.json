@@ -1,9 +1,10 @@
 {
     "data": {
-        "mainLandingTitle": "Website development. Website Design. Interfaces. UX. & More",
+        "mainLandingTitle": "Website development. Website Design. Interfaces. UX. & More.",
         "name": "Karthikeyan R.V.",
-        "title": "Web Experience Crafter",
-        "tagline": "Crafting seamless digital journeys, one line of code at a time.",
-        "description": "Hey, I'm a web developer and designer who crafts sleek, high-performance digital experiences. I specialize in building modern, intuitive, and scalable web solutions that not only look stunning but also function flawlessly. With a deep understanding of UI/UX, front-end and back-end technologies, I help brands, startups, and businesses turn ideas into reality. Whether it’s a dynamic web app, a bold portfolio, or an e-commerce platform, I focus on clean code, seamless interactions, and future-proof design. Let’s build something innovative together."
+        "linkedInLink": "https://www.linkedin.com/in/karthikeyan-r-v-549b861b6/",
+        "title": "Software Engineer (SDE II)",
+        "tagline": "Enterprise-scale frontend and full-stack engineer with a strong focus on performance, reliability, and clean system design.",
+        "description": "I'm a Software Engineer at Oracle Hospitality, where I build production features for OPERA Cloud, a platform used by 40K+ hotels globally. Across 3.5+ years of full-time experience, I've worked on microservices, Java-based backend systems, React + TypeScript interfaces, SQL optimization, and AI-driven automation with Python and LLM workflows. I enjoy owning complex product problems end-to-end and shipping solutions that are scalable, maintainable, and user-focused."
     }
 }

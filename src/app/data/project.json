@@ -1,39 +1,37 @@
 {
     "data": [
         {
-            "title": "Oracle's Opera Cloud",
-            "role": "Framework developer, Full stack application engineer, Intern team lead.",
-            "start": "September 2023",
+            "title": "Cloud PMS - OPERA Cloud",
+            "role": "Framework Developer, Full Stack Engineer",
+            "start": "September 2022",
             "end": "Present",
-            "description": "A comprehensive cloud-based property management system (PMS) designed specifically for the hospitality industry, allowing them to manage reservations, guest profiles, room inventory, sales, and other operations centrally within a single platform; some notable clients include Hyatt, Crown Resorts, Minor Hotel Group, Premier Inn Hotels Limited, and various other large hotel chains across the globe. ",
+            "description": "Contributed to Oracle OPERA Cloud PMS used by 40K+ hotels globally. Built production-ready UI framework modules, reusable page templates, and REST integrations in a microservices ecosystem focused on reliability, scalability, and cross-region support.",
             "technologies": [
                 "react",
                 "typescript",
-                "node",
-                "cypress",
-                "git",
                 "java",
-                "html"
+                "node",
+                "git",
+                "cypress"
             ],
             "projectImages": [
                 "project11.webp",
                 "project12.webp"
             ],
-            "url": "https://www.oracle.com/in/hospitality/hotel-property-management/hotel-pms-software/tour/"
+            "url": "https://www.oracle.com/in/hospitality/hotel-property-management/hotel-pms-software/"
         },
         {
             "title": "Vortex AI",
-            "role": "AI/ML Engineer, Full Stack Developer",
-            "start": "February 2024",
+            "role": "AI/ML + Full Stack Developer",
+            "start": "2024",
             "end": "Present",
-            "description": "Engineered a cutting-edge document intelligence platform that converts PDFs into searchable, interactive knowledge bases using LangChain, OpenAI's GPT-4, and FAISS. Admins can upload internal documentation, which the system intelligently indexes and understands, enabling users to query the content through a conversational AI chatbot. It’s a next-gen solution for organizations to unlock insights from static files with real-time, contextual answers—redefining how teams access critical information.",
+            "description": "Built a RAG-based chatbot for querying PDF documents using LangChain, OpenAI APIs, and FAISS vector search. Designed an end-to-end workflow for indexing, semantic retrieval, and response generation to improve accuracy and usability for knowledge-heavy documents.",
             "technologies": [
                 "langchain",
                 "gpt4",
                 "fastapi",
                 "react",
                 "typescript",
-                "node",
                 "ai"
             ],
             "projectImages": [
@@ -44,34 +42,14 @@
                 "project75.webp",
                 "project76.webp"
             ],
-            "url": "https://github.com/KarthikeyanRV2601/Vortex-AI"
-        },
-        {
-            "title": "Aether",
-            "role": "Frontend Engineer & Designer",
-            "start": "October 2022",
-            "end": "December 2022",
-            "description": "Aether is a modular, visually-driven self-exploration and productivity platform built with Next.js, React, and Firebase, featuring a highly interactive canvas using React Flow. It allows users to create, organize, and connect life elements like passions, goals, and dreams through nodes and timelines. It uses Supabase storage for decentralized image storage and offers seamless dark/light theming, SCSS-based responsive styling, and a scalable component architecture. Designed for extensibility and clean state management, Aether integrates journaling, goal tracking, and visualization into a unified, personalized experience.",
-            "technologies": [
-                "react",
-                "typescript",
-                "figma",
-                "firebase",
-                "supabase"
-            ],
-            "projectImages": [
-                "project61.webp",
-                "project62.webp",
-                "project63.webp"
-            ],
-            "url": "https://contra.com/p/NUoYZ2BM-aether"
+            "url": "https://github.com/KarthikeyanRV2601/Vortex-AI/tree/main"
         },
         {
             "title": "Policy Compliance System",
             "role": "Full Stack Developer",
-            "start": "January 2023",
-            "end": "March 2023",
-            "description": "Developed a secure, SOC 2-compliant web application to streamline how organizations manage and track employee policy acknowledgments. The system automates the entire workflow—from role-based policy assignment and version control to approval tracking and smart escalation handling—ensuring zero compliance gaps. Designed with enterprise scalability in mind, it empowers HR and legal teams to maintain audit readiness effortlessly while reducing manual overhead.",
+            "start": "2023",
+            "end": "2023",
+            "description": "Developed an RBAC-driven policy compliance platform with policy versioning, tracking workflows, notifications, and API integrations. Built for audit readiness and secure, role-based enterprise operations.",
             "technologies": [
                 "react",
                 "typescript",
@@ -85,26 +63,23 @@
                 "project53.webp",
                 "project54.webp",
                 "project55.webp",
-                "project56.webp",
-                "project57.webp",
-                "project58.webp",
-                "project59.webp"
+                "project56.webp"
             ],
             "url": "https://docs.google.com/document/d/1UgFN7qpVdGrDzPuNyUg97LLtxXgkvLk8vITuKfN3IxM/edit?usp=sharing"
         },
         {
             "title": "Order Management System",
-            "role": "Full stack developer, UI/UX Designer",
-            "start": "February 2019",
-            "end": "June 2019",
-            "description": "Created an order and stock management web application for a construction company, featuring four distinct user roles with tailored pages to support their specific functionalities. The system provides a comprehensive set of features for efficient order tracking, inventory management, and reporting. Delivered a high-performance, full-stack website.",
+            "role": "Full Stack Developer",
+            "start": "2019",
+            "end": "2019",
+            "description": "Built a PERN-based order and inventory management application with workflow support for multiple user roles. Implemented secure APIs and structured data operations for improved traceability and operational control.",
             "technologies": [
                 "react",
-                "typescript",
                 "node",
-                "git",
+                "expressjs",
                 "postgresql",
-                "expressjs"
+                "typescript",
+                "git"
             ],
             "projectImages": [
                 "project21.webp",
@@ -116,11 +91,11 @@
             "url": "https://contra.com/p/7g2mWsbR-order-management-system"
         },
         {
-            "title": "Safe Video Kit - Secure and Seamless Video Editing and Sharing",
-            "role": "Full stack developer, UI/UX Designer",
-            "start": "March 2021",
-            "end": "April 2021",
-            "description": "Safe Video Kit is a cutting-edge web application designed to provide secure and seamless video editing and sharing capabilities. With a strong focus on data security, Safe Video Kit ensures that your videos are protected while offering a seamless editing experience. Unlock new possibilities and unleash your creativity without compromising on the privacy of your valuable video content.",
+            "title": "Online Video, Audio & PDF Editor",
+            "role": "Web Developer Intern",
+            "start": "2021",
+            "end": "2021",
+            "description": "Developed secure browser-based media editing tools with 20+ features using FFmpeg (WASM) and PDF libraries. Focused on seamless client-side processing so user files remained local and private.",
             "technologies": [
                 "html",
                 "css",
@@ -133,28 +108,6 @@
                 "project33.webp"
             ],
             "url": "https://contra.com/p/AEMYlRUU-safe-video-kit-secure-and-seamless-video-editing-and-sharing"
-        },
-        {
-            "title": "Student Profile Management System",
-            "role": "Full stack developer, UI/UX Designer",
-            "start": "July 2020",
-            "end": "December 2020",
-            "description": "The Student Profile Management System is a web application that simplifies student information management for educational institutions. It provides secure login, student registration, course management, attendance tracking, grade management, communication, and data export/import features.",
-            "technologies": [
-                "react",
-                "javascript",
-                "springboot",
-                "java",
-                "firebase"
-            ],
-            "projectImages": [
-                "project41.webp",
-                "project42.webp",
-                "project43.webp",
-                "project44.webp",
-                "project45.webp"
-            ],
-            "url": "https://contra.com/p/kFPAbeZN-student-profile-management-system"
         }
     ]
 }

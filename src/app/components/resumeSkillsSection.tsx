@@ -23,6 +23,5 @@ export const ResumeSkillsSection = (props: ResumeSectionProps) => {
             <Paragraph textContent={'Certifications'} bold />
             <Paragraph textContent={props.resumeData.skills.certifications} />
         </div>
-        <SecondaryText textContent="*(n) indicates skill level on a scale from 1 (lowest) to 10 (highest)." />
     </div>);
 }

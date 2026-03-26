@@ -4,8 +4,6 @@ $pw: '.pw-resume-page';
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
 
     @media (max-width: 768px) {
         padding: 0;
