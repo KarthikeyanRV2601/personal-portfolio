@@ -1,25 +1,52 @@
-@media (max-width: 768px) {
-  .pw-experience-page {
-    padding: 20px;
-  }
+.pw-experience-page {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
-@media (max-width: 768px) {
-  .pw-experience-page-experience-block {
-    padding: 16px;
-  }
+
+.pw-experience-page-experience-block {
+  border: 1px solid var(--line-color);
+  background: rgba(25, 22, 40, 0.72);
+  padding: 18px;
 }
-@media (max-width: 768px) {
-  .pw-experience-page .pw-typo-mainheader {
-    font-size: 24px;
-  }
+
+.pw-experience-page-experience-block-header {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
 }
-@media (max-width: 768px) {
-  .pw-experience-page .pw-typo-secondary-text {
-    font-size: 14px;
-  }
+
+.pw-experience-page-experience-logo-wrap {
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--line-color);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 8px;
 }
-@media (max-width: 768px) {
-  .pw-experience-page .pw-typo-paragraph {
-    font-size: 16px;
-  }
-}/*# sourceMappingURL=experiencePage.css.map */
+
+.pw-experience-page-experience-logo-wrap-wide {
+  width: 112px;
+}
+
+.pw-experience-page-experience-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pw-experience-page-experience-block .pw-typo-mainheader {
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  margin-bottom: 4px;
+}
+
+.pw-experience-page-experience-block .pw-typo-secondary-text {
+  display: block;
+}
+
+.pw-experience-page-experience-block .pw-typo-paragraph {
+  margin-top: 6px;
+}

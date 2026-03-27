@@ -1,103 +1,89 @@
-@charset "UTF-8";
 .pw-about-me-page {
-  /* Mobile Screens (≤ 768px) */
+  width: 100%;
 }
-@media (max-width: 768px) {
-  .pw-about-me-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
+
 .pw-about-me-page-landing-wrap {
   width: 100%;
-  display: flex;
-  height: auto;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 20%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
+  gap: clamp(30px, 5vw, 78px);
+  align-items: start;
 }
-.pw-about-me-page-landing-wrap-left-section {
-  width: 60%;
-}
+
 .pw-about-me-page-landing-wrap-left-section .pw-typo-mainheader {
-  font-size: 96px;
-  line-height: 1.1;
+  font-size: clamp(2.2rem, 4.6vw, 4rem);
+  line-height: 1.04;
+  color: #e9e5ff;
+  text-shadow: 0 0 24px rgba(107, 245, 255, 0.18);
 }
+
 .pw-about-me-page-landing-wrap-right-section {
-  width: 30%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 22px;
+  border: 1px solid var(--line-color);
+  background: linear-gradient(145deg, rgba(17, 14, 30, 0.85), rgba(14, 12, 24, 0.92));
+  padding: 18px;
+  box-shadow: inset 0 0 0 1px rgba(107, 245, 255, 0.08), 0 0 24px rgba(255, 95, 195, 0.08);
 }
+
+.pw-about-me-page-cover-image-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  border: 1px solid rgba(107, 245, 255, 0.35);
+  overflow: hidden;
+  background: #0d0b18;
+}
+
+.pw-about-me-page-cover-image {
+  object-fit: cover;
+}
+
 .pw-about-me-page-landing-wrap-right-section .pw-typo-mainheader {
-  font-size: 24px;
+  font-size: clamp(1.08rem, 1.9vw, 1.5rem);
 }
+
 .pw-about-me-page-landing-wrap-right-section .pw-typo-paragraph {
-  font-size: 16px;
+  font-size: 0.96rem;
 }
-.pw-about-me-page {
-  /* Tablet Screens (≤ 1024px) */
+
+.pw-about-me-page-social-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
 }
-@media (max-width: 1400px) {
+
+.pw-about-me-page-social-link {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(107, 245, 255, 0.4);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: rgba(107, 245, 255, 0.08);
+  color: var(--text-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.pw-about-me-page-social-link:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 95, 195, 0.18);
+  border-color: rgba(255, 95, 195, 0.5);
+}
+
+@media (max-width: 980px) {
   .pw-about-me-page-landing-wrap {
-    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+
+  .pw-about-me-page-cover-image-wrap {
+    min-height: 320px;
   }
 }
-.pw-about-me-page {
-  /* Tablet Screens (≤ 1024px) */
-}
-@media (max-width: 1024px) {
-  .pw-about-me-page-landing-wrap {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .pw-about-me-page-landing-wrap-left-section {
-    width: 100%;
-  }
-  .pw-about-me-page-landing-wrap-left-section .pw-typo-mainheader {
-    font-size: 72px;
-  }
-  .pw-about-me-page-landing-wrap-right-section {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-  }
-  .pw-about-me-page-landing-wrap-right-section .pw-typo-mainheader {
-    font-size: 20px;
-  }
-  .pw-about-me-page-landing-wrap-right-section .pw-typo-paragraph {
-    font-size: 14px;
-  }
-}
-.pw-about-me-page {
-  /* Mobile Screens (≤ 768px) */
-}
-@media (max-width: 768px) {
-  .pw-about-me-page-landing-wrap {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .pw-about-me-page-landing-wrap-left-section {
-    max-width: 100%;
-  }
-  .pw-about-me-page-landing-wrap-left-section .pw-typo-mainheader {
-    max-width: 100%;
-    font-size: 24px;
-  }
-  .pw-about-me-page-landing-wrap-right-section {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-  }
-  .pw-about-me-page-landing-wrap-right-section .pw-typo-mainheader {
-    font-size: 18px;
-  }
-  .pw-about-me-page-landing-wrap-right-section .pw-typo-paragraph {
-    font-size: 12px;
-  }
-}/*# sourceMappingURL=aboutMePage.css.map */

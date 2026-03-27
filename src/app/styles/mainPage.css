@@ -38,10 +38,6 @@
   min-height: 68vh;
 }
 
-.pw-content-shell-full {
-  min-height: calc(100vh - 92px);
-}
-
 @media (max-width: 1100px) {
   .pw-main-page {
     width: 100%;

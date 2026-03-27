@@ -1,11 +1,7 @@
-import CustomCursor from "./components/interactibles/customCursor";
-import { MainPage } from "./pages";
+import CyberPortfolio from "./components/cyberPortfolio";
 
 export default function Home() {
   return (
-    <div style={{position: 'relative'}}>
-      <CustomCursor />
-      <MainPage />
-    </div>
+    <CyberPortfolio />
   );
 }

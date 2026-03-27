@@ -8,7 +8,16 @@ export default function ThemeSwitcher(props: { darkMode: boolean, setDarkMode: (
         if (savedTheme === "dark") {
             document.body.classList.add("pw-dark-mode");
             setDarkMode(true);
+            return;
         }
+        if (savedTheme === "light") {
+            document.body.classList.remove("pw-dark-mode");
+            setDarkMode(false);
+            return;
+        }
+        document.body.classList.add("pw-dark-mode");
+        localStorage.setItem("theme", "dark");
+        setDarkMode(true);
     }, [setDarkMode]);
 
     const toggleTheme = () => {

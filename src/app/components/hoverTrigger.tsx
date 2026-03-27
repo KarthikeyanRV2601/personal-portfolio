@@ -8,7 +8,7 @@ export default function HoverTrigger({ children }: HoverTriggerProps) {
 
   return (
     <div
-      className={"p-6 border border-gray-500 rounded-lg cursor-pointer"}
+      className={"pw-project-page-hover-trigger"}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >

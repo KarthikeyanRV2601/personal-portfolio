@@ -1,100 +1,124 @@
 .pw-project-page {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 12px;
 }
-@media (max-width: 768px) {
-  .pw-project-page {
-    padding: 20px;
-  }
+
+.pw-project-page-hover-trigger {
+  border: 1px solid var(--line-color);
+  background: rgba(24, 21, 38, 0.7);
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
+
+.pw-project-page-hover-trigger:hover {
+  transform: translateY(-2px);
+  background: rgba(29, 25, 46, 0.82);
+}
+
 .pw-project-page-project-block {
-  padding: 24px;
-  margin-bottom: 40px;
+  padding: 20px;
   width: 100%;
-  transition: transform 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 768px) {
-  .pw-project-page-project-block {
-    padding: 16px;
-  }
+
+.pw-project-page-project-block-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+  gap: 24px;
+  align-items: stretch;
 }
-@media (max-width: 480px) {
-  .pw-project-page-project-block {
-    padding: 0 !important;
-  }
-}
-.pw-project-page-project-block-a {
-  color: black;
-  font-size: 16px;
+
+.pw-project-page-project-block-details {
   display: flex;
+  flex-direction: column;
+}
+
+.pw-project-page-project-block .pw-typo-mainheader {
+  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+}
+
+.pw-project-page-project-block-a {
+  color: #0f0f1a;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  font-weight: bold;
+  gap: 8px;
+  font-weight: 700;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
-  width: -moz-fit-content;
   width: fit-content;
-  background: white;
-  padding: 2px;
+  background: var(--accent-color);
+  padding: 8px 12px;
+  border-radius: 999px;
 }
-@media (max-width: 1400px) {
-  .pw-project-page-project-block-a {
-    align-self: center;
-  }
-}
-@media (max-width: 768px) {
-  .pw-project-page-project-block-a {
-    gap: 12px;
-    align-self: center;
-  }
-}
+
 .pw-project-page-project-block-a img {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.2s ease-in-out;
-  background: white;
+  width: 16px;
+  height: 16px;
+  background: transparent;
 }
-.pw-project-page-project-block-a img:hover {
-  transform: scale(1.1);
-}
+
 .pw-project-page-tech-stack {
   display: flex;
-  gap: 16px;
+  gap: 10px;
   flex-wrap: wrap;
-  width: -moz-fit-content;
-  width: fit-content;
 }
+
 .pw-project-page-tech-stack-image {
+  border-radius: 8px;
+  border: 1px solid var(--line-color);
+  background: #f2efff;
+  padding: 4px;
+}
+
+.pw-project-page-project-carousel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pw-project-page-project-carousel-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--line-color);
+  background: rgba(14, 13, 24, 0.95);
+  overflow: hidden;
+}
+
+.pw-project-page-project-carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pw-project-page-project-carousel-controls {
+  display: grid;
+  grid-template-columns: 74px 1fr 74px;
+  align-items: center;
+  gap: 10px;
+}
+
+.pw-project-page-project-carousel-button {
+  border: 1px solid var(--line-color);
+  background: rgba(24, 21, 38, 0.8);
+  color: var(--text-color);
+  padding: 6px 10px;
+  font-size: 0.75rem;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
 }
-.pw-project-page-tech-stack-image:hover {
-  transform: scale(1.1);
+
+.pw-project-page-project-carousel-indicator {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  text-align: center;
 }
-.pw-project-page-tech-stack-image {
-  background: white;
-  padding: 2px;
-}
-@media (max-width: 768px) {
-  .pw-project-page-tech-stack {
-    gap: 12px;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
+
+@media (max-width: 980px) {
+  .pw-project-page-project-block-content {
+    grid-template-columns: 1fr;
   }
 }
-@media (max-width: 1400px) {
-  .pw-project-page-tech-stack {
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-  }
-}/*# sourceMappingURL=projectPage.css.map */

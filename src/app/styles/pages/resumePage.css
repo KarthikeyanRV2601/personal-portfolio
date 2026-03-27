@@ -2,120 +2,51 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  gap: 16px;
 }
-@media (max-width: 768px) {
-  .pw-resume-page {
-    padding: 0;
-  }
+
+.pw-resume-page-title-section,
+.pw-resume-page-skills-section,
+.pw-resume-page-experience-section,
+.pw-resume-page-education-section,
+.pw-resume-page-projects-section {
+  border: 1px solid var(--line-color);
+  background: rgba(24, 21, 38, 0.72);
+  padding: 16px;
 }
-.pw-resume-page {
-  /* Title Section */
-}
+
 .pw-resume-page-title-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 12px;
 }
-@media (max-width: 1400px) {
-  .pw-resume-page-title-section {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-}
-@media (max-width: 600px) {
-  .pw-resume-page-title-section {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-}
+
 .pw-resume-page-title-section-download-button {
-  background: white;
-  width: 30px;
-  height: 30px;
+  background: var(--accent-color);
+  width: 34px;
+  height: 34px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+  border-radius: 6px;
 }
-.pw-resume-page-title-section-download-button:hover {
-  opacity: 0.8;
-}
-.pw-resume-page {
-  /* Skills Section */
-}
-.pw-resume-page-skills-section {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.pw-resume-page-skills-section-skill {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.pw-resume-page {
-  /* Experience Section */
-}
-.pw-resume-page-experience-section {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-.pw-resume-page-experience-section-experience {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.pw-resume-page-experience-section-experience-position {
-  margin-top: 16px;
-}
-.pw-resume-page-experience-section-experience-position-information {
-  padding-left: 20px;
-}
-@media (max-width: 768px) {
-  .pw-resume-page-experience-section-experience-position-information {
-    padding: 0;
-  }
-}
-@media (max-width: 1400px) {
-  .pw-resume-page-experience-section-experience-position-information {
-    padding: 0;
-  }
-}
-.pw-resume-page {
-  /* Education Section */
-}
-.pw-resume-page-education-section {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.pw-resume-page {
-  /* Projects Section */
-}
+
+.pw-resume-page-skills-section,
+.pw-resume-page-experience-section,
+.pw-resume-page-education-section,
 .pw-resume-page-projects-section {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 14px;
 }
-.pw-resume-page-projects-section-project-title {
-  font-weight: bold;
-}
+
+.pw-resume-page-experience-section-experience-position-information,
 .pw-resume-page-projects-section-project-description {
-  padding-left: 20px;
+  padding-left: 10px;
 }
-@media (max-width: 768px) {
-  .pw-resume-page-projects-section-project-description {
-    padding-left: 10px;
-  }
+
+.pw-resume-page-projects-section-project-title {
+  font-weight: 700;
 }
-@media (max-width: 1400px) {
-  .pw-resume-page-projects-section-project-description {
-    padding-left: 10px;
-  }
-}/*# sourceMappingURL=resumePage.css.map */

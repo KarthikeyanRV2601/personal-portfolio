@@ -12,7 +12,7 @@ export const ResumePage = () => {
             animate={{opacity: 1, x: 0 }} // Move into view
             exit={{ x: "-100%" }} // Exit off-screen (left side)
             transition={{ duration: 0.1, ease: "easeInOut" }}
-            className="p-6 bg-gray-800 text-white rounded-lg shadow-md"
+            className="pw-content-shell"
         >
             <div className="pw-resume-page">
                 <ResumeTitleSection resumeData={resumeData} />
