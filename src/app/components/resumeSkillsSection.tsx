@@ -1,5 +1,5 @@
 import { ResumeSectionProps } from "../types";
-import { Paragraph, SecondaryText, SubHeader } from "./typography";
+import { Paragraph, SubHeader } from "./typography";
 
 export const ResumeSkillsSection = (props: ResumeSectionProps) => {
     return (<div className="pw-resume-page-skills-section pw-pos-margin-top-large">

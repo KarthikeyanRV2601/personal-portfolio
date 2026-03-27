@@ -1,5 +1,5 @@
 "use client"
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback } from "react";
 import { rootTranslations } from "../resources"
 import { MainPageTabs } from "../types"
 import { MenuProps, MenuTab } from "../types"
