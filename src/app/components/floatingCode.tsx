@@ -19,7 +19,7 @@ export const FloatingCode = (props: { theme: "light" | "dark" }) => {
         }, 2000);
 
         return () => clearInterval(interval);
-    }, [theme]);
+    }, [codeSnippets]);
 
     return (
         <div className="floating-code-container">

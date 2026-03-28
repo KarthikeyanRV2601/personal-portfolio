@@ -1,6 +1,20 @@
 import type { Metadata } from "next";
+import { Montserrat, Work_Sans } from "next/font/google";
 import "./globals.css";
 
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
+
+const workSans = Work_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-work-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Karthikeyan R V",
@@ -15,14 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Work+Sans:wght@400;700&display=swap"
-        />
-        <link rel="stylesheet" href="https://geists-fonts.vercel.app/stylesheet.css" />
         <link rel="icon" type="image/svg+xml" href="/resources/logoblack.svg" />
       </head>
-      <body>
+      <body className={`${montserrat.variable} ${workSans.variable}`}>
         {children}
       </body>
     </html>

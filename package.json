@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "sass:watch": "node-sass --watch src/sass -o dist/css",
     "sass:compile": "node-sass src/sass -o dist/css"
   },
