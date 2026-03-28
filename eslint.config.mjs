@@ -10,11 +10,14 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  {
+    ignores: [".next/**", "node_modules/**", "dist/**", "coverage/**", "out/**"],
+  },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   ...compat.config({
-    extends: ['next'],
+    extends: ["next"],
     rules: {
-      "@typescript-eslint/no-explicit-any": "off"
+      "@typescript-eslint/no-explicit-any": "off",
     },
   }),
 ];

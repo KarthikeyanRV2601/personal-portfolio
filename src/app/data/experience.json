@@ -6,7 +6,15 @@
             "location": "Hyderabad, India (On-site)",
             "start": "September 2024",
             "end": "Present",
-            "description": "Delivered 20+ production features for OPERA Cloud used by 40K+ hotels globally, including reusable UI components and page-template frameworks across 8+ modules. Built REST APIs in a microservices architecture, improved response times by ~15%, and contributed to cross-region localization. Applied SOLID design patterns, mentored interns, and built Python + LLM internal workflows that reduced manual effort by ~30%."
+            "description": "Delivered 20+ production features for OPERA Cloud used by 40K+ hotels globally, including reusable UI components and page-template frameworks across 8+ modules. Built REST APIs in a microservices architecture, improved response times by ~15%, and contributed to cross-region localization. Applied SOLID design patterns, mentored interns, and built Python + LLM internal workflows that reduced manual effort by ~30%.",
+            "expertise": "Large-scale application development, production stability, microservices, and user-centric UI engineering",
+            "responsibilities": [
+                "Delivered 20+ production-grade features across 8+ OPERA Cloud modules used by 40K+ hotels.",
+                "Designed reusable UI components and page-template frameworks for faster, consistent delivery.",
+                "Built and integrated REST APIs in a microservices architecture with improved latency and reliability.",
+                "Supported cross-region localization and mentored interns on engineering best practices.",
+                "Implemented Python + LLM internal automations that reduced repetitive manual effort."
+            ]
         },
         {
             "position": "Software Engineer I",
@@ -14,7 +22,15 @@
             "location": "Hyderabad, India (On-site)",
             "start": "September 2022",
             "end": "August 2024",
-            "description": "Built full-stack features with React, TypeScript, Java, and REST APIs for Oracle Hospitality products. Improved UI latency by ~20%, developed Java/Spring microservices for high-concurrency scenarios, and optimized SQL queries and state management to improve data retrieval performance by ~25%. Contributed to CI/CD and code-review practices that reduced defects and improved deployment stability."
+            "description": "Built full-stack features with React, TypeScript, Java, and REST APIs for Oracle Hospitality products. Improved UI latency by ~20%, developed Java/Spring microservices for high-concurrency scenarios, and optimized SQL queries and state management to improve data retrieval performance by ~25%. Contributed to CI/CD and code-review practices that reduced defects and improved deployment stability.",
+            "expertise": "Scalable full-stack systems, high-concurrency services, performance optimization, and delivery quality",
+            "responsibilities": [
+                "Built end-to-end product features using React, TypeScript, Java, and REST APIs.",
+                "Improved UI response performance and reduced latency through rendering and state-management optimizations.",
+                "Developed Java/Spring microservices for high-concurrency enterprise workflows.",
+                "Optimized SQL queries and backend data access paths for faster retrieval.",
+                "Strengthened CI/CD and code-review quality gates to reduce regressions."
+            ]
         },
         {
             "position": "Project Intern",
@@ -22,7 +38,14 @@
             "location": "Hyderabad, India (On-site)",
             "start": "February 2022",
             "end": "August 2022",
-            "description": "Audited 10+ microservices and supported bulk dependency/version upgrades for stable deployments. Assisted feature development, integration, and debugging in a distributed service ecosystem. Built Cypress and Jest test coverage and automated Jira workflows using Python to improve team efficiency."
+            "description": "Audited 10+ microservices and supported bulk dependency/version upgrades for stable deployments. Assisted feature development, integration, and debugging in a distributed service ecosystem. Built Cypress and Jest test coverage and automated Jira workflows using Python to improve team efficiency.",
+            "expertise": "Distributed systems support, service reliability, test automation, and release-readiness",
+            "responsibilities": [
+                "Audited and upgraded dependencies across 10+ microservices to improve deployment stability.",
+                "Supported integration and debugging across distributed services in shared environments.",
+                "Expanded Cypress and Jest automation for stronger release confidence.",
+                "Automated Jira workflows with Python to streamline team operations."
+            ]
         },
         {
             "position": "Web Developer Intern",
@@ -30,7 +53,14 @@
             "location": "Remote",
             "start": "February 2021",
             "end": "July 2021",
-            "description": "Developed browser-based video, audio, and PDF editor tools with 20+ features using FFmpeg (WASM) and PDF libraries. Optimized client-side processing for large file operations, reducing processing time by ~30% while improving UI responsiveness and data privacy through local-first processing."
+            "description": "Developed browser-based video, audio, and PDF editor tools with 20+ features using FFmpeg (WASM) and PDF libraries. Optimized client-side processing for large file operations, reducing processing time by ~30% while improving UI responsiveness and data privacy through local-first processing.",
+            "expertise": "Client-side media tooling, performance-focused frontend, and privacy-first UX",
+            "responsibilities": [
+                "Built browser-based media and PDF editing features with FFmpeg (WASM) and supporting libraries.",
+                "Optimized processing pipelines for large files to improve responsiveness and throughput.",
+                "Implemented local-first processing patterns to preserve user data privacy.",
+                "Collaborated on product iterations for stable and intuitive user workflows."
+            ]
         }
     ]
 }

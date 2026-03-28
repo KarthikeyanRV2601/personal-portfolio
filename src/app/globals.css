@@ -1,26 +1,68 @@
 :root {
   box-sizing: border-box;
-  --background-color: #f5f2ff;
-  --surface-color: #ffffff;
-  --surface-elevated: #f1edff;
-  --line-color: #d6cdee;
-  --text-color: #1e1930;
-  --text-muted: #6d648d;
-  --accent-color: #6b5cff;
-  --accent-soft: rgba(107, 92, 255, 0.14);
-  --accent-pink: #ff5fc3;
+  --color-bg: #1a1410;
+  --color-surface: #2a211b;
+  --color-primary: #d4a373;
+  --color-accent: #e76f51;
+  --color-text: #faedcd;
+  --color-muted: #cbb899;
+  --color-border: rgba(255, 255, 255, 0.06);
+  --color-danger: #e76f51;
+  --color-text-on-primary: #2a1f18;
+  --background-color: var(--color-bg);
+  --surface-color: var(--color-surface);
+  --surface-elevated: #362a23;
+  --line-color: var(--color-border);
+  --text-color: var(--color-text);
+  --text-muted: var(--color-muted);
+  --gold-strong: var(--color-primary);
+  --gold-soft: rgba(212, 163, 115, 0.28);
+  --accent-soft: rgba(231, 111, 81, 0.22);
+  --badge-text-color: #fff3db;
 }
 
 .pw-dark-mode {
-  --background-color: #06050e;
-  --surface-color: #100e20;
-  --surface-elevated: #17142d;
-  --line-color: #4b4470;
-  --text-color: #f3f0ff;
-  --text-muted: #b9b2dc;
-  --accent-color: #6bf5ff;
-  --accent-soft: rgba(107, 245, 255, 0.16);
-  --accent-pink: #ff5fc3;
+  --color-bg: #1a1410;
+  --color-surface: #2a211b;
+  --color-primary: #d4a373;
+  --color-accent: #e76f51;
+  --color-text: #faedcd;
+  --color-muted: #cbb899;
+  --color-border: rgba(255, 255, 255, 0.06);
+  --color-danger: #e76f51;
+  --color-text-on-primary: #2a1f18;
+  --background-color: var(--color-bg);
+  --surface-color: var(--color-surface);
+  --surface-elevated: #362a23;
+  --line-color: var(--color-border);
+  --text-color: var(--color-text);
+  --text-muted: var(--color-muted);
+  --gold-strong: var(--color-primary);
+  --gold-soft: rgba(212, 163, 115, 0.28);
+  --accent-soft: rgba(231, 111, 81, 0.22);
+  --badge-text-color: #fff3db;
+}
+
+body:not(.pw-dark-mode) {
+  --color-bg: #faedcd;
+  --color-surface: #ffffff;
+  --color-primary: #bc6c25;
+  --color-accent: #9c6644;
+  --color-text: #3a2e2a;
+  --color-muted: #6b5550;
+  --color-border: rgba(0, 0, 0, 0.06);
+  --color-danger: #9c6644;
+  --color-text-on-primary: #fff8f2;
+  --background-color: var(--color-bg);
+  --surface-color: var(--color-surface);
+  --surface-elevated: #fff8f0;
+  --line-color: var(--color-border);
+  --text-color: var(--color-text);
+  --text-muted: var(--color-muted);
+  --gold-strong: var(--color-primary);
+  --gold-soft: rgba(188, 108, 37, 0.2);
+  --accent-soft: rgba(156, 102, 68, 0.16);
+  --badge-text-color: #4f2c1b;
 }
 
 * {
@@ -39,20 +81,21 @@ body {
   margin: 0;
   cursor: auto;
   font-family: "Work Sans", sans-serif;
-  background:
-    radial-gradient(circle at 12% 8%, rgba(107, 92, 255, 0.12), transparent 34%),
-    radial-gradient(circle at 86% 14%, rgba(255, 95, 195, 0.1), transparent 38%),
-    linear-gradient(180deg, #faf8ff 0%, var(--background-color) 100%);
   color: var(--text-color);
+  background:
+    radial-gradient(circle at 12% 8%, color-mix(in srgb, var(--color-primary) 17%, transparent), transparent 35%),
+    radial-gradient(circle at 86% 20%, color-mix(in srgb, var(--color-accent) 14%, transparent), transparent 40%),
+    radial-gradient(circle at 58% 66%, color-mix(in srgb, var(--color-primary) 10%, transparent), transparent 48%),
+    linear-gradient(180deg, color-mix(in srgb, var(--background-color) 86%, #000000) 0%, var(--background-color) 100%);
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
 }
 
-body.pw-dark-mode {
+body:not(.pw-dark-mode) {
   background:
-    radial-gradient(circle at 12% 8%, rgba(107, 245, 255, 0.15), transparent 34%),
-    radial-gradient(circle at 86% 14%, rgba(255, 95, 195, 0.14), transparent 38%),
-    linear-gradient(180deg, #090813 0%, var(--background-color) 100%);
+    radial-gradient(circle at 14% 8%, color-mix(in srgb, var(--color-primary) 11%, transparent), transparent 34%),
+    radial-gradient(circle at 84% 20%, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 38%),
+    linear-gradient(180deg, color-mix(in srgb, var(--background-color) 88%, #ffffff) 0%, var(--background-color) 100%);
 }
 
 a {
@@ -65,31 +108,109 @@ p {
 
 ::selection,
 ::-moz-selection {
-  background-color: var(--accent-color);
-  color: #0d0b18;
+  background-color: color-mix(in srgb, var(--color-primary) 86%, transparent);
+  color: var(--color-text);
 }
 
 .pw-theme-toggle {
-  position: fixed;
-  top: 16px;
-  right: 18px;
-  border: 1px solid var(--line-color);
-  background: var(--surface-color);
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--gold-strong) 44%, var(--line-color) 56%);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--surface-elevated) 93%, transparent) 0%,
+    color-mix(in srgb, var(--gold-soft) 18%, transparent) 100%
+  );
   color: var(--text-color);
   cursor: pointer;
-  height: 36px;
-  width: 36px;
-  border-radius: 9999px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-  display: flex;
-  justify-content: center;
+  height: 44px;
+  min-width: 170px;
+  padding: 0 12px;
+  border-radius: 999px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
   align-items: center;
-  z-index: 60;
+  justify-content: space-between;
+  gap: 10px;
+  font: inherit;
+  z-index: 70;
+  backdrop-filter: blur(8px);
 }
 
 .pw-theme-toggle:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--color-primary) 52%, var(--line-color) 48%);
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--gold-soft) 24%, transparent);
+}
+
+.pw-theme-toggle:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--gold-strong) 88%, transparent);
+  outline-offset: 2px;
+}
+
+.pw-theme-toggle-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--gold-soft) 44%, transparent);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.pw-theme-toggle-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pw-theme-toggle-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.pw-theme-toggle-hint {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: color-mix(in srgb, var(--color-accent) 70%, var(--text-muted) 30%);
+}
+
+body:not(.pw-dark-mode) .pw-theme-toggle {
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--surface-color) 95%, transparent) 0%,
+    color-mix(in srgb, var(--gold-soft) 12%, transparent) 100%
+  );
+}
+
+@media (max-width: 760px) {
+  .pw-theme-toggle {
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    min-width: 146px;
+    height: 40px;
+    padding: 0 10px;
+    gap: 8px;
+    z-index: 80;
+  }
+
+  .pw-theme-toggle-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .pw-theme-toggle-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pw-theme-toggle-label {
+    font-size: 0.8rem;
+  }
 }
 
 .pw-interactible {
