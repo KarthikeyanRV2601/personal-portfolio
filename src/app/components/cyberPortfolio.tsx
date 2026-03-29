@@ -389,7 +389,7 @@ export default function CyberPortfolio() {
               src={coverPhotoSrc}
               alt={about.name}
               fill
-              sizes="(max-width: 900px) 92vw, 34vw"
+              sizes="(max-width: 900px) 92vw, 42vw"
               className={styles.coverPhoto}
               priority
               unoptimized
