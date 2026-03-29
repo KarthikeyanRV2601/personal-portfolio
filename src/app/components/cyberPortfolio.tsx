@@ -436,7 +436,7 @@ export default function CyberPortfolio() {
               </div>
               <div>
                 <dt>Email</dt>
-                <dd>karthikeyan.rv.portfolio@gmail.com</dd>
+                <dd>karthikeyan.r.v.2601@gmail.com</dd>
               </div>
               <div>
                 <dt>Phone</dt>
@@ -664,7 +664,7 @@ export default function CyberPortfolio() {
                     <h4>{item.title}</h4>
                     <p>{item.description}</p>
                     <a
-                      href={`mailto:karthikeyan.rv.portfolio@gmail.com?subject=${encodeURIComponent(item.askSubject)}`}
+                      href={`mailto:karthikeyan.r.v.2601@gmail.com?subject=${encodeURIComponent(item.askSubject)}`}
                       className={styles.beyondWorkAsk}
                     >
                       {item.ask}
@@ -676,7 +676,7 @@ export default function CyberPortfolio() {
           </div>
           <div className={styles.contactFormWrap}>
             <h3 className={styles.bodyText}>Stay Connected</h3>
-            <p className={styles.bodyText}>Email: karthikeyan.rv.portfolio@gmail.com</p>
+            <p className={styles.bodyText}>Email: karthikeyan.r.v.2601@gmail.com</p>
             <div className={styles.contactLinks}>
               {socialLinks.map((social) => (
                 <a key={`contact-${social.label}`} href={social.href} target="_blank" rel="noreferrer" className={styles.contactLinkButton}>
