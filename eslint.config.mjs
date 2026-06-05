@@ -11,7 +11,7 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   {
-    ignores: [".next/**", "node_modules/**", "dist/**", "coverage/**", "out/**"],
+    ignores: [".next/**", "node_modules/**", "dist/**", "coverage/**", "out/**", "opera-cookbook/**"],
   },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   ...compat.config({

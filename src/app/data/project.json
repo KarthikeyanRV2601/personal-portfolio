@@ -21,6 +21,26 @@
             "url": "https://www.oracle.com/in/hospitality/hotel-property-management/hotel-pms-software/"
         },
         {
+            "title": "JobBuddy",
+            "role": "Product Engineer, React + TypeScript",
+            "start": "2026",
+            "end": "Present",
+            "description": "Built a local-first Gmail job-search dashboard that scans application emails with read-only Gmail access, classifies status signals, and turns inbox activity into a compact tracker for pipeline status, attention items, notes, and skill context.",
+            "technologies": [
+                "react",
+                "typescript",
+                "javascript",
+                "ai",
+                "git"
+            ],
+            "projectImages": [
+                "jobbuddy-dashboard.jpg",
+                "jobbuddy-tracker.jpg",
+                "jobbuddy-editor.jpg"
+            ],
+            "url": "https://github.com/KarthikeyanRV2601/jobBuddy"
+        },
+        {
             "title": "Vortex AI",
             "role": "AI/ML + Full Stack Developer",
             "start": "2024",
@@ -43,6 +63,25 @@
                 "project76.webp"
             ],
             "url": "https://github.com/KarthikeyanRV2601/Vortex-AI/tree/main"
+        },
+        {
+            "title": "Online Video, Audio & PDF Editor",
+            "role": "Web Developer Intern",
+            "start": "2021",
+            "end": "2021",
+            "description": "Developed secure browser-based media editing tools with 20+ features using FFmpeg (WASM) and PDF libraries. Focused on seamless client-side processing so user files remained local and private.",
+            "technologies": [
+                "html",
+                "css",
+                "javascript",
+                "jekyll"
+            ],
+            "projectImages": [
+                "project31.webp",
+                "project32.webp",
+                "project33.webp"
+            ],
+            "url": "https://contra.com/p/AEMYlRUU-safe-video-kit-secure-and-seamless-video-editing-and-sharing"
         },
         {
             "title": "Policy Compliance System",
@@ -89,25 +128,6 @@
                 "project25.webp"
             ],
             "url": "https://contra.com/p/7g2mWsbR-order-management-system"
-        },
-        {
-            "title": "Online Video, Audio & PDF Editor",
-            "role": "Web Developer Intern",
-            "start": "2021",
-            "end": "2021",
-            "description": "Developed secure browser-based media editing tools with 20+ features using FFmpeg (WASM) and PDF libraries. Focused on seamless client-side processing so user files remained local and private.",
-            "technologies": [
-                "html",
-                "css",
-                "javascript",
-                "jekyll"
-            ],
-            "projectImages": [
-                "project31.webp",
-                "project32.webp",
-                "project33.webp"
-            ],
-            "url": "https://contra.com/p/AEMYlRUU-safe-video-kit-secure-and-seamless-video-editing-and-sharing"
         }
     ]
 }
