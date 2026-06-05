@@ -23,10 +23,10 @@ const socialLinks = [
 ];
 
 const specializationCards = [
-  { title: "#LargeScaleApplications", count: "40+ components", icon: "UI" },
-  { title: "#ProductionIssueResolution", count: "20+ APIs", icon: "MS" },
-  { title: "#HighUserBasePlatforms", count: "RAG + Agents", icon: "AI" },
-  { title: "#UserCentricDesign", count: "Latency -20%", icon: "PX" },
+  { title: "Interface systems", count: "React + TypeScript", icon: "UI" },
+  { title: "Service reliability", count: "Java + APIs", icon: "BE" },
+  { title: "AI workflows", count: "Python + LLMs", icon: "AI" },
+  { title: "Product polish", count: "UX + performance", icon: "PX" },
 ];
 
 const navLinks = [
@@ -183,9 +183,9 @@ export default function CyberPortfolio() {
 
   const stats = [
     { value: "3.5+ years", label: "Professional experience" },
-    { value: "20+ features", label: "Production delivered" },
-    { value: "40K+ hotels", label: "Platform impact" },
-    { value: "2 OCI certs", label: "AI foundations" },
+    { value: "Product UI", label: "Frontend systems" },
+    { value: "Java APIs", label: "Backend delivery" },
+    { value: "OCI AI", label: "Applied AI learning" },
   ];
 
   const coreSkills = useMemo(() => {
@@ -204,7 +204,7 @@ export default function CyberPortfolio() {
     { label: "Role", value: about.title },
     { label: "Location", value: "Hyderabad, India" },
     { label: "Experience", value: "3.5+ years" },
-    { label: "Impact", value: "40K+ hotels platform" },
+    { label: "Focus", value: "Enterprise hospitality products" },
     { label: "Certification 1", value: "OCI 2025 AI Foundations Associate" },
     { label: "Certification 2", value: "OCI 2025 Certified Generative AI Professional" },
   ];
@@ -368,16 +368,16 @@ export default function CyberPortfolio() {
 
         <div className={styles.heroLeft}>
           <h1 className={styles.heroTitle}>
-            <span>{about.name}</span>
-            <span>{about.title}</span>
+            <span className={styles.heroName}>{about.name}</span>
+            <span className={styles.heroRole}>{about.title}</span>
           </h1>
           <p className={styles.heroIntro}>{about.tagline}</p>
           <div className={styles.ctaRow}>
             <a href="/KarthikeyanRV_Resume.pdf" target="_blank" rel="noreferrer" className={styles.secondaryButton}>
-              Hire Me
+              View CV
             </a>
             <a href="#contact" className={styles.primaryButton}>
-              Lets Talk
+              Contact
             </a>
           </div>
         </div>
@@ -536,19 +536,36 @@ export default function CyberPortfolio() {
       <section id="projects" className={styles.section}>
         <h2 className={styles.sectionHeading}>Selected work</h2>
         <div className={styles.projectGrid}>
-          {projects.map((project) => {
+          {projects.map((project, index) => {
             const activeIndex = projectImageIndex[project.title] ?? 0;
             const imageCount = project.projectImages.length;
 
             return (
-              <article key={project.title} className={styles.projectCard}>
+              <article key={project.title} className={`${styles.projectCard} ${index < 2 ? styles.projectCardFeatured : ""}`}>
+                <div className={styles.projectText}>
+                  <span className={styles.projectRank}>{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{project.title}</h3>
+                  <p>{project.role}</p>
+                  <span className={styles.projectMeta}>
+                    {project.start} - {project.end}
+                  </span>
+                  <p className={styles.projectDescription}>{project.description}</p>
+                  <div className={styles.projectTechList} aria-label={`${project.title} technologies`}>
+                    {project.technologies.slice(0, 5).map((technology) => (
+                      <span key={`${project.title}-${technology}`}>{technology}</span>
+                    ))}
+                  </div>
+                  <a href={project.url} target="_blank" rel="noreferrer" className={styles.projectLink}>
+                    View Project
+                  </a>
+                </div>
                 <div className={styles.projectCarousel}>
                   <div className={styles.projectImageWrap}>
                     <Image
                       src={`/resources/images/projects/${project.projectImages[activeIndex]}`}
                       alt={`${project.title} preview ${activeIndex + 1}`}
                       fill
-                      sizes="(max-width: 900px) 92vw, 46vw"
+                      sizes="(max-width: 900px) 92vw, 42vw"
                       className={styles.projectImage}
                     />
                     <span className={styles.projectImageCount}>
@@ -576,17 +593,6 @@ export default function CyberPortfolio() {
                       </button>
                     </div>
                   ) : null}
-                </div>
-                <div className={styles.projectText}>
-                  <h3>{project.title}</h3>
-                  <p>{project.role}</p>
-                  <span className={styles.projectMeta}>
-                    {project.start} - {project.end}
-                  </span>
-                  <p className={styles.projectDescription}>{project.description}</p>
-                  <a href={project.url} target="_blank" rel="noreferrer" className={styles.projectLink}>
-                    View Project
-                  </a>
                 </div>
               </article>
             );
@@ -623,9 +629,9 @@ export default function CyberPortfolio() {
         <h2 className={styles.sectionHeading}>Resume highlights</h2>
         <div className={styles.resumeGrid}>
           <article className={styles.resumeCard}>
-            <h3>{resume.resumeNameTitle}</h3>
-            <p>{resume.resumeTagLine}</p>
-            <p>{resume.skills.languages}</p>
+            <h3>Engineering Focus</h3>
+            <p>Product engineering across enterprise UI, service reliability, and practical automation.</p>
+            <p>Core languages: Java, TypeScript, Python, SQL.</p>
           </article>
           <article className={styles.resumeCard}>
             <h3>Frameworks and Tools</h3>

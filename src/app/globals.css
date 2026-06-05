@@ -1,68 +1,68 @@
 :root {
   box-sizing: border-box;
-  --color-bg: #1a1410;
-  --color-surface: #2a211b;
-  --color-primary: #d4a373;
-  --color-accent: #e76f51;
-  --color-text: #faedcd;
-  --color-muted: #cbb899;
-  --color-border: rgba(255, 255, 255, 0.06);
-  --color-danger: #e76f51;
-  --color-text-on-primary: #2a1f18;
+  --color-bg: #111111;
+  --color-surface: #181818;
+  --color-primary: #76e4c3;
+  --color-accent: #b8c0ff;
+  --color-text: #f4f4f2;
+  --color-muted: #a8aaa7;
+  --color-border: rgba(255, 255, 255, 0.09);
+  --color-danger: #ff8a8a;
+  --color-text-on-primary: #092018;
   --background-color: var(--color-bg);
   --surface-color: var(--color-surface);
-  --surface-elevated: #362a23;
+  --surface-elevated: #202020;
   --line-color: var(--color-border);
   --text-color: var(--color-text);
   --text-muted: var(--color-muted);
   --gold-strong: var(--color-primary);
-  --gold-soft: rgba(212, 163, 115, 0.28);
-  --accent-soft: rgba(231, 111, 81, 0.22);
-  --badge-text-color: #fff3db;
+  --gold-soft: rgba(118, 228, 195, 0.16);
+  --accent-soft: rgba(184, 192, 255, 0.14);
+  --badge-text-color: #dffff5;
 }
 
 .pw-dark-mode {
-  --color-bg: #1a1410;
-  --color-surface: #2a211b;
-  --color-primary: #d4a373;
-  --color-accent: #e76f51;
-  --color-text: #faedcd;
-  --color-muted: #cbb899;
-  --color-border: rgba(255, 255, 255, 0.06);
-  --color-danger: #e76f51;
-  --color-text-on-primary: #2a1f18;
+  --color-bg: #111111;
+  --color-surface: #181818;
+  --color-primary: #76e4c3;
+  --color-accent: #b8c0ff;
+  --color-text: #f4f4f2;
+  --color-muted: #a8aaa7;
+  --color-border: rgba(255, 255, 255, 0.09);
+  --color-danger: #ff8a8a;
+  --color-text-on-primary: #092018;
   --background-color: var(--color-bg);
   --surface-color: var(--color-surface);
-  --surface-elevated: #362a23;
+  --surface-elevated: #202020;
   --line-color: var(--color-border);
   --text-color: var(--color-text);
   --text-muted: var(--color-muted);
   --gold-strong: var(--color-primary);
-  --gold-soft: rgba(212, 163, 115, 0.28);
-  --accent-soft: rgba(231, 111, 81, 0.22);
-  --badge-text-color: #fff3db;
+  --gold-soft: rgba(118, 228, 195, 0.16);
+  --accent-soft: rgba(184, 192, 255, 0.14);
+  --badge-text-color: #dffff5;
 }
 
 body:not(.pw-dark-mode) {
-  --color-bg: #faedcd;
+  --color-bg: #f7f7f4;
   --color-surface: #ffffff;
-  --color-primary: #bc6c25;
-  --color-accent: #9c6644;
-  --color-text: #3a2e2a;
-  --color-muted: #6b5550;
-  --color-border: rgba(0, 0, 0, 0.06);
-  --color-danger: #9c6644;
-  --color-text-on-primary: #fff8f2;
+  --color-primary: #0f8f72;
+  --color-accent: #4d5bd7;
+  --color-text: #1f2421;
+  --color-muted: #66706b;
+  --color-border: rgba(17, 24, 21, 0.1);
+  --color-danger: #b64040;
+  --color-text-on-primary: #ffffff;
   --background-color: var(--color-bg);
   --surface-color: var(--color-surface);
-  --surface-elevated: #fff8f0;
+  --surface-elevated: #fbfbf8;
   --line-color: var(--color-border);
   --text-color: var(--color-text);
   --text-muted: var(--color-muted);
   --gold-strong: var(--color-primary);
-  --gold-soft: rgba(188, 108, 37, 0.2);
-  --accent-soft: rgba(156, 102, 68, 0.16);
-  --badge-text-color: #4f2c1b;
+  --gold-soft: rgba(15, 143, 114, 0.12);
+  --accent-soft: rgba(77, 91, 215, 0.1);
+  --badge-text-color: #0d5d4c;
 }
 
 * {
@@ -82,20 +82,13 @@ body {
   cursor: auto;
   font-family: var(--font-work-sans), "Work Sans", sans-serif;
   color: var(--text-color);
-  background:
-    radial-gradient(circle at 12% 8%, color-mix(in srgb, var(--color-primary) 17%, transparent), transparent 35%),
-    radial-gradient(circle at 86% 20%, color-mix(in srgb, var(--color-accent) 14%, transparent), transparent 40%),
-    radial-gradient(circle at 58% 66%, color-mix(in srgb, var(--color-primary) 10%, transparent), transparent 48%),
-    linear-gradient(180deg, color-mix(in srgb, var(--background-color) 86%, #000000) 0%, var(--background-color) 100%);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--background-color) 94%, #ffffff) 0%, var(--background-color) 100%);
   transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
 }
 
 body:not(.pw-dark-mode) {
-  background:
-    radial-gradient(circle at 14% 8%, color-mix(in srgb, var(--color-primary) 11%, transparent), transparent 34%),
-    radial-gradient(circle at 84% 20%, color-mix(in srgb, var(--color-accent) 10%, transparent), transparent 38%),
-    linear-gradient(180deg, color-mix(in srgb, var(--background-color) 88%, #ffffff) 0%, var(--background-color) 100%);
+  background: linear-gradient(180deg, #ffffff 0%, var(--background-color) 100%);
 }
 
 a {
@@ -114,12 +107,8 @@ p {
 
 .pw-theme-toggle {
   position: relative;
-  border: 1px solid color-mix(in srgb, var(--gold-strong) 44%, var(--line-color) 56%);
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--surface-elevated) 93%, transparent) 0%,
-    color-mix(in srgb, var(--gold-soft) 18%, transparent) 100%
-  );
+  border: 1px solid color-mix(in srgb, var(--line-color) 88%, transparent);
+  background: color-mix(in srgb, var(--surface-elevated) 92%, transparent);
   color: var(--text-color);
   cursor: pointer;
   height: 44px;
@@ -138,8 +127,8 @@ p {
 
 .pw-theme-toggle:hover {
   transform: translateY(-1px);
-  border-color: color-mix(in srgb, var(--color-primary) 52%, var(--line-color) 48%);
-  box-shadow: 0 8px 22px color-mix(in srgb, var(--gold-soft) 24%, transparent);
+  border-color: color-mix(in srgb, var(--color-primary) 38%, var(--line-color) 62%);
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--color-bg) 14%, transparent);
 }
 
 .pw-theme-toggle:focus-visible {
@@ -179,11 +168,7 @@ p {
 }
 
 body:not(.pw-dark-mode) .pw-theme-toggle {
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--surface-color) 95%, transparent) 0%,
-    color-mix(in srgb, var(--gold-soft) 12%, transparent) 100%
-  );
+  background: color-mix(in srgb, var(--surface-color) 96%, transparent);
 }
 
 @media (max-width: 760px) {
