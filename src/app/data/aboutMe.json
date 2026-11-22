@@ -1,10 +1,10 @@
 {
-    "data": {
-        "mainLandingTitle": "I build reliable interfaces for product teams.",
-        "name": "Karthikeyan R.V.",
-        "linkedInLink": "https://www.linkedin.com/in/karthikeyan-rv/",
-        "title": "Product Engineer | Scalable Systems",
-        "tagline": "Frontend and full-stack engineer focused on dependable products, clear interfaces, and maintainable systems.",
-        "description": "I'm a Software Engineer at Oracle Hospitality working on OPERA Cloud. My day-to-day work spans React + TypeScript interfaces, Java services, SQL optimization, and practical AI automation with Python and LLM workflows. I care about calm user experiences, clean implementation details, and product work that remains easy to operate after it ships."
-    }
+  "data": {
+    "mainLandingTitle": "About",
+    "name": "Karthikeyan R.V.",
+    "linkedInLink": "https://www.linkedin.com/in/karthikeyan-rv/",
+    "title": "Application Software Engineer II",
+    "tagline": "Full-stack engineering and applied AI at Oracle Hospitality.",
+    "description": "I’m a Software Engineer II at Oracle Hospitality. I develop agentic workflows for booking and availability, RAG-based documentation chat, and Python / LLM automation for internal processes. My full-stack work includes React and TypeScript interfaces, Java and Spring Boot services, and REST APIs for OPERA Cloud."
+  }
 }

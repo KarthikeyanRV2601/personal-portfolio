@@ -4,7 +4,7 @@ import "./globals.css";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-montserrat",
   display: "swap",
 });
@@ -17,8 +17,8 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Karthikeyan R V",
-  description: "Personal portfolio",
+  title: "Karthikeyan R.V. — AI Workflows & Software Engineering",
+  description: "Software Engineer II at Oracle Hospitality. Full-stack engineering, agentic AI workflows, and RAG systems for OPERA Cloud.",
 };
 
 export default function RootLayout({

@@ -6,11 +6,15 @@ import aboutMeData from "../data/aboutMe.json";
 import experienceData from "../data/experience.json";
 import projectData from "../data/project.json";
 import blogsData from "../data/blogs.json";
+import siteConfig from "../data/site.json";
+import skillsData from "../data/skills.json";
 import contactPageData from "../data/contactPage.json";
 import resumeDataRaw from "../data/resume.json";
 import ThemeSwitcher from "./interactibles/themeSwitcher";
 import styles from "./cyberPortfolio.module.css";
 import { ContactFormFieldType, ContactPageData } from "../types";
+
+const projectPriority = new Map([["Vortex AI", 0], ["Cloud PMS - OPERA Cloud", 1], ["JobBuddy", 2]]);
 
 const githubLink = "https://github.com/KarthikeyanRV2601";
 
@@ -22,18 +26,12 @@ const socialLinks = [
   { label: "CV", icon: "cv" as SocialIcon, href: "/KarthikeyanRV_Resume.pdf" },
 ];
 
-const specializationCards = [
-  { title: "Interface systems", count: "React + TypeScript", icon: "UI" },
-  { title: "Service reliability", count: "Java + APIs", icon: "BE" },
-  { title: "AI workflows", count: "Python + LLMs", icon: "AI" },
-  { title: "Product polish", count: "UX + performance", icon: "PX" },
-];
-
 const navLinks = [
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
+  { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
-  { id: "blogs", label: "Blogs" },
+  ...(siteConfig.showBlogs ? [{ id: "blogs", label: "Blogs" }] : []),
   { id: "resume", label: "Resume" },
   { id: "contact", label: "Contact" },
 ];
@@ -81,15 +79,17 @@ const renderSocialIcon = (icon: SocialIcon) => {
 export default function CyberPortfolio() {
   const about = aboutMeData.data;
   const experiences = experienceData.data;
-  const projects = projectData.data;
+  const projects = [...projectData.data].sort(
+    (left, right) => (projectPriority.get(left.title) ?? 3) - (projectPriority.get(right.title) ?? 3)
+  );
   const blogs = blogsData.data;
   const resume = resumeDataRaw.data;
   const { interestsDropDownData, projectTimeData } = contactPageData;
 
   const [darkMode, setDarkMode] = useState(false);
+  const [portraitOn, setPortraitOn] = useState(true);
   const [activeSection, setActiveSection] = useState("home");
   const [projectImageIndex, setProjectImageIndex] = useState<Record<string, number>>({});
-  const [coverBasePath, setCoverBasePath] = useState("/resources/images/profile");
   const [formStatus, setFormStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
@@ -123,40 +123,11 @@ export default function CyberPortfolio() {
   const [contactData, setContactData] = useState<ContactPageData>(initialContactData);
 
   useEffect(() => {
-    let cancelled = false;
-
-    const checkImageExists = (path: string): Promise<boolean> => {
-      return new Promise((resolve) => {
-        const probe = new window.Image();
-        probe.onload = () => resolve(true);
-        probe.onerror = () => resolve(false);
-        probe.src = `${path}/cover-light.png`;
-      });
-    };
-
-    const resolveCoverPath = async () => {
-      const candidates = ["/images/profie", "/images/profile", "/resources/images/profile"];
-      for (const path of candidates) {
-        const exists = await checkImageExists(path);
-        if (exists) {
-          if (!cancelled) setCoverBasePath(path);
-          return;
-        }
-      }
-    };
-
-    resolveCoverPath();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  useEffect(() => {
     const observedIds = navLinks.map((link) => link.id);
 
     const updateActiveSection = () => {
       const offset = 140;
-      let currentSection = observedIds[0];
+      let currentSection = "home";
 
       for (const id of observedIds) {
         const element = document.getElementById(id);
@@ -179,34 +150,11 @@ export default function CyberPortfolio() {
     };
   }, []);
 
-  const coverPhotoSrc = `${coverBasePath}/${darkMode ? "cover-dark.png" : "cover-light.png"}?theme=${darkMode ? "dark" : "light"}`;
-
   const stats = [
-    { value: "3.5+ years", label: "Professional experience" },
-    { value: "Product UI", label: "Frontend systems" },
-    { value: "Java APIs", label: "Backend delivery" },
-    { value: "OCI AI", label: "Applied AI learning" },
-  ];
-
-  const coreSkills = useMemo(() => {
-    return Array.from(
-      new Set(
-        [resume.skills.languages, resume.skills.frameworkAndTools, resume.skills.aiMlAndDataScience]
-          .join(",")
-          .split(",")
-          .map((skill) => skill.trim())
-          .filter(Boolean)
-      )
-    ).slice(0, 18);
-  }, [resume.skills.aiMlAndDataScience, resume.skills.frameworkAndTools, resume.skills.languages]);
-
-  const quickFacts = [
-    { label: "Role", value: about.title },
-    { label: "Location", value: "Hyderabad, India" },
-    { label: "Experience", value: "3.5+ years" },
-    { label: "Focus", value: "Enterprise hospitality products" },
-    { label: "Certification 1", value: "OCI 2025 AI Foundations Associate" },
-    { label: "Certification 2", value: "OCI 2025 Certified Generative AI Professional" },
+    { value: "30+", label: "OPERA Cloud features delivered" },
+    { value: "8+", label: "Modules with reusable UI frameworks" },
+    { value: "~80%", label: "Less manual effort through AI automation" },
+    { value: "~15%", label: "Faster API response times" },
   ];
 
   const beyondWorkItems = [
@@ -341,17 +289,19 @@ export default function CyberPortfolio() {
 
   return (
     <main className={styles.page}>
+      <a href="#about" className={styles.skipLink}>Skip to content</a>
       <header className={styles.topBar}>
         <a href="#home" className={styles.brand}>
-          K.R.V
+          KRV<span className={styles.brandDot}>_</span>
         </a>
         <div className={styles.headerControls}>
-          <nav className={styles.nav}>
+          <nav className={styles.nav} aria-label="Main navigation">
             {navLinks.map((link) => (
               <a
                 key={link.id}
                 href={`#${link.id}`}
                 className={`${styles.navItem} ${activeSection === link.id ? styles.navItemActive : ""}`}
+                aria-current={activeSection === link.id ? "location" : undefined}
                 onClick={() => setActiveSection(link.id)}
               >
                 {link.label}
@@ -363,99 +313,82 @@ export default function CyberPortfolio() {
       </header>
 
       <section id="home" className={`${styles.section} ${styles.hero}`}>
-        <div className={styles.ambientOne} aria-hidden="true" />
-        <div className={styles.ambientTwo} aria-hidden="true" />
-
-        <div className={styles.heroLeft}>
-          <h1 className={styles.heroTitle}>
-            <span className={styles.heroName}>{about.name}</span>
-            <span className={styles.heroRole}>{about.title}</span>
-          </h1>
-          <p className={styles.heroIntro}>{about.tagline}</p>
+        <div className={styles.heroContent}>
+          <p className={styles.heroGreeting}>Hey, I’m Karthikeyan</p>
+          <p className={styles.heroLabel}>SOFTWARE ENGINEER II / AI ENGINEERING</p>
+          <h1 className={styles.heroTitle}><span>AI agents.</span><br />Built into<br />real products.</h1>
+          <p className={styles.heroIntro}>I build agentic workflows, RAG systems, and full-stack applications at Oracle Hospitality.</p>
           <div className={styles.ctaRow}>
-            <a href="/KarthikeyanRV_Resume.pdf" target="_blank" rel="noreferrer" className={styles.secondaryButton}>
-              View CV
-            </a>
-            <a href="#contact" className={styles.primaryButton}>
-              Contact
-            </a>
+            <a href="#projects" className={styles.primaryButton}>Explore projects <span aria-hidden="true">↗</span></a>
+            <a href="/KarthikeyanRV_Resume.pdf" target="_blank" rel="noreferrer" className={styles.secondaryButton}>Résumé <span aria-hidden="true">↓</span></a>
           </div>
+          <div className={styles.heroFootnote}><span>Oracle Hospitality</span><span>Hyderabad, India</span></div>
         </div>
-
-        <div className={styles.heroRight}>
-          <div className={styles.heroImageCard}>
-            <Image
-              key={coverPhotoSrc}
-              src={coverPhotoSrc}
-              alt={about.name}
-              fill
-              sizes="(max-width: 900px) 92vw, 42vw"
-              className={styles.coverPhoto}
-              priority
-              unoptimized
-            />
+        <div className={styles.workflowWindow}>
+          <div className={styles.windowBar}><span aria-hidden="true">■</span><span>WORKFLOW_01</span><span>AI SYSTEMS</span></div>
+          <div className={styles.workflowBody}>
+            <p className={styles.workflowLabel}>AGENTIC DEVELOPMENT</p>
+            <h2>From a request<br />to a workflow.</h2>
+            <ol className={styles.workflowSteps}>
+              <li><span>01</span><div><strong>Understand the request</strong><small>Booking · availability · documentation</small></div></li>
+              <li><span>02</span><div><strong>Retrieve the context</strong><small>RAG · embeddings · semantic search</small></div></li>
+              <li><span>03</span><div><strong>Connect the application</strong><small>Python · LLMs · REST APIs</small></div></li>
+            </ol>
+            <details className={styles.aiReveal}>
+              <summary>Inspect the AI layer <span aria-hidden="true" /></summary>
+              <div className={styles.terminal}>
+                <p className={styles.terminalPrompt}>$ workflow.inspect</p>
+                <dl>
+                  <div><dt>AGENTS</dt><dd>Booking & availability flows</dd></div>
+                  <div><dt>RETRIEVAL</dt><dd>OPERA Cloud documentation chat</dd></div>
+                  <div><dt>AUTOMATION</dt><dd>Python + LLM internal workflows</dd></div>
+                </dl>
+                <p className={styles.terminalNote}>A sketch of my engineering work.</p>
+              </div>
+            </details>
           </div>
-          <div className={styles.socialRail}>
-            {socialLinks.map((social) => (
-              <a key={social.label} href={social.href} target="_blank" rel="noreferrer" aria-label={social.label} className={styles.socialButton}>
-                <span className={styles.socialIcon}>{renderSocialIcon(social.icon)}</span>
-                <span className={styles.socialLabel}>{social.label}</span>
-              </a>
-            ))}
-          </div>
+          <div className={styles.windowFooter}><span>PYTHON / LANGCHAIN / OPENAI</span><span aria-hidden="true">↳</span></div>
         </div>
       </section>
+
+      <div className={styles.focusStrip}><span>01 / AGENTIC WORKFLOWS</span><span>02 / RAG SYSTEMS</span><span>03 / FULL-STACK ENGINEERING</span></div>
 
       <section id="about" className={styles.section}>
-        <div className={styles.headingGrid}>
-          <h2 className={styles.sectionHeading}>{about.mainLandingTitle}</h2>
-          <div className={styles.aboutDescriptionBlock}>
-            <p className={styles.leadText}>{about.description}</p>
-            <a href="/KarthikeyanRV_Resume.pdf" target="_blank" rel="noreferrer" className={styles.primaryButton}>
-              Download CV
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.section}>
-        <div className={styles.aboutGrid}>
-          <article className={styles.infoCard}>
-            <dl className={styles.infoList}>
-              <div>
-                <dt>Name</dt>
-                <dd>{about.name}</dd>
+        <p className={styles.eyebrow}>01 / ABOUT</p>
+        <div className={styles.aboutLayout}>
+          <figure className={styles.aboutPhoto}>
+            <div className={styles.tvAerial} aria-hidden="true" />
+            <div className={styles.television}>
+              <div id="portrait-screen" className={styles.aboutImageWrap}>
+                {portraitOn ? <Image src="/resources/images/profile/mountain-portrait.png" alt="Karthikeyan in the mountains, shown inside a small retro television" fill sizes="180px" className={styles.aboutImage} /> : <span className={styles.offAir}>OFF AIR</span>}
+                <div className={styles.scanlines} aria-hidden="true" />
               </div>
-              <div>
-                <dt>Role</dt>
-                <dd>{about.title}</dd>
+              <div className={styles.tvControls}>
+                <span className={styles.tvDial} aria-hidden="true" />
+                <button type="button" onClick={() => setPortraitOn(!portraitOn)} aria-label={portraitOn ? "Turn off portrait screen" : "Turn on portrait screen"} aria-pressed={portraitOn} aria-controls="portrait-screen" className={styles.tvPower}>⏻</button>
+                <span className={styles.tvGrille} aria-hidden="true" />
               </div>
-              <div>
-                <dt>Address</dt>
-                <dd>Hyderabad, India</dd>
-              </div>
-              <div>
-                <dt>Email</dt>
-                <dd>karthikeyan.r.v.2601@gmail.com</dd>
-              </div>
-              <div>
-                <dt>Phone</dt>
-                <dd>Available on request</dd>
-              </div>
-            </dl>
-            <div className={styles.interestsWrap}>
-              {specializationCards.map((item) => (
-                <span key={item.title} className={styles.interestChip}>
-                  {item.title}
-                </span>
-              ))}
             </div>
-          </article>
+            <figcaption>CH. 01 / {about.name}</figcaption>
+          </figure>
+          <div className={styles.aboutDescriptionBlock}>
+            <h2 className={styles.sectionHeading}>The person<br />behind the work.</h2>
+            <p className={styles.leadText}>{about.description}</p>
+            <dl className={styles.aboutFacts}>
+              <div><dt>Current role</dt><dd>{about.title}</dd></div>
+              <div><dt>Based in</dt><dd>Hyderabad, India</dd></div>
+            </dl>
+            <p className={styles.personalNote}>Outside work, I enjoy digital sketching, 3D design, fishing, and travel.</p>
+            <div className={styles.socialRail}>
+              {socialLinks.map((social) => <a key={social.label} href={social.href} target="_blank" rel="noreferrer" className={styles.socialButton}><span className={styles.socialIcon}>{renderSocialIcon(social.icon)}</span>{social.label}</a>)}
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="experience" className={styles.section}>
-        <h2 className={styles.sectionHeading}>My experience and journey</h2>
+        <p className={styles.eyebrow}>02 / EXPERIENCE</p>
+        <h2 className={styles.sectionHeading}>Experience</h2>
         <div className={styles.experienceLayout}>
           <div className={styles.statsGrid}>
             {stats.map((stat) => (
@@ -512,29 +445,23 @@ export default function CyberPortfolio() {
         </div>
       </section>
 
-      <section className={styles.section}>
-        <h2 className={styles.sectionHeading}>Core Skills</h2>
-        <div className={styles.skillCloud}>
-          {coreSkills.map((skill) => (
-            <span key={skill} className={styles.skillPill}>
-              {skill}
-            </span>
-          ))}
-        </div>
-
-        <div className={styles.specializationGrid}>
-          {specializationCards.map((item) => (
-            <article key={item.title} className={styles.specializationCard}>
-              <span>{item.icon}</span>
-              <h3>{item.title}</h3>
-              <p>{item.count}</p>
+      <section id="skills" className={styles.section}>
+        <p className={styles.eyebrow}>03 / SKILLS</p>
+        <h2 className={styles.sectionHeading}>AI engineering,<br /><span className={styles.headingAccent}>with a full-stack foundation.</span></h2>
+        <p className={styles.skillsIntro}>Agentic application flows, documentation retrieval, and Python / LLM automation.</p>
+        <div className={styles.skillsGrid}>
+          {skillsData.categories.map((category) => (
+            <article key={category.title} className={`${styles.skillCategory} ${category.title === "AI & retrieval" ? styles.aiSkillCategory : ""}`}>
+              <h3>{category.title === "AI & retrieval" ? "01 / Agentic AI & retrieval" : category.title}</h3>
+              <ul>{category.items.map((skill) => <li key={skill}>{skill}</li>)}</ul>
             </article>
           ))}
         </div>
       </section>
 
       <section id="projects" className={styles.section}>
-        <h2 className={styles.sectionHeading}>Selected work</h2>
+        <p className={styles.eyebrow}>04 / PROJECTS</p>
+        <h2 className={styles.sectionHeading}>Selected work<span className={styles.headingAccent}> / build log</span></h2>
         <div className={styles.projectGrid}>
           {projects.map((project, index) => {
             const activeIndex = projectImageIndex[project.title] ?? 0;
@@ -556,7 +483,7 @@ export default function CyberPortfolio() {
                     ))}
                   </div>
                   <a href={project.url} target="_blank" rel="noreferrer" className={styles.projectLink}>
-                    View Project
+                    View project ↗
                   </a>
                 </div>
                 <div className={styles.projectCarousel}>
@@ -584,6 +511,7 @@ export default function CyberPortfolio() {
                             type="button"
                             className={`${styles.projectDot} ${imageIndex === activeIndex ? styles.projectDotActive : ""}`}
                             onClick={() => goToProjectImage(project.title, imageIndex)}
+                            aria-pressed={imageIndex === activeIndex}
                             aria-label={`Show image ${imageIndex + 1} for ${project.title}`}
                           />
                         ))}
@@ -593,6 +521,7 @@ export default function CyberPortfolio() {
                       </button>
                     </div>
                   ) : null}
+                  <a className={styles.imageLink} href={`/resources/images/projects/${project.projectImages[activeIndex]}`} target="_blank" rel="noreferrer" aria-label={`Open full-size image ${activeIndex + 1} for ${project.title}`}>Open full-size ↗</a>
                 </div>
               </article>
             );
@@ -600,8 +529,10 @@ export default function CyberPortfolio() {
         </div>
       </section>
 
+      {siteConfig.showBlogs && (
       <section id="blogs" className={styles.section}>
-        <h2 className={styles.sectionHeading}>Blogs</h2>
+        <p className={styles.eyebrow}>05 / NOTES & IDEAS</p>
+        <h2 className={styles.sectionHeading}>Thinking out loud.</h2>
         <div className={styles.blogGrid}>
           {blogs.map((blog) => (
             <article key={blog.title} className={styles.blogCard}>
@@ -624,65 +555,40 @@ export default function CyberPortfolio() {
           ))}
         </div>
       </section>
+      )}
 
       <section id="resume" className={styles.section}>
-        <h2 className={styles.sectionHeading}>Resume highlights</h2>
+        <p className={styles.eyebrow}>05 / RÉSUMÉ</p>
+        <div className={styles.resumeHeading}>
+          <h2 className={styles.sectionHeading}>Résumé</h2>
+          <a href="/KarthikeyanRV_Resume.pdf" target="_blank" rel="noreferrer" className={styles.secondaryButton}>Download PDF <span aria-hidden="true">↓</span></a>
+        </div>
         <div className={styles.resumeGrid}>
           <article className={styles.resumeCard}>
-            <h3>Engineering Focus</h3>
-            <p>Product engineering across enterprise UI, service reliability, and practical automation.</p>
-            <p>Core languages: Java, TypeScript, Python, SQL.</p>
+            <h3>Education</h3>
+            {resume.education.map((item) => <div key={item.university}><p className={styles.resumeEmphasis}>{item.course}</p><p>{item.university}</p><p>2018–2022 · {item.score}</p></div>)}
           </article>
           <article className={styles.resumeCard}>
-            <h3>Frameworks and Tools</h3>
-            <p>{resume.skills.frameworkAndTools}</p>
-          </article>
-          <article className={styles.resumeCard}>
-            <h3>AI and Data</h3>
-            <p>{resume.skills.aiMlAndDataScience}</p>
-          </article>
-          <article className={styles.resumeCard}>
-            <h3>Certifications</h3>
-            <p>{resume.skills.certifications}</p>
+            <h3>Certifications & achievements</h3>
+            <ul><li>OCI 2025 AI Foundations Associate</li><li>OCI 2025 Certified Generative AI Professional</li><li>Atlassian App Dev Hackathon finalist — Top 10 of 2,000+ teams</li></ul>
           </article>
         </div>
       </section>
 
       <section id="contact" className={styles.section}>
+        <p className={styles.eyebrow}>06 / CONTACT</p>
         <div className={styles.contactCard}>
           <div className={styles.contactHeader}>
-            <h2 className={styles.sectionHeading}>{about.name}</h2>
-            <p className={styles.contactCopy}>Quick Facts</p>
-            <div className={styles.quickFactsGrid}>
-              {quickFacts.map((fact) => (
-                <article key={fact.label} className={styles.quickFactCard}>
-                  <h4>{fact.label}</h4>
-                  <p>{fact.value}</p>
-                </article>
-              ))}
-            </div>
-
+            <h2 className={styles.sectionHeading}>Contact</h2>
+            <a href="mailto:karthikeyan.r.v.2601@gmail.com" className={styles.contactEmail}>karthikeyan.r.v.2601@gmail.com ↗</a>
+            <p className={styles.contactCopy}>Hyderabad, India</p>
             <div className={styles.beyondWorkBlock}>
-              <h3>Beyond Work</h3>
-              <div className={styles.beyondWorkGrid}>
-                {beyondWorkItems.map((item) => (
-                  <article key={item.title} className={styles.beyondWorkCard}>
-                    <h4>{item.title}</h4>
-                    <p>{item.description}</p>
-                    <a
-                      href={`mailto:karthikeyan.r.v.2601@gmail.com?subject=${encodeURIComponent(item.askSubject)}`}
-                      className={styles.beyondWorkAsk}
-                    >
-                      {item.ask}
-                    </a>
-                  </article>
-                ))}
-              </div>
+              <h3>Interests</h3>
+              {beyondWorkItems.map((item) => <p key={item.title} className={styles.personalNote}>{item.title}</p>)}
             </div>
           </div>
           <div className={styles.contactFormWrap}>
-            <h3 className={styles.bodyText}>Stay Connected</h3>
-            <p className={styles.bodyText}>Email: karthikeyan.r.v.2601@gmail.com</p>
+            <h3 className={styles.bodyText}>Send a message</h3>
             <div className={styles.contactLinks}>
               {socialLinks.map((social) => (
                 <a key={`contact-${social.label}`} href={social.href} target="_blank" rel="noreferrer" className={styles.contactLinkButton}>
@@ -698,27 +604,35 @@ export default function CyberPortfolio() {
                   <span>Name</span>
                   <input
                     type="text"
+                    autoComplete="name"
+                    aria-invalid={Boolean(formErrors.name)}
+                    aria-describedby={formErrors.name ? "contact-name-error" : undefined}
                     value={contactData.name.value}
                     onChange={(event) => handleInputChange(ContactFormFieldType.NAME, event)}
                     placeholder="Your name"
                   />
-                  {formErrors.name ? <small>{formErrors.name}</small> : null}
+                  {formErrors.name ? <small id="contact-name-error">{formErrors.name}</small> : null}
                 </label>
 
                 <label className={styles.formField}>
                   <span>Email</span>
                   <input
                     type="email"
+                    autoComplete="email"
+                    aria-invalid={Boolean(formErrors.email)}
+                    aria-describedby={formErrors.email ? "contact-email-error" : undefined}
                     value={contactData.email.value}
                     onChange={(event) => handleInputChange(ContactFormFieldType.EMAIL, event)}
                     placeholder="you@example.com"
                   />
-                  {formErrors.email ? <small>{formErrors.email}</small> : null}
+                  {formErrors.email ? <small id="contact-email-error">{formErrors.email}</small> : null}
                 </label>
 
                 <label className={styles.formField}>
                   <span>Interest</span>
                   <select
+                    aria-invalid={Boolean(formErrors.interest)}
+                    aria-describedby={formErrors.interest ? "contact-interest-error" : undefined}
                     value={contactData.interest.value}
                     onChange={(event) => handleInputChange(ContactFormFieldType.INTEREST, event)}
                   >
@@ -728,12 +642,14 @@ export default function CyberPortfolio() {
                       </option>
                     ))}
                   </select>
-                  {formErrors.interest ? <small>{formErrors.interest}</small> : null}
+                  {formErrors.interest ? <small id="contact-interest-error">{formErrors.interest}</small> : null}
                 </label>
 
                 <label className={styles.formField}>
                   <span>Project Timeline</span>
                   <select
+                    aria-invalid={Boolean(formErrors.projectTime)}
+                    aria-describedby={formErrors.projectTime ? "contact-projectTime-error" : undefined}
                     value={contactData.projectTime.value}
                     onChange={(event) => handleInputChange(ContactFormFieldType.TIME, event)}
                   >
@@ -743,29 +659,32 @@ export default function CyberPortfolio() {
                       </option>
                     ))}
                   </select>
-                  {formErrors.projectTime ? <small>{formErrors.projectTime}</small> : null}
+                  {formErrors.projectTime ? <small id="contact-projectTime-error">{formErrors.projectTime}</small> : null}
                 </label>
               </div>
 
               <label className={styles.formField}>
                 <span>Message</span>
                 <textarea
-                  value={contactData.message.value}
+                  aria-invalid={Boolean(formErrors.message)}
+                    aria-describedby={formErrors.message ? "contact-message-error" : undefined}
+                    value={contactData.message.value}
                   onChange={(event) => handleInputChange(ContactFormFieldType.MESSAGE, event)}
                   rows={5}
-                  placeholder="Tell me about your requirement..."
+                  placeholder="Your message..."
                 />
-                {formErrors.message ? <small>{formErrors.message}</small> : null}
+                {formErrors.message ? <small id="contact-message-error">{formErrors.message}</small> : null}
               </label>
 
               <button type="submit" className={styles.primaryButton} disabled={isSubmitting}>
                 {isSubmitting ? "Sending..." : "Send Now"}
               </button>
-              {formStatus ? <p className={styles.formStatus}>{formStatus}</p> : null}
+              {formStatus ? <p role="status" className={styles.formStatus}>{formStatus}</p> : null}
             </form>
           </div>
         </div>
       </section>
+      <footer className={styles.footer}><a href="#home" className={styles.brand}>KRV<span className={styles.brandDot}>_</span></a><span>Karthikeyan R. V. · Software Engineer</span><a href="#home">Back to top ↑</a></footer>
     </main>
   );
 }

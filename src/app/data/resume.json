@@ -1,148 +1,132 @@
 {
-    "data": {
-        "resumeNameTitle": "Karthikeyan R V",
-        "resumeTagLine": "Software Engineer (SDE II) at Oracle Hospitality",
-        "skills": {
-            "languages": "Java, Python, TypeScript, JavaScript, SQL, C++, C, HTML5, CSS3",
-            "frameworkAndTools": "React.js, Next.js, Spring Boot, FastAPI, Node.js, Flask, REST APIs, Microservices Architecture, PostgreSQL, MongoDB, Firebase, Docker, Kubernetes, CI/CD, Jenkins, GitHub Actions, Git, Linux, Selenium, Cypress",
-            "aiMlAndDataScience": "LangChain, OpenAI API, Retrieval-Augmented Generation (RAG), FAISS, Embeddings, Semantic Search, Prompt Engineering, Agentic AI Systems, Data Processing",
-            "certifications": "OCI 2025 AI Foundations Associate, OCI 2025 Certified Generative AI Professional"
-        },
-        "experience": [
-            {
-                "organization": "ORACLE | HOSPITALITY GLOBAL BUSINESS UNIT",
-                "positions": [
-                    {
-                        "position": "Software Engineer II",
-                        "location": "Hyderabad, India",
-                        "start": "09/2024",
-                        "end": "Present",
-                        "projects": [
-                            "Cloud PMS - OPERA Cloud"
-                        ],
-                        "responsibilities": [
-                            {
-                                "subtitle": "Production Feature Delivery",
-                                "items": [
-                                    "Delivered 20+ production features for OPERA Cloud used by 40K+ hotels globally.",
-                                    "Built reusable UI components and page-template framework across 8+ modules, reducing development effort by ~25%."
-                                ]
-                            },
-                            {
-                                "subtitle": "Scalable Services and Reliability",
-                                "items": [
-                                    "Developed REST APIs within a microservices architecture and improved response times by ~15%.",
-                                    "Implemented i18n localization and cross-browser compatibility, improving usability across 10+ regions."
-                                ]
-                            },
-                            {
-                                "subtitle": "Engineering Quality and Automation",
-                                "items": [
-                                    "Applied SOLID principles and design patterns in scalable system modules and mentored interns for faster onboarding.",
-                                    "Built Python and LLM-based agent workflows that reduced manual effort in internal processes by ~30%."
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "position": "Software Engineer I",
-                        "location": "Hyderabad, India",
-                        "start": "09/2022",
-                        "end": "08/2024",
-                        "responsibilities": [
-                            {
-                                "subtitle": "Full-stack Feature Development",
-                                "items": [
-                                    "Built full-stack features using React, TypeScript, Java, and REST APIs, improving UI responsiveness and reducing latency by ~20%.",
-                                    "Developed Java and Spring microservices to support high-concurrency enterprise usage."
-                                ]
-                            },
-                            {
-                                "subtitle": "Performance and Delivery",
-                                "items": [
-                                    "Optimized SQL queries, state management, and APIs to improve data retrieval performance by ~25%.",
-                                    "Contributed to code reviews, testing, and CI/CD workflows to reduce production defects and improve deployment stability."
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "position": "Project Intern",
-                        "location": "Hyderabad, India",
-                        "start": "02/2022",
-                        "end": "08/2022",
-                        "responsibilities": [
-                            {
-                                "subtitle": "Platform and Test Support",
-                                "items": [
-                                    "Audited 10+ microservices and supported bulk version upgrades for stable deployments.",
-                                    "Built Cypress/Jest test suites and automated Jira workflows using Python to improve team efficiency."
-                                ]
-                            }
-                        ]
-                    }
+  "data": {
+    "resumeNameTitle": "Karthikeyan R V",
+    "resumeTagLine": "Application Software Engineer II at Oracle Hospitality",
+    "skills": {
+      "languages": "Java, TypeScript, JavaScript, Python, C++, C, Solidity, SQL",
+      "frameworkAndTools": "React, Next.js, Angular, Redux, Oracle JET, HTML5, CSS3, Microfrontends, Spring Boot, Node.js, Express.js, NestJS, REST APIs, Microservices, System design, PostgreSQL, MySQL, MongoDB, NoSQL, Data modeling, Database management systems, AWS, Azure, Docker, Kubernetes, Git, CI/CD, Jenkins, GitHub Actions, Unit testing, Test automation, Software testing, Performance optimization, Debugging, Code reviews, JWT, OAuth 2.0, Data structures and algorithms, Object-oriented programming, SOLID principles, Design patterns, Operating systems, Computer networks, Agile, Scrum, Internationalization (i18n), Cross-browser compatibility, FFmpeg, WebAssembly, PDF libraries, Gmail integration, Mentoring, Blockchain development",
+      "aiMlAndDataScience": "Agentic AI, Generative AI, LLM integration, OpenAI APIs, Retrieval-Augmented Generation (RAG), LangChain, AI agents, Prompt engineering, Embeddings, Semantic search, Vector databases, FAISS, PGVector, Pinecone",
+      "certifications": "OCI 2025 AI Foundations Associate, OCI 2025 Certified Generative AI Professional"
+    },
+    "experience": [
+      {
+        "organization": "ORACLE | HOSPITALITY GLOBAL BUSINESS UNIT",
+        "positions": [
+          {
+            "position": "Application Software Engineer II",
+            "location": "Hyderabad, India",
+            "start": "09/2024",
+            "end": "Present",
+            "projects": [
+              "Cloud PMS - OPERA Cloud"
+            ],
+            "responsibilities": [
+              {
+                "subtitle": "Engineering contributions",
+                "items": [
+                  "Developed agentic AI workflows for booking and availability; built Python and LLM automation that reduced manual effort by approximately 80%.",
+                  "Built a RAG pipeline integrated with chat to retrieve OPERA Cloud documentation in response to user queries.",
+                  "Delivered 30+ features serving 40K+ hotels; built reusable UI components and page templates across 8+ modules, cutting development effort by approximately 50%.",
+                  "Developed REST APIs within a microservices architecture, improving API response times by approximately 15%.",
+                  "Applied SOLID principles and design patterns, mentored interns, and supported internationalization and cross-browser compatibility across 10+ regions."
                 ]
-            },
-            {
-                "organization": "APPSCMS TECHNOLOGIES",
-                "positions": [
-                    {
-                        "position": "Web Developer Intern",
-                        "location": "Remote",
-                        "start": "02/2021",
-                        "end": "07/2021",
-                        "projects": [
-                            "Online Video Editor",
-                            "Online Audio Editor",
-                            "Online PDF Editor"
-                        ],
-                        "responsibilities": [
-                            {
-                                "subtitle": "Client-side Media Platform",
-                                "items": [
-                                    "Developed browser-based media tools with 20+ features using FFmpeg (WASM) and PDF libraries.",
-                                    "Optimized client-side processing for large files, reducing processing time by ~30% and improving UI responsiveness."
-                                ]
-                            }
-                        ]
-                    }
+              }
+            ]
+          },
+          {
+            "position": "Software Engineer I",
+            "location": "Hyderabad, India",
+            "start": "09/2022",
+            "end": "08/2024",
+            "responsibilities": [
+              {
+                "subtitle": "Engineering contributions",
+                "items": [
+                  "Developed full-stack features using React, TypeScript, Java, and REST APIs, reducing UI latency by approximately 20%.",
+                  "Built Java and Spring microservices supporting scalable backend services and concurrent workloads.",
+                  "Optimized SQL queries, frontend state management, and APIs, improving data retrieval performance by approximately 25%.",
+                  "Contributed to code reviews, software testing, and CI/CD pipelines using Jenkins and Git."
                 ]
-            }
-        ],
-        "education": [
-            {
-                "university": "AMRITA VISHWA VIDYAPEETHAM",
-                "course": "B.Tech in Computer Science and Engineering",
-                "start": "06/2018",
-                "end": "06/2022",
-                "score": "CGPA: 8.43/10",
-                "achievements": [
-                    "Finalist in Atlassian App Dev Hackathon (Top 10 of 2000+ teams).",
-                    "AIR 819 in AEEE and awarded 90% scholarship."
+              }
+            ]
+          },
+          {
+            "position": "Project Intern",
+            "location": "Hyderabad, India",
+            "start": "02/2022",
+            "end": "08/2022",
+            "responsibilities": [
+              {
+                "subtitle": "Engineering contributions",
+                "items": [
+                  "Built frontend components with React and Oracle JET.",
+                  "Supported API integration and debugging across microservices.",
+                  "Contributed to features, bug fixes, and testing in an Agile team."
                 ]
-            }
-        ],
-        "projects": [
-            {
-                "projectTitle": "Vortex AI",
-                "description": "RAG chatbot for PDF querying with LangChain, OpenAI APIs, FAISS, and Python.",
-                "link": "https://github.com/KarthikeyanRV2601/Vortex-AI/tree/main"
-            },
-            {
-                "projectTitle": "Policy Compliance System",
-                "description": "RBAC platform with policy versioning, tracking workflows, notifications, and enterprise APIs.",
-                "link": "https://docs.google.com/document/d/1UgFN7qpVdGrDzPuNyUg97LLtxXgkvLk8vITuKfN3IxM/edit?usp=sharing"
-            },
-            {
-                "projectTitle": "Order Management System",
-                "description": "Full-stack order and inventory application built with PostgreSQL, Express, React, and Node.js.",
-                "link": "https://contra.com/p/7g2mWsbR-order-management-system"
-            },
-            {
-                "projectTitle": "Cloud PMS - OPERA Cloud",
-                "description": "Contributed to Oracle Hospitality OPERA Cloud serving 40K+ hotels globally.",
-                "link": "https://www.oracle.com/in/hospitality/hotel-property-management/hotel-pms-software/"
-            }
+              }
+            ]
+          }
         ]
-    }
+      },
+      {
+        "organization": "APPSCMS TECHNOLOGIES",
+        "positions": [
+          {
+            "position": "Web Developer Intern",
+            "location": "Remote",
+            "start": "02/2021",
+            "end": "07/2021",
+            "projects": [
+              "Online Video Editor",
+              "Online Audio Editor",
+              "Online PDF Editor"
+            ],
+            "responsibilities": [
+              {
+                "subtitle": "Client-side Media Platform",
+                "items": [
+                  "Developed browser-based media tools with 20+ features using FFmpeg (WASM) and PDF libraries.",
+                  "Optimized client-side processing for large files, reducing processing time by ~30% and improving UI responsiveness."
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "education": [
+      {
+        "university": "AMRITA VISHWA VIDYAPEETHAM",
+        "course": "B.Tech in Computer Science and Engineering",
+        "start": "06/2018",
+        "end": "06/2022",
+        "score": "GPA: 8.37",
+        "achievements": [
+          "Finalist, Atlassian App Dev Hackathon (Top 10 of 2000+ teams)."
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "projectTitle": "Vortex AI",
+        "description": "RAG chatbot for PDF querying with LangChain, OpenAI APIs, FAISS, and Python.",
+        "link": "https://github.com/KarthikeyanRV2601/Vortex-AI/tree/main"
+      },
+      {
+        "projectTitle": "JobBuddy",
+        "description": "React job-search workspace with Gmail integration, automated pipeline analytics, and company discovery.",
+        "link": "https://github.com/KarthikeyanRV2601/jobBuddy"
+      },
+      {
+        "projectTitle": "Order Management System",
+        "description": "Full-stack order and inventory application built with PostgreSQL, Express, React, and Node.js.",
+        "link": "https://contra.com/p/7g2mWsbR-order-management-system"
+      },
+      {
+        "projectTitle": "Cloud PMS - OPERA Cloud",
+        "description": "Contributed to Oracle Hospitality OPERA Cloud serving 40K+ hotels globally.",
+        "link": "https://www.oracle.com/in/hospitality/hotel-property-management/hotel-pms-software/"
+      }
+    ]
+  }
 }

@@ -17,9 +17,8 @@ export default function ThemeSwitcher(props: { darkMode: boolean; setDarkMode: (
       setDarkMode(false);
       return;
     }
-    document.body.classList.add("pw-dark-mode");
-    localStorage.setItem("theme", "dark");
-    setDarkMode(true);
+    document.body.classList.remove("pw-dark-mode");
+    setDarkMode(false);
   }, [setDarkMode]);
 
   const toggleTheme = () => {
@@ -38,6 +37,7 @@ export default function ThemeSwitcher(props: { darkMode: boolean; setDarkMode: (
       type="button"
       className="pw-theme-toggle"
       onClick={toggleTheme}
+      aria-pressed={darkMode}
       aria-label={darkMode ? "Switch to light theme" : "Switch to dark theme"}
       title={darkMode ? "Switch to light theme" : "Switch to dark theme"}
     >

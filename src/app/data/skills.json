@@ -1,0 +1,124 @@
+{
+  "categories": [
+    {
+      "title": "AI & retrieval",
+      "items": [
+        "Agentic AI",
+        "Generative AI",
+        "LLM integration",
+        "OpenAI APIs",
+        "Retrieval-Augmented Generation (RAG)",
+        "LangChain",
+        "AI agents",
+        "Prompt engineering",
+        "Embeddings",
+        "Semantic search",
+        "Vector databases",
+        "FAISS",
+        "PGVector",
+        "Pinecone"
+      ]
+    },
+    {
+      "title": "Languages",
+      "items": [
+        "Java",
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "C++",
+        "C",
+        "Solidity",
+        "SQL"
+      ]
+    },
+    {
+      "title": "Backend & architecture",
+      "items": [
+        "Spring Boot",
+        "Node.js",
+        "Express.js",
+        "NestJS",
+        "REST APIs",
+        "Microservices",
+        "System design",
+        "Blockchain development"
+      ]
+    },
+    {
+      "title": "Databases",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "NoSQL",
+        "Data modeling",
+        "Database management systems"
+      ]
+    },
+    {
+      "title": "Frontend",
+      "items": [
+        "React",
+        "Next.js",
+        "Angular",
+        "Redux",
+        "Oracle JET",
+        "HTML5",
+        "CSS3",
+        "Microfrontends"
+      ]
+    },
+    {
+      "title": "Cloud & delivery",
+      "items": [
+        "AWS",
+        "Azure",
+        "Docker",
+        "Kubernetes",
+        "Git",
+        "CI/CD",
+        "Jenkins",
+        "GitHub Actions"
+      ]
+    },
+    {
+      "title": "Quality & security",
+      "items": [
+        "Unit testing",
+        "Test automation",
+        "Software testing",
+        "Performance optimization",
+        "Debugging",
+        "Code reviews",
+        "JWT",
+        "OAuth 2.0"
+      ]
+    },
+    {
+      "title": "Computer science",
+      "items": [
+        "Data structures and algorithms",
+        "Object-oriented programming",
+        "SOLID principles",
+        "Design patterns",
+        "Operating systems",
+        "Computer networks"
+      ]
+    },
+    {
+      "title": "Product & collaboration",
+      "items": [
+        "Agile",
+        "Scrum",
+        "Internationalization (i18n)",
+        "Cross-browser compatibility",
+        "FFmpeg",
+        "WebAssembly",
+        "PDF libraries",
+        "Gmail integration",
+        "Mentoring"
+      ]
+    }
+  ]
+}
