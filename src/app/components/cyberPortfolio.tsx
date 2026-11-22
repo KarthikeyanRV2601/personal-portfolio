@@ -156,7 +156,7 @@ export default function CyberPortfolio() {
     { value: "30+", label: "OPERA Cloud features delivered" },
     { value: "8+", label: "Modules with reusable UI frameworks" },
     { value: "~80%", label: "Less manual effort through AI automation" },
-    { value: "~15%", label: "Faster API response times" },
+    { value: "40K+", label: "Hotels served by OPERA Cloud" },
   ];
 
   const beyondWorkItems = [
