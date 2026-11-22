@@ -1,0 +1,48 @@
+.widget { position: fixed; right: 24px; bottom: 22px; z-index: 90; }
+.launcher { display: flex; align-items: center; gap: 12px; padding: 15px 20px; background: var(--terminal-bg); color: var(--terminal-text); border: 2px solid var(--text-color); box-shadow: 4px 4px 0 var(--retro-shadow); font: 700 16px/1.5 'Courier New', monospace; cursor: pointer; }
+.launcher[hidden] { display: none; }
+.launcher > span { font-size: 24px; }
+.panel { display: flex; flex-direction: column; width: 450px; height: min(760px, calc(100dvh - 44px)); max-width: calc(100vw - 48px); border: 2px solid var(--text-color); background: var(--surface-elevated); color: var(--text-color); box-shadow: 6px 6px 0 var(--retro-shadow); }
+.header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 17px 20px; border-bottom: 2px solid var(--text-color); background: var(--retro-panel); }
+.header h2 { font: 700 19px/1.4 'Courier New', monospace; margin: 0; }
+.header p { font-size: 14px; margin: 5px 0 0; }
+.close { width: 44px; height: 44px; flex-shrink: 0; font-size: 30px; line-height: 1; border: 1px solid var(--text-color); background: transparent; color: inherit; cursor: pointer; }
+.transcript { padding: 20px; flex: 1; overflow-y: auto; min-height: 0; overscroll-behavior: contain; }
+.intro { font-size: 17px; line-height: 1.7; margin: 0 0 20px; color: var(--text-muted); }
+.suggestions { display: grid; gap: 10px; }
+.suggestions button, .actions button, .actions a { text-align: left; font-size: 16px; line-height: 1.5; padding: 11px 13px; border: 1px solid var(--line-color); background: var(--background-color); color: var(--text-color); cursor: pointer; text-decoration: none; }
+.suggestions button:hover, .actions button:hover, .actions a:hover { border-color: var(--color-accent); }
+.turn { margin: 0 0 18px; border: 1px solid var(--line-color); padding: 16px; overflow-wrap: anywhere; }
+.turn h3 { font: 700 14px/1.6 'Courier New', monospace; margin: 0 0 12px; }
+.messageCopy { font-size: 18px; line-height: 1.75; }
+.messageCopy p { white-space: pre-wrap; margin: 0 0 14px; }
+.messageCopy p:last-child { margin-bottom: 0; }
+.messageCopy ul { padding-left: 22px; margin: 0 0 14px; }
+.messageCopy li { margin-bottom: 12px; }
+.userTurn { background: var(--surface-color); }
+.steps { margin-top: 17px; font-size: 14px; }
+.steps summary { cursor: pointer; }
+.steps ol { padding-left: 20px; line-height: 1.8; }
+.sources { display: grid; gap: 8px; margin-top: 18px; }
+.sources > span { font: 700 14px 'Courier New', monospace; }
+.sources button { background: transparent; color: var(--text-color); border: 0; text-decoration: underline; text-underline-offset: 3px; text-align: left; font-size: 14px; line-height: 1.6; padding: 4px 0; cursor: pointer; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 17px; }
+.offline { border-left: 3px solid var(--color-accent); padding: 0 0 0 16px; font-size: 17px; line-height: 1.7; }
+.composer { padding: 18px 20px; border-top: 1px solid var(--line-color); }
+.composer label { display: block; font-size: 16px; font-weight: 700; margin-bottom: 9px; }
+.composer textarea { display: block; width: 100%; min-height: 76px; resize: vertical; max-height: 150px; padding: 12px; border: 1px solid var(--line-color); background: var(--background-color); color: var(--text-color); font: inherit; font-size: 18px; line-height: 1.6; }
+.composerActions { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 12px; }
+.reset, .send { padding: 11px 14px; font: 700 16px/1.5 'Courier New', monospace; cursor: pointer; }
+.send { border: 1px solid var(--text-color); background: var(--color-primary); color: var(--color-text-on-primary); }
+.reset { color: var(--text-color); background: transparent; border: 1px solid var(--line-color); }
+.panel button:disabled, .composer textarea:disabled { opacity: .6; cursor: not-allowed; }
+.privacy { font-size: 14px; line-height: 1.5; color: var(--text-muted); margin: 13px 0 0; }
+.status { font-size: 16px; line-height: 1.6; }
+.error { font-size: 16px; line-height: 1.6; color: var(--color-danger); }
+@media (max-width: 600px) {
+  .widget { right: 14px; bottom: 14px; }
+  .panel { width: calc(100vw - 28px); max-width: none; height: min(760px, calc(100dvh - 28px)); }
+  .header, .transcript, .composer { padding: 15px; }
+  .header h2 { font-size: 17px; }
+  .launcher { padding: 12px 16px; }
+}

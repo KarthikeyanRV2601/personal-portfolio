@@ -10,6 +10,8 @@ import siteConfig from "../data/site.json";
 import skillsData from "../data/skills.json";
 import contactPageData from "../data/contactPage.json";
 import resumeDataRaw from "../data/resume.json";
+import PortfolioChat from "./portfolioChat";
+import { projectElementId } from "../../lib/portfolioChat";
 import ThemeSwitcher from "./interactibles/themeSwitcher";
 import styles from "./cyberPortfolio.module.css";
 import { ContactFormFieldType, ContactPageData } from "../types";
@@ -468,7 +470,7 @@ export default function CyberPortfolio() {
             const imageCount = project.projectImages.length;
 
             return (
-              <article key={project.title} className={`${styles.projectCard} ${index < 2 ? styles.projectCardFeatured : ""}`}>
+              <article id={projectElementId(project.title)} key={project.title} className={`${styles.projectCard} ${index < 2 ? styles.projectCardFeatured : ""}`}>
                 <div className={styles.projectText}>
                   <span className={styles.projectRank}>{String(index + 1).padStart(2, "0")}</span>
                   <h3>{project.title}</h3>
@@ -685,6 +687,7 @@ export default function CyberPortfolio() {
         </div>
       </section>
       <footer className={styles.footer}><a href="#home" className={styles.brand}>KRV<span className={styles.brandDot}>_</span></a><span>Karthikeyan R. V. · Software Engineer</span><a href="#home">Back to top ↑</a></footer>
+      <PortfolioChat />
     </main>
   );
 }

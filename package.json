@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint .",
     "sass:watch": "node-sass --watch src/sass -o dist/css",
-    "sass:compile": "node-sass src/sass -o dist/css"
+    "sass:compile": "node-sass src/sass -o dist/css",
+    "test:chat": "node scripts/test-portfolio-chat.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.4.7",
