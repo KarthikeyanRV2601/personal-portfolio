@@ -16,7 +16,7 @@ import ThemeSwitcher from "./interactibles/themeSwitcher";
 import styles from "./cyberPortfolio.module.css";
 import { ContactFormFieldType, ContactPageData } from "../types";
 
-const projectPriority = new Map([["Vortex AI", 0], ["Cloud PMS - OPERA Cloud", 1], ["JobBuddy", 2]]);
+const projectPriority = new Map([["JobBuddy", 0], ["Vortex AI", 1], ["Cloud PMS - OPERA Cloud", 2]]);
 
 const githubLink = "https://github.com/KarthikeyanRV2601";
 
@@ -32,9 +32,9 @@ const navLinks = [
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
-  { id: "projects", label: "Projects" },
-  ...(siteConfig.showBlogs ? [{ id: "blogs", label: "Blogs" }] : []),
-  { id: "resume", label: "Resume" },
+  { id: "projects", label: "Work" },
+  ...(siteConfig.showBlogs ? [{ id: "blogs", label: "Notes" }] : []),
+  { id: "resume", label: "Résumé" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -88,7 +88,8 @@ export default function CyberPortfolio() {
   const resume = resumeDataRaw.data;
   const { interestsDropDownData, projectTimeData } = contactPageData;
 
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [portraitOn, setPortraitOn] = useState(true);
   const [activeSection, setActiveSection] = useState("home");
   const [projectImageIndex, setProjectImageIndex] = useState<Record<string, number>>({});
@@ -125,10 +126,10 @@ export default function CyberPortfolio() {
   const [contactData, setContactData] = useState<ContactPageData>(initialContactData);
 
   useEffect(() => {
-    const observedIds = navLinks.map((link) => link.id);
+    const observedIds = ["home", "about", "experience", "skills", "projects", "blogs", "resume", "contact"];
 
     const updateActiveSection = () => {
-      const offset = 140;
+      const offset = 110;
       let currentSection = "home";
 
       for (const id of observedIds) {
@@ -294,19 +295,21 @@ export default function CyberPortfolio() {
       <a href="#about" className={styles.skipLink}>Skip to content</a>
       <header className={styles.topBar}>
         <a href="#home" className={styles.brand}>
-          KRV<span className={styles.brandDot}>_</span>
+          KRV<span className={styles.brandDot}>✳</span>
         </a>
+        <span className={styles.headerNote}>SOFTWARE ENGINEER / HYDERABAD, IN</span>
         <div className={styles.headerControls}>
-          <nav className={styles.nav} aria-label="Main navigation">
-            {navLinks.map((link) => (
+          <button id="menu-toggle" className={styles.menuToggle} type="button" aria-expanded={menuOpen} aria-controls="main-nav" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "Close −" : "Menu +"}</button>
+          <nav id="main-nav" className={`${styles.nav} ${menuOpen ? styles.navOpen : ""}`} aria-label="Main navigation" onKeyDown={(event) => { if (event.key === "Escape") { setMenuOpen(false); document.getElementById("menu-toggle")?.focus(); } }}>
+            {navLinks.map((link, index) => (
               <a
                 key={link.id}
                 href={`#${link.id}`}
                 className={`${styles.navItem} ${activeSection === link.id ? styles.navItemActive : ""}`}
                 aria-current={activeSection === link.id ? "location" : undefined}
-                onClick={() => setActiveSection(link.id)}
+                onClick={() => { setActiveSection(link.id); setMenuOpen(false); }}
               >
-                {link.label}
+                <span className={styles.navNumber}>{index + 1}.</span> {link.label}
               </a>
             ))}
           </nav>
@@ -315,45 +318,34 @@ export default function CyberPortfolio() {
       </header>
 
       <section id="home" className={`${styles.section} ${styles.hero}`}>
-        <div className={styles.heroContent}>
-          <p className={styles.heroGreeting}>Hey, I’m Karthikeyan</p>
-          <p className={styles.heroLabel}>SOFTWARE ENGINEER II / AI ENGINEERING</p>
-          <h1 className={styles.heroTitle}><span>AI agents.</span><br />Built into<br />real products.</h1>
-          <p className={styles.heroIntro}>I build agentic workflows, RAG systems, and full-stack applications at Oracle Hospitality.</p>
-          <div className={styles.ctaRow}>
-            <a href="#projects" className={styles.primaryButton}>Explore projects <span aria-hidden="true">↗</span></a>
-            <a href="/KarthikeyanRV_Resume.pdf" target="_blank" rel="noreferrer" className={styles.secondaryButton}>Résumé <span aria-hidden="true">↓</span></a>
-          </div>
-          <div className={styles.heroFootnote}><span>Oracle Hospitality</span><span>Hyderabad, India</span></div>
+        <div className={styles.heroTopline}>
+          <p className={styles.heroGreeting}>Hey,<br />I build full-stack products<br />and AI workflows.</p>
+          <div className={styles.heroIndex}><span>PERSONAL PORTFOLIO</span><span>VOL. 01 / 2026</span><span className={styles.barcode} aria-hidden="true" /></div>
         </div>
-        <div className={styles.workflowWindow}>
-          <div className={styles.windowBar}><span aria-hidden="true">■</span><span>WORKFLOW_01</span><span>AI SYSTEMS</span></div>
-          <div className={styles.workflowBody}>
-            <p className={styles.workflowLabel}>AGENTIC DEVELOPMENT</p>
-            <h2>From a request<br />to a workflow.</h2>
-            <ol className={styles.workflowSteps}>
-              <li><span>01</span><div><strong>Understand the request</strong><small>Booking · availability · documentation</small></div></li>
-              <li><span>02</span><div><strong>Retrieve the context</strong><small>RAG · embeddings · semantic search</small></div></li>
-              <li><span>03</span><div><strong>Connect the application</strong><small>Python · LLMs · REST APIs</small></div></li>
-            </ol>
-            <details className={styles.aiReveal}>
-              <summary>Inspect the AI layer <span aria-hidden="true" /></summary>
-              <div className={styles.terminal}>
-                <p className={styles.terminalPrompt}>$ workflow.inspect</p>
-                <dl>
-                  <div><dt>AGENTS</dt><dd>Booking & availability flows</dd></div>
-                  <div><dt>RETRIEVAL</dt><dd>OPERA Cloud documentation chat</dd></div>
-                  <div><dt>AUTOMATION</dt><dd>Python + LLM internal workflows</dd></div>
-                </dl>
-                <p className={styles.terminalNote}>A sketch of my engineering work.</p>
-              </div>
-            </details>
+        <div className={styles.heroMain}>
+          <div className={styles.heroContent}>
+            <p className={styles.heroLabel}><span aria-hidden="true">✳</span> SOFTWARE ENGINEER II @ ORACLE</p>
+            <h1 className={styles.heroTitle} aria-label="Karthikeyan R.V.">KARTHI<span>KEYAN<span className={styles.nameSuffix}> R.V.</span></span></h1>
+            <div className={styles.ctaRow}>
+              <a href="#projects" className={styles.primaryButton}>See the work <span aria-hidden="true">↘</span></a>
+              <a href="/KarthikeyanRV_Resume.pdf" target="_blank" rel="noreferrer" className={styles.secondaryButton}>Get my résumé <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
-          <div className={styles.windowFooter}><span>PYTHON / LANGCHAIN / OPENAI</span><span aria-hidden="true">↳</span></div>
+          <a href="#projects" className={styles.heroArtwork} aria-label="Explore selected projects">
+            <span className={styles.vinyl} aria-hidden="true"><span>FULL STACK / APPLIED AI</span></span>
+            <div className={styles.recordSleeve}>
+              <div className={styles.sleeveTop}><span>KRV / ENGINEERING</span><span>VOL. 01</span></div>
+              <svg className={styles.sleeveSymbol} viewBox="0 0 200 200" fill="none" aria-hidden="true"><path d="M100 12v176M12 100h176M38 38l124 124M38 162 162 38" stroke="currentColor" strokeWidth="28"/><circle cx="100" cy="100" r="25" fill="var(--color-accent)"/></svg>
+              <p>FULL STACK<br />& APPLIED AI</p>
+              <div className={styles.sleeveBottom}><span>SIDE A — SELECTED WORK</span><span>↗</span></div>
+            </div>
+            <span className={styles.artworkCaption}>SELECTED PROJECTS / 2022–2026</span>
+          </a>
         </div>
+        <div className={styles.heroFootnote}><span>REACT / TYPESCRIPT / JAVA / PYTHON</span><a href="#projects">SCROLL TO EXPLORE ↓</a></div>
       </section>
 
-      <div className={styles.focusStrip}><span>01 / AGENTIC WORKFLOWS</span><span>02 / RAG SYSTEMS</span><span>03 / FULL-STACK ENGINEERING</span></div>
+      <div className={styles.focusStrip}><span>FULL-STACK ENGINEERING</span><span aria-hidden="true">✳</span><span>AGENTIC WORKFLOWS</span><span aria-hidden="true">✳</span><span>RAG SYSTEMS</span><span aria-hidden="true">✳</span><span>REACT / JAVA / PYTHON</span></div>
 
       <section id="about" className={styles.section}>
         <p className={styles.eyebrow}>01 / ABOUT</p>
@@ -374,7 +366,7 @@ export default function CyberPortfolio() {
             <figcaption>CH. 01 / {about.name}</figcaption>
           </figure>
           <div className={styles.aboutDescriptionBlock}>
-            <h2 className={styles.sectionHeading}>The person<br />behind the work.</h2>
+            <h2 className={styles.sectionHeading}>OFF<br /><span className={styles.headingAccent}>SCREEN.</span></h2>
             <p className={styles.leadText}>{about.description}</p>
             <dl className={styles.aboutFacts}>
               <div><dt>Current role</dt><dd>{about.title}</dd></div>
@@ -390,7 +382,7 @@ export default function CyberPortfolio() {
 
       <section id="experience" className={styles.section}>
         <p className={styles.eyebrow}>02 / EXPERIENCE</p>
-        <h2 className={styles.sectionHeading}>Experience</h2>
+        <h2 className={styles.sectionHeading}>THE DAY JOB<span className={styles.headingAccent}>.</span></h2>
         <div className={styles.experienceLayout}>
           <div className={styles.statsGrid}>
             {stats.map((stat) => (
@@ -449,30 +441,30 @@ export default function CyberPortfolio() {
 
       <section id="skills" className={styles.section}>
         <p className={styles.eyebrow}>03 / SKILLS</p>
-        <h2 className={styles.sectionHeading}>AI engineering,<br /><span className={styles.headingAccent}>with a full-stack foundation.</span></h2>
+        <h2 className={styles.sectionHeading}>SKILLS &<br /><span className={styles.headingAccent}>SPECIALTIES.</span></h2>
         <p className={styles.skillsIntro}>Agentic application flows, documentation retrieval, and Python / LLM automation.</p>
         <div className={styles.skillsGrid}>
-          {skillsData.categories.map((category) => (
-            <article key={category.title} className={`${styles.skillCategory} ${category.title === "AI & retrieval" ? styles.aiSkillCategory : ""}`}>
-              <h3>{category.title === "AI & retrieval" ? "01 / Agentic AI & retrieval" : category.title}</h3>
+          {skillsData.categories.map((category, index) => (
+            <details key={category.title} className={styles.skillCategory} open={index === 0}>
+              <summary><span className={styles.skillNumber}>{String(index + 1).padStart(2, "0")}</span><h3>{category.title === "AI & retrieval" ? "Agentic AI & retrieval" : category.title}</h3><span className={styles.skillPlus} aria-hidden="true" /></summary>
               <ul>{category.items.map((skill) => <li key={skill}>{skill}</li>)}</ul>
-            </article>
+            </details>
           ))}
         </div>
       </section>
 
       <section id="projects" className={styles.section}>
-        <p className={styles.eyebrow}>04 / PROJECTS</p>
-        <h2 className={styles.sectionHeading}>Selected work<span className={styles.headingAccent}> / build log</span></h2>
+        <p className={styles.eyebrow}>04 / SELECTED WORK</p>
+        <h2 className={styles.sectionHeading}>SELECTED WORK<span className={styles.headingAccent}>.</span></h2>
         <div className={styles.projectGrid}>
           {projects.map((project, index) => {
             const activeIndex = projectImageIndex[project.title] ?? 0;
             const imageCount = project.projectImages.length;
 
             return (
-              <article id={projectElementId(project.title)} key={project.title} className={`${styles.projectCard} ${index < 2 ? styles.projectCardFeatured : ""}`}>
+              <article id={projectElementId(project.title)} key={project.title} className={styles.projectCard}>
                 <div className={styles.projectText}>
-                  <span className={styles.projectRank}>{String(index + 1).padStart(2, "0")}</span>
+                  <span className={styles.projectRank}>RELEASE {String(index + 1).padStart(2, "0")} / {project.start}</span>
                   <h3>{project.title}</h3>
                   <p>{project.role}</p>
                   <span className={styles.projectMeta}>
@@ -494,7 +486,7 @@ export default function CyberPortfolio() {
                       src={`/resources/images/projects/${project.projectImages[activeIndex]}`}
                       alt={`${project.title} preview ${activeIndex + 1}`}
                       fill
-                      sizes="(max-width: 900px) 92vw, 42vw"
+                      sizes="(max-width: 700px) 90vw, 42vw"
                       className={styles.projectImage}
                     />
                     <span className={styles.projectImageCount}>
@@ -503,7 +495,7 @@ export default function CyberPortfolio() {
                   </div>
                   {imageCount > 1 ? (
                     <div className={styles.projectCarouselControls}>
-                      <button type="button" className={styles.projectNavButton} onClick={() => previousProjectImage(project.title, imageCount)}>
+                      <button type="button" className={styles.projectNavButton} onClick={() => previousProjectImage(project.title, imageCount)} aria-label={`Previous image for ${project.title}`}>
                         Prev
                       </button>
                       <div className={styles.projectDots}>
@@ -518,7 +510,7 @@ export default function CyberPortfolio() {
                           />
                         ))}
                       </div>
-                      <button type="button" className={styles.projectNavButton} onClick={() => nextProjectImage(project.title, imageCount)}>
+                      <button type="button" className={styles.projectNavButton} onClick={() => nextProjectImage(project.title, imageCount)} aria-label={`Next image for ${project.title}`}>
                         Next
                       </button>
                     </div>
@@ -562,7 +554,7 @@ export default function CyberPortfolio() {
       <section id="resume" className={styles.section}>
         <p className={styles.eyebrow}>05 / RÉSUMÉ</p>
         <div className={styles.resumeHeading}>
-          <h2 className={styles.sectionHeading}>Résumé</h2>
+          <h2 className={styles.sectionHeading}>THE RÉSUMÉ<span className={styles.headingAccent}>.</span></h2>
           <a href="/KarthikeyanRV_Resume.pdf" target="_blank" rel="noreferrer" className={styles.secondaryButton}>Download PDF <span aria-hidden="true">↓</span></a>
         </div>
         <div className={styles.resumeGrid}>
@@ -581,7 +573,7 @@ export default function CyberPortfolio() {
         <p className={styles.eyebrow}>06 / CONTACT</p>
         <div className={styles.contactCard}>
           <div className={styles.contactHeader}>
-            <h2 className={styles.sectionHeading}>Contact</h2>
+            <h2 className={styles.sectionHeading}>LET’S<br /><span className={styles.headingAccent}>TALK.</span></h2>
             <a href="mailto:karthikeyan.r.v.2601@gmail.com" className={styles.contactEmail}>karthikeyan.r.v.2601@gmail.com ↗</a>
             <p className={styles.contactCopy}>Hyderabad, India</p>
             <div className={styles.beyondWorkBlock}>
@@ -679,14 +671,14 @@ export default function CyberPortfolio() {
               </label>
 
               <button type="submit" className={styles.primaryButton} disabled={isSubmitting}>
-                {isSubmitting ? "Sending..." : "Send Now"}
+                {isSubmitting ? "Sending..." : "Send message ↗"}
               </button>
               {formStatus ? <p role="status" className={styles.formStatus}>{formStatus}</p> : null}
             </form>
           </div>
         </div>
       </section>
-      <footer className={styles.footer}><a href="#home" className={styles.brand}>KRV<span className={styles.brandDot}>_</span></a><span>Karthikeyan R. V. · Software Engineer</span><a href="#home">Back to top ↑</a></footer>
+      <footer className={styles.footer}><a href="#home" className={styles.brand}>KRV<span className={styles.brandDot}>✳</span></a><span>© {new Date().getFullYear()} KARTHIKEYAN R.V.<br />FULL STACK & APPLIED AI</span><a href="#home">Back to top ↑</a></footer>
       <PortfolioChat />
     </main>
   );

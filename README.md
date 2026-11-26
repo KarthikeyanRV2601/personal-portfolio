@@ -1,12 +1,16 @@
 # Karthikeyan R. V. — Portfolio
 
-A Next.js / React portfolio with a retro interface, accessible typography, a small interactive television portrait, and a Gemini-powered portfolio assistant.
+A Next.js / React portfolio with a grunge print aesthetic: distressed headlines, record-sleeve artwork, charcoal and paper themes, a small interactive television portrait, and a Gemini-powered portfolio assistant.
 
 **[Live portfolio](https://karthikeyan-r-v-portfolio.netlify.app)** · Built with Next.js, React, and TypeScript. This is a responsive web application, available directly in a mobile browser.
 
+## Desktop preview
+
+![Desktop portfolio with distressed typography and record-sleeve artwork](docs/screenshots/desktop-home.jpg)
+
 ## Mobile walkthrough
 
-Screenshots from the live application at a 390 × 844 CSS-pixel viewport, presented in illustrative iPhone-style frames. These are mobile browser captures, not a native iOS app. Open any image for a larger view.
+Screenshots of the redesigned application at a 390 × 844 CSS-pixel viewport, presented in illustrative iPhone-style frames. These are mobile browser captures, not a native iOS app. Open any image for a larger view.
 
 <table>
   <tr>
@@ -15,23 +19,29 @@ Screenshots from the live application at a 390 × 844 CSS-pixel viewport, presen
     <th>AI skills</th>
   </tr>
   <tr>
-    <td><a href="docs/screenshots/mobile-home-iphone.png"><img src="docs/screenshots/mobile-home-iphone.png" width="250" alt="Mobile home screen with retro typography and project navigation"></a></td>
+    <td><a href="docs/screenshots/mobile-home-iphone.png"><img src="docs/screenshots/mobile-home-iphone.png" width="250" alt="Mobile home screen with distressed typography, record artwork, and project navigation"></a></td>
     <td><a href="docs/screenshots/mobile-about-iphone.png"><img src="docs/screenshots/mobile-about-iphone.png" width="250" alt="Mobile About section with an interactive retro television portrait"></a></td>
     <td><a href="docs/screenshots/mobile-skills-iphone.png"><img src="docs/screenshots/mobile-skills-iphone.png" width="250" alt="Mobile skills section highlighting agentic AI and retrieval"></a></td>
   </tr>
   <tr>
     <th>Project gallery</th>
-    <th>Dark theme</th>
+    <th>Paper theme</th>
     <th>Portfolio assistant</th>
   </tr>
   <tr>
     <td><a href="docs/screenshots/mobile-projects-iphone.png"><img src="docs/screenshots/mobile-projects-iphone.png" width="250" alt="Mobile project gallery with screenshot navigation controls"></a></td>
-    <td><a href="docs/screenshots/mobile-dark-iphone.png"><img src="docs/screenshots/mobile-dark-iphone.png" width="250" alt="Mobile home screen in the dark theme"></a></td>
+    <td><a href="docs/screenshots/mobile-light-iphone.png"><img src="docs/screenshots/mobile-light-iphone.png" width="250" alt="Mobile home screen in the paper theme"></a></td>
     <td><a href="docs/screenshots/mobile-chat-iphone.png"><img src="docs/screenshots/mobile-chat-iphone.png" width="250" alt="Mobile Gemini portfolio assistant showing its initial interface"></a></td>
   </tr>
 </table>
 
-Try the flow: **Explore projects** → browse project screenshots → open **Ask about my work** → ask **Show me his AI projects**. The assistant can return sources and a button to the relevant project. The header also links to experience, skills, the résumé, and contact details; the theme button switches between light and dark. The chat screenshot shows the initial interface; live answers depend on provider availability and quota.
+Try the flow: **See the work** → browse project screenshots → open **Ask about my work** → ask **Show me his AI projects**. The assistant can return sources and a button to the relevant project. The header also links to experience, skills, the résumé, and contact details; the theme button switches between light and dark. The chat screenshot shows the initial interface; live answers depend on provider availability and quota.
+
+## Design and type
+
+The visual direction is inspired by [Grunge on ThemeWagon](https://preview.themewagon.com/grunge/). The layout, record artwork, and texture are implemented for this portfolio; no template code or assets are copied.
+
+Fonts are hosted locally through `next/font/local`: [Anton](src/app/fonts/anton-OFL.txt) for condensed display type, [Rubik Dirt](src/app/fonts/rubikdirt-OFL.txt) for distressed headlines, and [DM Sans](src/app/fonts/dmsans-OFL.txt) for body copy. The linked SIL Open Font License files are included alongside the fonts.
 
 ## Run locally
 

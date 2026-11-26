@@ -6,30 +6,26 @@ export default function ThemeSwitcher(props: { darkMode: boolean; setDarkMode: (
   const { darkMode, setDarkMode } = props;
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      document.body.classList.add("pw-dark-mode");
-      setDarkMode(true);
-      return;
+    let savedTheme: string | null = null;
+    try {
+      savedTheme = localStorage.getItem("theme");
+    } catch {
+      // The theme still works when browser storage is unavailable.
     }
-    if (savedTheme === "light") {
-      document.body.classList.remove("pw-dark-mode");
-      setDarkMode(false);
-      return;
-    }
-    document.body.classList.remove("pw-dark-mode");
-    setDarkMode(false);
+    const useDarkTheme = savedTheme !== "light";
+    document.body.classList.toggle("pw-dark-mode", useDarkTheme);
+    setDarkMode(useDarkTheme);
   }, [setDarkMode]);
 
   const toggleTheme = () => {
-    if (darkMode) {
-      document.body.classList.remove("pw-dark-mode");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.body.classList.add("pw-dark-mode");
-      localStorage.setItem("theme", "dark");
+    const useDarkTheme = !darkMode;
+    document.body.classList.toggle("pw-dark-mode", useDarkTheme);
+    setDarkMode(useDarkTheme);
+    try {
+      localStorage.setItem("theme", useDarkTheme ? "dark" : "light");
+    } catch {
+      // Keep the selected theme for this visit even without persistent storage.
     }
-    setDarkMode(!darkMode);
   };
 
   return (

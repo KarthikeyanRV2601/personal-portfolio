@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
-import { Montserrat, Work_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-montserrat",
+const display = localFont({
+  src: "./fonts/Anton-Regular.ttf",
+  variable: "--font-display",
   display: "swap",
 });
-
-const workSans = Work_Sans({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-work-sans",
+const grunge = localFont({
+  src: "./fonts/RubikDirt-Regular.ttf",
+  variable: "--font-grunge",
+  display: "swap",
+});
+const body = localFont({
+  src: "./fonts/DMSans.ttf",
+  variable: "--font-body",
+  weight: "100 1000",
   display: "swap",
 });
 
@@ -31,7 +34,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/svg+xml" href="/resources/logoblack.svg" />
       </head>
-      <body className={`${montserrat.variable} ${workSans.variable}`}>
+      <body className={`${display.variable} ${grunge.variable} ${body.variable} pw-dark-mode`}>
         {children}
       </body>
     </html>
